@@ -1,0 +1,1 @@
+"""Configuration transverse (settings, exceptions)."""
