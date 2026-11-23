@@ -22,7 +22,8 @@ endif
 .PHONY: help env up down restart logs ps clean-volumes clean \
         backend-install backend-run backend-test backend-lint backend-format \
         frontend-install frontend-dev frontend-build frontend-lint \
-        db-shell redis-cli lint
+        db-shell redis-cli lint \
+				db-upgrade db-downgrade db-revision
 
 help: ## Affiche cette aide
 	@grep -hE '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -88,6 +89,17 @@ frontend-build: ## Build de production du frontend
 
 frontend-lint: ## Lint frontend (eslint)
 	cd $(FRONTEND_DIR) && npm run lint
+
+## --- Base de données (Alembic) -------------------------------------
+
+db-upgrade: ## Applique les migrations (crée/met à jour les tables)
+	$(PY) -m alembic -c $(BACKEND_DIR)/alembic.ini upgrade head
+
+db-downgrade: ## Annule la dernière migration
+	$(PY) -m alembic -c $(BACKEND_DIR)/alembic.ini downgrade -1
+
+db-revision: ## Génère une migration : make db-revision m="message"
+	$(PY) -m alembic -c $(BACKEND_DIR)/alembic.ini revision --autogenerate -m "$(m)"
 
 ## --- Utilitaires ---------------------------------------------------
 
