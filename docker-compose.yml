@@ -13,6 +13,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-smartcampus}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-smartcampus}
       POSTGRES_DB: ${POSTGRES_DB:-smartcampus}
+      APP_DB_USER: ${APP_DB_USER:-smartcampus_app}          
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:-smartcampus_app}  
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:

@@ -1,10 +1,12 @@
 """Paramètres de l'application, chargés depuis les variables d'environnement."""
 
+import json
 from functools import lru_cache
 from pathlib import Path
+from typing import Annotated
 
 from pydantic import field_validator
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 # backend/app/core/config.py -> backend/ -> racine du dépôt
 BACKEND_DIR = Path(__file__).resolve().parents[2]
@@ -29,10 +31,12 @@ class Settings(BaseSettings):
 
     # --- API ---
     API_V1_PREFIX: str = "/api/v1"
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+    BACKEND_CORS_ORIGINS: Annotated[list[str], NoDecode] = ["http://localhost:3000"]
 
     # --- Base de données ---
-    DATABASE_URL: str = "postgresql+psycopg://smartcampus:smartcampus@localhost:5432/smartcampus"
+    DATABASE_URL: str = (
+        "postgresql+psycopg://smartcampus_app:smartcampus_app@localhost:5432/smartcampus"
+    )
 
     # --- Redis ---
     REDIS_URL: str = "redis://localhost:6379/0"
@@ -41,7 +45,10 @@ class Settings(BaseSettings):
     @classmethod
     def _split_origins(cls, value: object) -> object:
         """Accepte une liste JSON ou une chaîne d'origines séparées par des virgules."""
-        if isinstance(value, str) and not value.strip().startswith("["):
+        if isinstance(value, str):
+            value = value.strip()
+            if value.startswith("["):
+                return json.loads(value)
             return [origin.strip() for origin in value.split(",") if origin.strip()]
         return value
 
