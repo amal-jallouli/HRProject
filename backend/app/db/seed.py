@@ -17,6 +17,7 @@ ATTENTION - données fictives :
 """
 
 from dataclasses import dataclass
+from datetime import date
 from decimal import Decimal
 
 import bcrypt
@@ -25,10 +26,16 @@ from sqlalchemy.orm import Session
 
 from app.db.session import SessionLocal
 from app.models import Institution, Program, ProgramYear, User
-from app.models.enums import ProgramLevel, UserRole
+from app.models.enums import ProgramLevel, PublicationStatus, UserRole
 
 DEMO_PASSWORD = "Demo@2026"  # mot de passe de TOUS les comptes de démonstration
 YEARS = ("2026-2027", "2027-2028")
+
+# Modalités de paiement INDICATIVES
+PAYMENT_TERMS = {
+    "IIT": "Paiement en 3 tranches : 50 % à l'inscription, 25 % en janvier, 25 % en avril.",
+    "ISB": "Paiement par semestre : 50 % à l'inscription, 50 % au début du second semestre.",
+}
 
 BAC_SCIENTIFIQUES = [
     "Mathématiques",
@@ -55,7 +62,9 @@ class ProgramSpec:
     skills_tags: list[str]
     bac_sections: list[str] | None
     min_average: Decimal
-    tuition: tuple[int, int]  # (2026-2027, 2027-2028) en TND : la scolarité augmente chaque année
+    tuition: tuple[
+        int, int
+    ]  # (2026-2027, 2027-2028) en TND : la scolarité augmente chaque année
     registration_fee: int
 
 
@@ -240,7 +249,13 @@ PROGRAMS: list[ProgramSpec] = [
         "Transferts de chaleur et de matière, Réacteurs chimiques, Environnement, Sécurité "
         "industrielle.",
         "Ingénieur procédés, ingénieur environnement, responsable HSE, ingénieur de production.",
-        ["procédés", "chimie", "environnement", "thermodynamique", "sécurité industrielle"],
+        [
+            "procédés",
+            "chimie",
+            "environnement",
+            "thermodynamique",
+            "sécurité industrielle",
+        ],
         None,
         Decimal("12.00"),
         (7500, 7900),
@@ -367,7 +382,9 @@ def seed(session: Session) -> dict[str, int]:
     for spec in PROGRAMS:
         inst = institutions[spec.institution]
         program = session.scalar(
-            select(Program).where(Program.institution_id == inst.id, Program.name == spec.name)
+            select(Program).where(
+                Program.institution_id == inst.id, Program.name == spec.name
+            )
         )
         if program is None:
             program = Program(
@@ -386,7 +403,8 @@ def seed(session: Session) -> dict[str, int]:
         for year, tuition in zip(YEARS, spec.tuition, strict=True):
             exists = session.scalar(
                 select(ProgramYear.id).where(
-                    ProgramYear.program_id == program.id, ProgramYear.academic_year == year
+                    ProgramYear.program_id == program.id,
+                    ProgramYear.academic_year == year,
                 )
             )
             if exists is None:
@@ -398,6 +416,11 @@ def seed(session: Session) -> dict[str, int]:
                         registration_fee=Decimal(spec.registration_fee),
                         min_average=spec.min_average,
                         bac_sections=spec.bac_sections,
+                        payment_terms=PAYMENT_TERMS[spec.institution],
+                        status=PublicationStatus.published,
+                        # offre valable de juin (ouverture des inscriptions) à fin août de l'année
+                        valid_from=date(int(year[:4]), 6, 1),
+                        valid_until=date(int(year[5:]), 8, 31),
                     )
                 )
                 created["program_years"] += 1

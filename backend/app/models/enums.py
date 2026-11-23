@@ -74,6 +74,12 @@ class DocumentStatus(enum.StrEnum):
     outdated = "outdated"
 
 
+class PublicationStatus(enum.StrEnum):
+    draft = "draft"  # en préparation, invisible pour les candidats et l'agent IA
+    published = "published"  # officiel : visible s'il est dans sa période de validité
+    archived = "archived"  # retiré, conservé pour l'historique
+
+
 class JobStatus(enum.StrEnum):
     pending = "pending"
     running = "running"
