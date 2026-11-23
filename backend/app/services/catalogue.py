@@ -13,13 +13,23 @@ from sqlalchemy import ColumnElement, and_, func, or_, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.models import Institution, Preregistration, Program, ProgramYear, Recommendation, User
+from app.models import (
+    Institution,
+    Preregistration,
+    Program,
+    ProgramYear,
+    Recommendation,
+    Subject,
+    User,
+)
 from app.models.enums import ProgramLevel, PublicationStatus, UserRole
 from app.schemas.catalogue import (
     ProgramCreate,
     ProgramUpdate,
     ProgramYearCreate,
     ProgramYearUpdate,
+    SubjectCreate,
+    SubjectUpdate,
 )
 
 
@@ -376,3 +386,69 @@ def archive_year(db: Session, user: User, program_id: uuid.UUID, academic_year: 
     db.commit()
     db.refresh(year)
     return year
+
+
+# ======================================================================== matières
+def _subject_query(program_id: uuid.UUID, semester: int | None, q: str | None):
+    stmt = select(Subject).where(Subject.program_id == program_id)
+    if semester is not None:
+        stmt = stmt.where(Subject.semester == semester)
+    if q:
+        stmt = stmt.where(Subject.name.ilike(f"%{_escape_like(q.strip())}%", escape="\\"))
+    return stmt.order_by(Subject.semester, Subject.name)
+
+
+def list_public_subjects(
+    db: Session, program_id: uuid.UUID, semester: int | None, q: str | None
+) -> list[Subject]:
+    program = db.get(Program, program_id)
+    if program is None or not program.is_active:
+        raise _error(status.HTTP_404_NOT_FOUND, "Formation introuvable")
+    return list(db.scalars(_subject_query(program_id, semester, q)))
+
+
+def list_subjects(
+    db: Session, user: User, program_id: uuid.UUID, semester: int | None, q: str | None
+) -> list[Subject]:
+    program = get_program_for_user(db, user, program_id)
+    return list(db.scalars(_subject_query(program.id, semester, q)))
+
+
+def _get_subject(db: Session, user: User, program_id: uuid.UUID, subject_id: uuid.UUID) -> Subject:
+    program = get_program_for_user(db, user, program_id)
+    subject = db.get(Subject, subject_id)
+    if subject is None or subject.program_id != program.id:
+        raise _error(status.HTTP_404_NOT_FOUND, "Matière introuvable pour cette formation")
+    return subject
+
+
+def get_subject(db: Session, user: User, program_id: uuid.UUID, subject_id: uuid.UUID) -> Subject:
+    return _get_subject(db, user, program_id, subject_id)
+
+
+_SUBJECT_CONFLICT = "Cette matière existe déjà dans ce semestre"
+
+
+def create_subject(db: Session, user: User, program_id: uuid.UUID, data: SubjectCreate) -> Subject:
+    program = get_program_for_user(db, user, program_id)
+    subject = Subject(program_id=program.id, **data.model_dump())
+    db.add(subject)
+    _commit(db, _SUBJECT_CONFLICT)
+    db.refresh(subject)
+    return subject
+
+
+def update_subject(
+    db: Session, user: User, program_id: uuid.UUID, subject_id: uuid.UUID, data: SubjectUpdate
+) -> Subject:
+    subject = _get_subject(db, user, program_id, subject_id)
+    for field, value in data.model_dump(exclude_unset=True).items():
+        setattr(subject, field, value)
+    _commit(db, _SUBJECT_CONFLICT)
+    db.refresh(subject)
+    return subject
+
+
+def delete_subject(db: Session, user: User, program_id: uuid.UUID, subject_id: uuid.UUID) -> None:
+    db.delete(_get_subject(db, user, program_id, subject_id))
+    db.commit()

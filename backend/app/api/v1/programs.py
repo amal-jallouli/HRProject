@@ -9,7 +9,7 @@ from typing import Annotated
 from fastapi import APIRouter, Query, Response, status
 
 from app.api.deps import CatalogueManager, DbSession, Pagination
-from app.models import Program, ProgramYear
+from app.models import Program, ProgramYear, Subject
 from app.models.enums import ProgramLevel
 from app.schemas.catalogue import (
     ProgramCreate,
@@ -18,6 +18,9 @@ from app.schemas.catalogue import (
     ProgramYearCreate,
     ProgramYearOut,
     ProgramYearUpdate,
+    SubjectCreate,
+    SubjectOut,
+    SubjectUpdate,
 )
 from app.schemas.common import Page
 from app.services import catalogue as service
@@ -126,3 +129,50 @@ def archive_year(
     program_id: uuid.UUID, academic_year: str, db: DbSession, user: CatalogueManager
 ) -> ProgramYear:
     return service.archive_year(db, user, program_id, academic_year)
+
+
+# ------------------------------------------------------- matières (programme pédagogique)
+@router.get("/{program_id}/subjects", response_model=list[SubjectOut])
+def list_subjects(
+    program_id: uuid.UUID,
+    db: DbSession,
+    user: CatalogueManager,
+    semester: Annotated[int | None, Query(ge=1, le=12)] = None,
+    q: Annotated[str | None, Query(max_length=100)] = None,
+) -> list[Subject]:
+    return service.list_subjects(db, user, program_id, semester, q)
+
+
+@router.post(
+    "/{program_id}/subjects", response_model=SubjectOut, status_code=status.HTTP_201_CREATED
+)
+def create_subject(
+    program_id: uuid.UUID, body: SubjectCreate, db: DbSession, user: CatalogueManager
+) -> Subject:
+    return service.create_subject(db, user, program_id, body)
+
+
+@router.get("/{program_id}/subjects/{subject_id}", response_model=SubjectOut)
+def get_subject(
+    program_id: uuid.UUID, subject_id: uuid.UUID, db: DbSession, user: CatalogueManager
+) -> Subject:
+    return service.get_subject(db, user, program_id, subject_id)
+
+
+@router.patch("/{program_id}/subjects/{subject_id}", response_model=SubjectOut)
+def update_subject(
+    program_id: uuid.UUID,
+    subject_id: uuid.UUID,
+    body: SubjectUpdate,
+    db: DbSession,
+    user: CatalogueManager,
+) -> Subject:
+    return service.update_subject(db, user, program_id, subject_id, body)
+
+
+@router.delete("/{program_id}/subjects/{subject_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_subject(
+    program_id: uuid.UUID, subject_id: uuid.UUID, db: DbSession, user: CatalogueManager
+) -> Response:
+    service.delete_subject(db, user, program_id, subject_id)
+    return Response(status_code=status.HTTP_204_NO_CONTENT)

@@ -89,3 +89,25 @@ class ProgramYear(Base):
     )
     valid_from: Mapped[date | None] = mapped_column(Date)
     valid_until: Mapped[date | None] = mapped_column(Date)
+
+
+class Subject(Base):
+    """Matière d'une formation : le programme pédagogique est l'ensemble de ses matières."""
+
+    __tablename__ = "subjects"
+    __table_args__ = (
+        UniqueConstraint("program_id", "semester", "name"),
+        CheckConstraint("semester BETWEEN 1 AND 12", name="semester_range"),
+        CheckConstraint("credits IS NULL OR credits >= 0", name="credits_non_negative"),
+    )
+
+    id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()")
+    )
+    program_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("programs.id", ondelete="CASCADE"), index=True
+    )
+    name: Mapped[str] = mapped_column(String(200))
+    semester: Mapped[int] = mapped_column(SmallInteger)
+    credits: Mapped[int | None] = mapped_column(SmallInteger)
+    description: Mapped[str | None] = mapped_column(Text)

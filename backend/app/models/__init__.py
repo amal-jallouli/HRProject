@@ -14,7 +14,7 @@ from app.models.candidatures import (
     Recommendation,
     User,
 )
-from app.models.catalogue import Institution, Program, ProgramYear
+from app.models.catalogue import Institution, Program, ProgramYear, Subject
 from app.models.documents import AgentRun, Document, DocumentChunk, SyncJob
 
 __all__ = [
@@ -30,6 +30,7 @@ __all__ = [
     "Preregistration",
     "Program",
     "ProgramYear",
+    "Subject",
     "Qcm",
     "Recommendation",
     "SyncJob",

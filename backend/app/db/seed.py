@@ -24,14 +24,15 @@ import bcrypt
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.db.seed_subjects import subjects_for
 from app.db.session import SessionLocal
-from app.models import Institution, Program, ProgramYear, User
+from app.models import Institution, Program, ProgramYear, Subject, User
 from app.models.enums import ProgramLevel, PublicationStatus, UserRole
 
 DEMO_PASSWORD = "Demo@2026"  # mot de passe de TOUS les comptes de démonstration
 YEARS = ("2026-2027", "2027-2028")
 
-# Modalités de paiement INDICATIVES
+# Modalités de paiement INDICATIVES (à remplacer par celles de l'administration)
 PAYMENT_TERMS = {
     "IIT": "Paiement en 3 tranches : 50 % à l'inscription, 25 % en janvier, 25 % en avril.",
     "ISB": "Paiement par semestre : 50 % à l'inscription, 50 % au début du second semestre.",
@@ -62,9 +63,7 @@ class ProgramSpec:
     skills_tags: list[str]
     bac_sections: list[str] | None
     min_average: Decimal
-    tuition: tuple[
-        int, int
-    ]  # (2026-2027, 2027-2028) en TND : la scolarité augmente chaque année
+    tuition: tuple[int, int]  # (2026-2027, 2027-2028) en TND : la scolarité augmente chaque année
     registration_fee: int
 
 
@@ -249,13 +248,7 @@ PROGRAMS: list[ProgramSpec] = [
         "Transferts de chaleur et de matière, Réacteurs chimiques, Environnement, Sécurité "
         "industrielle.",
         "Ingénieur procédés, ingénieur environnement, responsable HSE, ingénieur de production.",
-        [
-            "procédés",
-            "chimie",
-            "environnement",
-            "thermodynamique",
-            "sécurité industrielle",
-        ],
+        ["procédés", "chimie", "environnement", "thermodynamique", "sécurité industrielle"],
         None,
         Decimal("12.00"),
         (7500, 7900),
@@ -365,7 +358,7 @@ def _hash_password(password: str) -> str:
 
 def seed(session: Session) -> dict[str, int]:
     """Insère les données manquantes ; retourne le nombre de lignes créées par table."""
-    created = {"institutions": 0, "programs": 0, "program_years": 0, "users": 0}
+    created = {"institutions": 0, "programs": 0, "program_years": 0, "subjects": 0, "users": 0}
 
     # --- Institutions
     institutions: dict[str, Institution] = {}
@@ -382,9 +375,7 @@ def seed(session: Session) -> dict[str, int]:
     for spec in PROGRAMS:
         inst = institutions[spec.institution]
         program = session.scalar(
-            select(Program).where(
-                Program.institution_id == inst.id, Program.name == spec.name
-            )
+            select(Program).where(Program.institution_id == inst.id, Program.name == spec.name)
         )
         if program is None:
             program = Program(
@@ -403,8 +394,7 @@ def seed(session: Session) -> dict[str, int]:
         for year, tuition in zip(YEARS, spec.tuition, strict=True):
             exists = session.scalar(
                 select(ProgramYear.id).where(
-                    ProgramYear.program_id == program.id,
-                    ProgramYear.academic_year == year,
+                    ProgramYear.program_id == program.id, ProgramYear.academic_year == year
                 )
             )
             if exists is None:
@@ -424,6 +414,25 @@ def seed(session: Session) -> dict[str, int]:
                     )
                 )
                 created["program_years"] += 1
+
+        # --- Matières (programme pédagogique)
+        for semester, subject_name, credits in subjects_for(spec.name):
+            if (
+                session.scalar(
+                    select(Subject.id).where(
+                        Subject.program_id == program.id,
+                        Subject.semester == semester,
+                        Subject.name == subject_name,
+                    )
+                )
+                is None
+            ):
+                session.add(
+                    Subject(
+                        program_id=program.id, name=subject_name, semester=semester, credits=credits
+                    )
+                )
+                created["subjects"] += 1
 
     # --- Comptes responsables (mot de passe haché avec bcrypt)
     for email, full_name, role, inst_code in DEMO_USERS:

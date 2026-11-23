@@ -7,9 +7,9 @@ from fastapi import APIRouter, Query
 from sqlalchemy import select
 
 from app.api.deps import DbSession, Pagination, Today
-from app.models import Institution
+from app.models import Institution, Subject
 from app.models.enums import ProgramLevel
-from app.schemas.catalogue import CatalogueProgramOut, InstitutionOut, OfferOut
+from app.schemas.catalogue import CatalogueProgramOut, InstitutionOut, OfferOut, SubjectOut
 from app.schemas.common import Page
 from app.services import catalogue as service
 
@@ -73,6 +73,20 @@ def get_offer(
     academic_year: Annotated[str | None, Query(pattern=r"^\d{4}-\d{4}$")] = None,
 ):
     return service.get_valid_offer(db, program_id, today, academic_year)
+
+
+@router.get(
+    "/programs/{program_id}/subjects",
+    response_model=list[SubjectOut],
+    summary="Matières (programme pédagogique) d'une formation",
+)
+def list_subjects(
+    program_id: uuid.UUID,
+    db: DbSession,
+    semester: Annotated[int | None, Query(ge=1, le=12)] = None,
+    q: Annotated[str | None, Query(max_length=100)] = None,
+) -> list[Subject]:
+    return service.list_public_subjects(db, program_id, semester, q)
 
 
 def _to_out(program, offer) -> CatalogueProgramOut:

@@ -162,3 +162,38 @@ class CatalogueProgramOut(ProgramOut):
     """Formation + offre valide du jour (None si aucune offre publiée et valide)."""
 
     offer: OfferOut | None = None
+
+
+# ------------------------------------------------------------------------ subjects
+class SubjectBase(BaseModel):
+    name: Name
+    semester: Annotated[int, Field(ge=1, le=12)]
+    credits: Annotated[int, Field(ge=0, le=60)] | None = None
+    description: str | None = None
+
+
+class SubjectCreate(SubjectBase):
+    pass
+
+
+class SubjectUpdate(BaseModel):
+    """PATCH : seuls les champs envoyés sont modifiés."""
+
+    name: Name | None = None
+    semester: Annotated[int, Field(ge=1, le=12)] | None = None
+    credits: Annotated[int, Field(ge=0, le=60)] | None = None
+    description: str | None = None
+
+    @model_validator(mode="after")
+    def _no_null_on_required(self) -> Self:
+        for field in ("name", "semester"):
+            if field in self.model_fields_set and getattr(self, field) is None:
+                raise ValueError(f"{field} ne peut pas être null")
+        return self
+
+
+class SubjectOut(SubjectBase):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: uuid.UUID
+    program_id: uuid.UUID
