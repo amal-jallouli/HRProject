@@ -23,7 +23,7 @@ endif
         backend-install backend-run backend-test backend-lint backend-format \
         frontend-install frontend-dev frontend-build frontend-lint \
         db-shell redis-cli lint \
-				db-upgrade db-downgrade db-revision
+				db-upgrade db-downgrade db-revision db-seed
 
 help: ## Affiche cette aide
 	@grep -hE '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -100,6 +100,9 @@ db-downgrade: ## Annule la dernière migration
 
 db-revision: ## Génère une migration : make db-revision m="message"
 	$(PY) -m alembic -c $(BACKEND_DIR)/alembic.ini revision --autogenerate -m "$(m)"
+
+db-seed: ## Insère les données de démonstration (idempotent)
+	$(PY) -m app.db.seed
 
 ## --- Utilitaires ---------------------------------------------------
 
