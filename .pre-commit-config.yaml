@@ -1,0 +1,39 @@
+# ============================================================
+# SmartCampus AI - Hooks pre-commit
+# Installation : pip install pre-commit && pre-commit install
+# ============================================================
+
+repos:
+  # --- Vérifications génériques ---
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+        exclude: ^frontend/tsconfig\.json$
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  # --- Backend : formatage et lint Python (ruff) ---
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+        files: ^backend/
+      - id: ruff-format
+        files: ^backend/
+
+  # --- Frontend : formatage (prettier local au projet) ---
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier (frontend)
+        entry: npx --prefix frontend prettier --write
+        language: system
+        files: ^frontend/.*\.(ts|tsx|js|jsx|json|css|md)$
+        pass_filenames: true
