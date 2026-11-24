@@ -1,0 +1,466 @@
+{
+  "meta": {
+    "nom": "SmartCampus AI – Jeu d'évaluation LLM (SA-32)",
+    "version": "1.0",
+    "date": "2026-11-22",
+    "langues": {
+      "fr": "Français",
+      "tn_ar": "Dialecte tunisien (écriture arabe)",
+      "arabizi": "Dialecte tunisien en Arabizi (latin + chiffres)",
+      "mixte": "Code-switching français / tunisien"
+    },
+    "intentions": {
+      "SALUTATION": "salutation, remerciement ou clôture",
+      "INFO_FORMATION": "question sur une formation (contenu, durée, conditions, débouchés, passerelles)",
+      "COMPARAISON": "demande de comparer des parcours",
+      "ORIENTATION": "demande de conseil d'orientation",
+      "PROFIL": "le candidat donne des informations sur lui (notes, goûts, contraintes) sans question précise",
+      "PREINSCRIPTION": "inscription, préinscription, demande de contact ou de rendez-vous",
+      "HORS_SUJET": "sans rapport avec l'orientation universitaire"
+    },
+    "champs_profil": [
+      "niveau",
+      "section_bac",
+      "moyenne",
+      "interets",
+      "preferences",
+      "points_faibles",
+      "contraintes",
+      "ville",
+      "demande_contact"
+    ],
+    "nb_questions": 40
+  },
+  "questions": [
+    {
+      "id": "FR-01",
+      "langue": "fr",
+      "groupe_parallele": "G01_salutation",
+      "question": "Bonjour, je suis en terminale et je cherche des informations sur l'IIT.",
+      "intention_attendue": "SALUTATION",
+      "profil_attendu": {
+        "niveau": "terminale"
+      },
+      "comportement_attendu": "Saluer dans la langue/registre du candidat et l'inviter à présenter son projet d'orientation."
+    },
+    {
+      "id": "FR-02",
+      "langue": "fr",
+      "groupe_parallele": "G09_formations_isb",
+      "question": "Quelles sont les formations proposées par l'ISB ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "FR-03",
+      "langue": "fr",
+      "groupe_parallele": "G02_comparaison",
+      "question": "Quelle est la différence entre la prépa et la licence à l'IIT ?",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "comportement_attendu": "Comparer les parcours de façon structurée (durée, approche, débouchés) sans inventer de règles précises ; proposer d'affiner selon le profil."
+    },
+    {
+      "id": "FR-04",
+      "langue": "fr",
+      "groupe_parallele": "G03_orientation_profil",
+      "question": "J'ai eu 14 au bac maths et j'aime la programmation. Quelle formation me conseillez-vous ?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "section_bac": "mathématiques",
+        "moyenne": 14,
+        "interets": [
+          "programmation"
+        ]
+      },
+      "comportement_attendu": "Prendre en compte le profil exprimé, proposer des pistes justifiées sans imposer, et poser au moins une question complémentaire."
+    },
+    {
+      "id": "FR-05",
+      "langue": "fr",
+      "groupe_parallele": "G08_debouches",
+      "question": "Quels sont les débouchés après le cycle ingénieur en informatique ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "FR-06",
+      "langue": "fr",
+      "groupe_parallele": "G05_preinscription",
+      "question": "Je veux m'inscrire en licence, comment je fais ?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "comportement_attendu": "Expliquer qu'il est possible de lancer la préinscription / la demande de contact et demander les informations manquantes, sans promettre une décision officielle."
+    },
+    {
+      "id": "FR-07",
+      "langue": "fr",
+      "groupe_parallele": "G07_passerelle",
+      "question": "Est-ce qu'il y a des passerelles entre la licence et le cycle ingénieur ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "FR-08",
+      "langue": "fr",
+      "groupe_parallele": "G06_profil_preferences",
+      "question": "Je préfère une formation pratique et je ne suis pas très fort en physique.",
+      "intention_attendue": "PROFIL",
+      "profil_attendu": {
+        "preferences": [
+          "pratique"
+        ],
+        "points_faibles": [
+          "physique"
+        ]
+      },
+      "comportement_attendu": "Prendre acte des informations (les reformuler) et poser une question pour compléter le profil."
+    },
+    {
+      "id": "FR-09",
+      "langue": "fr",
+      "groupe_parallele": "G10_hors_sujet",
+      "question": "Tu peux m'aider à écrire mon CV ?",
+      "intention_attendue": "HORS_SUJET",
+      "profil_attendu": {},
+      "comportement_attendu": "Décliner poliment et recentrer la conversation sur l'orientation universitaire."
+    },
+    {
+      "id": "FR-10",
+      "langue": "fr",
+      "groupe_parallele": "G11_conditions_acces",
+      "question": "J'ai un bac technique, est-ce que je peux accéder à la prépa ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {
+        "section_bac": "technique"
+      },
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "TN-01",
+      "langue": "tn_ar",
+      "groupe_parallele": "G01_salutation",
+      "question": "عسلامة، نحب نعرف شنوة القرايات اللي عندكم",
+      "intention_attendue": "SALUTATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Saluer dans la langue/registre du candidat et l'inviter à présenter son projet d'orientation."
+    },
+    {
+      "id": "TN-02",
+      "langue": "tn_ar",
+      "groupe_parallele": "G02_comparaison",
+      "question": "شنوة الفرق بين البريبا والليسانس؟",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "comportement_attendu": "Comparer les parcours de façon structurée (durée, approche, débouchés) sans inventer de règles précises ; proposer d'affiner selon le profil."
+    },
+    {
+      "id": "TN-03",
+      "langue": "tn_ar",
+      "groupe_parallele": "G03_orientation_profil",
+      "question": "جبت الباك رياضيات بـ 13 ونحب الإعلامية، شنوة تنصحني نقرا؟",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "section_bac": "mathématiques",
+        "moyenne": 13,
+        "interets": [
+          "informatique"
+        ]
+      },
+      "comportement_attendu": "Prendre en compte le profil exprimé, proposer des pistes justifiées sans imposer, et poser au moins une question complémentaire."
+    },
+    {
+      "id": "TN-04",
+      "langue": "tn_ar",
+      "groupe_parallele": "G04_duree",
+      "question": "قداش تدوم القراية في الإنجينيور؟",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "TN-05",
+      "langue": "tn_ar",
+      "groupe_parallele": "G05_preinscription",
+      "question": "كيفاش نعمل الإنسكريبسيون؟",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "comportement_attendu": "Expliquer qu'il est possible de lancer la préinscription / la demande de contact et demander les informations manquantes, sans promettre une décision officielle."
+    },
+    {
+      "id": "TN-06",
+      "langue": "tn_ar",
+      "groupe_parallele": "G06_profil_preferences",
+      "question": "ما نحبش الفيزيك برشا ونحب حاجة فيها تطبيق",
+      "intention_attendue": "PROFIL",
+      "profil_attendu": {
+        "preferences": [
+          "pratique"
+        ],
+        "points_faibles": [
+          "physique"
+        ]
+      },
+      "comportement_attendu": "Prendre acte des informations (les reformuler) et poser une question pour compléter le profil."
+    },
+    {
+      "id": "TN-07",
+      "langue": "tn_ar",
+      "groupe_parallele": "G07_passerelle",
+      "question": "بعد الليسانس نجم نكمل إنجينيور؟",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "TN-08",
+      "langue": "tn_ar",
+      "groupe_parallele": "G08_debouches",
+      "question": "شنوة الخدمة اللي نجم نلقاها بعد الـ ISB؟",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "TN-09",
+      "langue": "tn_ar",
+      "groupe_parallele": "G10_hors_sujet",
+      "question": "شكون ربح الماتش البارح؟",
+      "intention_attendue": "HORS_SUJET",
+      "profil_attendu": {},
+      "comportement_attendu": "Décliner poliment et recentrer la conversation sur l'orientation universitaire."
+    },
+    {
+      "id": "TN-10",
+      "langue": "tn_ar",
+      "groupe_parallele": "G12_contact",
+      "question": "نحب تعيطولي باش تفسرولي أكثر",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {
+        "demande_contact": true
+      },
+      "comportement_attendu": "Expliquer qu'il est possible de lancer la préinscription / la demande de contact et demander les informations manquantes, sans promettre une décision officielle."
+    },
+    {
+      "id": "AZ-01",
+      "langue": "arabizi",
+      "groupe_parallele": "G01_salutation",
+      "question": "Ahla, labes?",
+      "intention_attendue": "SALUTATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Saluer dans la langue/registre du candidat et l'inviter à présenter son projet d'orientation."
+    },
+    {
+      "id": "AZ-02",
+      "langue": "arabizi",
+      "groupe_parallele": "G02_comparaison",
+      "question": "Chnowa el far9 bin prépa w licence?",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "comportement_attendu": "Comparer les parcours de façon structurée (durée, approche, débouchés) sans inventer de règles précises ; proposer d'affiner selon le profil."
+    },
+    {
+      "id": "AZ-03",
+      "langue": "arabizi",
+      "groupe_parallele": "G03_orientation_profil",
+      "question": "5dhit bac info b 12, nheb el dev barcha, chnowa tnasa7ni?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "section_bac": "informatique",
+        "moyenne": 12,
+        "interets": [
+          "développement"
+        ]
+      },
+      "comportement_attendu": "Prendre en compte le profil exprimé, proposer des pistes justifiées sans imposer, et poser au moins une question complémentaire."
+    },
+    {
+      "id": "AZ-04",
+      "langue": "arabizi",
+      "groupe_parallele": "G04_duree",
+      "question": "9adeh ya5ou wa9t el cycle ingénieur?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "AZ-05",
+      "langue": "arabizi",
+      "groupe_parallele": "G05_preinscription",
+      "question": "Nheb nsajel fel licence, chnowa lezem?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "comportement_attendu": "Expliquer qu'il est possible de lancer la préinscription / la demande de contact et demander les informations manquantes, sans promettre une décision officielle."
+    },
+    {
+      "id": "AZ-06",
+      "langue": "arabizi",
+      "groupe_parallele": "G06_profil_preferences",
+      "question": "Ena mouch 9wi fel maths ama nheb l'informatique",
+      "intention_attendue": "PROFIL",
+      "profil_attendu": {
+        "interets": [
+          "informatique"
+        ],
+        "points_faibles": [
+          "mathématiques"
+        ]
+      },
+      "comportement_attendu": "Prendre acte des informations (les reformuler) et poser une question pour compléter le profil."
+    },
+    {
+      "id": "AZ-07",
+      "langue": "arabizi",
+      "groupe_parallele": "G07_passerelle",
+      "question": "Ba3d el licence najjem nod5ol cycle ingénieur?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "AZ-08",
+      "langue": "arabizi",
+      "groupe_parallele": "G08_debouches",
+      "question": "Chnowa el 5edma elli nal9aha ba3d ISB?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "AZ-09",
+      "langue": "arabizi",
+      "groupe_parallele": "G09_formations_iit",
+      "question": "Chniya les formations elli 3andkom fel IIT?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "AZ-10",
+      "langue": "arabizi",
+      "groupe_parallele": "G10_hors_sujet",
+      "question": "A3tini recette mta3 couscous",
+      "intention_attendue": "HORS_SUJET",
+      "profil_attendu": {},
+      "comportement_attendu": "Décliner poliment et recentrer la conversation sur l'orientation universitaire."
+    },
+    {
+      "id": "MX-01",
+      "langue": "mixte",
+      "groupe_parallele": "G08_debouches",
+      "question": "Salut, ena fi terminale w nheb na3ref les débouchés mta3 génie logiciel",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {
+        "niveau": "terminale",
+        "interets": [
+          "génie logiciel"
+        ]
+      },
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "MX-02",
+      "langue": "mixte",
+      "groupe_parallele": "G13_difficulte",
+      "question": "Est-ce que la prépa s3iba barcha wala normal?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Répondre de façon générale SANS inventer de chiffres, conditions ou durées précises ; indiquer que l'information officielle sera vérifiée (RAG) ou proposer de la vérifier."
+    },
+    {
+      "id": "MX-03",
+      "langue": "mixte",
+      "groupe_parallele": "G03_orientation_profil",
+      "question": "Bonjour, عندي باك علوم تجريبية, est-ce que nnajjem na9ra informatique?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "section_bac": "sciences expérimentales",
+        "interets": [
+          "informatique"
+        ]
+      },
+      "comportement_attendu": "Prendre en compte le profil exprimé, proposer des pistes justifiées sans imposer, et poser au moins une question complémentaire."
+    },
+    {
+      "id": "MX-04",
+      "langue": "mixte",
+      "groupe_parallele": "G03_orientation_profil",
+      "question": "J'hésite entre prépa w licence, nheb voie pratique w progressive",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "preferences": [
+          "pratique",
+          "progressive"
+        ]
+      },
+      "comportement_attendu": "Prendre en compte le profil exprimé, proposer des pistes justifiées sans imposer, et poser au moins une question complémentaire."
+    },
+    {
+      "id": "MX-05",
+      "langue": "mixte",
+      "groupe_parallele": "G05_preinscription",
+      "question": "Comment je fais la préinscription, w chnowa les papiers elli lezmin?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "comportement_attendu": "Expliquer qu'il est possible de lancer la préinscription / la demande de contact et demander les informations manquantes, sans promettre une décision officielle."
+    },
+    {
+      "id": "MX-06",
+      "langue": "mixte",
+      "groupe_parallele": "G06_profil_preferences",
+      "question": "Ma moyenne c'est 15, ama ma n7ebech na9ra 5 ans",
+      "intention_attendue": "PROFIL",
+      "profil_attendu": {
+        "moyenne": 15,
+        "contraintes": [
+          "durée courte"
+        ]
+      },
+      "comportement_attendu": "Prendre acte des informations (les reformuler) et poser une question pour compléter le profil."
+    },
+    {
+      "id": "MX-07",
+      "langue": "mixte",
+      "groupe_parallele": "G02_comparaison",
+      "question": "Compare-moi licence info w ingénieur, chkoun a7sen pour le travail?",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "comportement_attendu": "Comparer les parcours de façon structurée (durée, approche, débouchés) sans inventer de règles précises ; proposer d'affiner selon le profil."
+    },
+    {
+      "id": "MX-08",
+      "langue": "mixte",
+      "groupe_parallele": "G14_contrainte_geo",
+      "question": "Ena men Sfax w ma najjemch nbadel el wileya",
+      "intention_attendue": "PROFIL",
+      "profil_attendu": {
+        "ville": "Sfax",
+        "contraintes": [
+          "géographique"
+        ]
+      },
+      "comportement_attendu": "Prendre acte des informations (les reformuler) et poser une question pour compléter le profil."
+    },
+    {
+      "id": "MX-09",
+      "langue": "mixte",
+      "groupe_parallele": "G12_contact",
+      "question": "Tu peux me fixer un rendez-vous pour l'entretien?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "comportement_attendu": "Expliquer qu'il est possible de lancer la préinscription / la demande de contact et demander les informations manquantes, sans promettre une décision officielle."
+    },
+    {
+      "id": "MX-10",
+      "langue": "mixte",
+      "groupe_parallele": "G01_salutation",
+      "question": "Ok merci, ya3tik essa7a",
+      "intention_attendue": "SALUTATION",
+      "profil_attendu": {},
+      "comportement_attendu": "Saluer dans la langue/registre du candidat et l'inviter à présenter son projet d'orientation."
+    }
+  ]
+}

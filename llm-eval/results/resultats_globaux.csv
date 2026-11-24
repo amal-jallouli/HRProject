@@ -1,0 +1,4 @@
+﻿model,score_final,score_global,json_valide,langue_acc,intention_acc,intention_f1,profil_rappel,script_reponse_ok,chiffres_suspects,latence_moy_s,tokens_par_s,pertinence_moy,registre_ok,hallucination,n
+gemma4:e2b-it-qat,73.3,72.2,0.9833,0.6167,0.7,0.721,0.6757,0.8333,0.1429,18.9598,6.5485,3.325,0.575,0.025,60
+llama3.2:3b,51.3,55.9,0.95,0.1667,0.4333,0.3877,0.7568,0.9167,0.2857,47.1808,4.2573,1.95,0.5,0.325,60
+qwen3.5:4b,68.2,80.2,1.0,0.7167,0.7667,0.7502,0.973,0.9167,0.3571,54.8035,4.5428,2.425,0.8,0.45,60
