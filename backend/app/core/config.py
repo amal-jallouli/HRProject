@@ -40,6 +40,7 @@ class Settings(BaseSettings):
 
     # --- Redis ---
     REDIS_URL: str = "redis://localhost:6379/0"
+<<<<<<< HEAD
     
 
     # --- Sessions visiteurs (SA-25) ---
@@ -57,6 +58,9 @@ class Settings(BaseSettings):
     VISITOR_MEMORY_MAX_MESSAGES: int = 20
     # Longueur maximale d'un message enregistré, en caractères
     VISITOR_MESSAGE_MAX_LENGTH: int = 2000
+=======
+
+>>>>>>> f768d88d53bdd019ee98eeb8ce8ba5af5f7a1e3d
     @field_validator("BACKEND_CORS_ORIGINS", mode="before")
     @classmethod
     def _split_origins(cls, value: object) -> object:
