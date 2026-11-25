@@ -179,9 +179,36 @@ class Qcm(Base):
     interview_summary: Mapped[str | None] = mapped_column(Text)
 
 
+class InterviewerSlot(Base):
+    """Créneau d'entretien que le responsable d'entretien met à disposition."""
+
+    __tablename__ = "interviewer_slots"
+    __table_args__ = (
+        CheckConstraint("ends_at > starts_at", name="ends_after_starts"),
+        UniqueConstraint("interviewer_id", "starts_at"),
+    )
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), **_UUID_PK)
+    interviewer_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    starts_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    ends_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+
 class Appointment(Base):
     __tablename__ = "appointments"
-    __table_args__ = (CheckConstraint("ends_at > starts_at", name="ends_after_starts"),)
+    __table_args__ = (
+        CheckConstraint("ends_at > starts_at", name="ends_after_starts"),
+        # Un créneau ne peut porter qu'un seul rendez-vous non annulé (pas de double réservation).
+        # Annuler le rendez-vous libère le créneau.
+        Index(
+            "uq_appointments_active_slot",
+            "slot_id",
+            unique=True,
+            postgresql_where=text("status <> 'cancelled'"),
+        ),
+    )
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), **_UUID_PK)
     preregistration_id: Mapped[uuid.UUID] = mapped_column(
@@ -189,6 +216,9 @@ class Appointment(Base):
     )
     interviewer_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("users.id", ondelete="SET NULL")
+    )
+    slot_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("interviewer_slots.id", ondelete="SET NULL")
     )
     starts_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     ends_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
