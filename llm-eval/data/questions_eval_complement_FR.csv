@@ -1,0 +1,21 @@
+﻿id,categorie,langue,question,intention_attendue,question_d_origine,comportement_attendu
+FR-11,admission,fr,Quelles sont les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac ?,INFO_FORMATION,,Ne pas inventer de moyenne ni de section exigée ; indiquer que l'information officielle IIT sera vérifiée
+FR-12,admission,fr,Quels documents faut-il fournir pour la préinscription en licence de gestion à l'ISB ?,PREINSCRIPTION,,"Rester général, ne pas inventer de liste ; proposer de lancer la préinscription"
+FR-13,admission,fr,"Après une licence appliquée à l'IIT, est-ce que je peux intégrer directement le cycle ingénieur ?",INFO_FORMATION,,Ne pas affirmer de passerelle sans source ; proposer de vérifier
+FR-14,admission,fr,Est-ce qu'il y a un test ou un entretien pour être admis à l'IIT ?,INFO_FORMATION,,"Mentionner le QCM et l'entretien prévus par la plateforme, sans inventer de modalités"
+FR-15,admission,fr,La licence en administration des affaires de l'ISB est enseignée en anglais : faut-il un niveau d'anglais minimum ?,INFO_FORMATION,,Ne pas inventer de score exigé ; proposer de vérifier
+FR-16,admission,fr,"Avec 13 de moyenne au bac technique, vous pouvez me confirmer que je suis admis en génie mécanique ?",PREINSCRIPTION,,Ne jamais confirmer une admission ; renvoyer vers le responsable académique IIT
+FR-17,orientation,fr,"J'hésite entre le génie informatique et les télécommunications à l'IIT, lequel me conviendrait ?",ORIENTATION,,"Poser des questions sur les intérêts du candidat avant de proposer, sans imposer"
+FR-18,orientation,fr,"J'aime créer des sites web et des vidéos, la licence multimédia et web de l'IIT est-elle faite pour moi ?",ORIENTATION,,"Relier le profil à la formation, proposer aussi une alternative"
+FR-19,orientation,fr,"Je veux travailler dans le marketing digital, vaut-il mieux une licence de gestion à l'ISB puis un mastère ?",ORIENTATION,,Proposer un parcours possible sans inventer de conditions
+FR-20,orientation,fr,"Je suis bon en physique et j'aime la robotique, quelle formation de l'IIT me correspond ?",ORIENTATION,,"Proposer des pistes (mécatronique, systèmes embarqués…) en justifiant, sans imposer"
+FR-21,reformulation,fr,C'est quoi la différence entre la prépa intégrée et une licence appliquée à l'IIT ?,COMPARAISON,FR-03,Même compréhension que la question d'origine
+FR-22,reformulation,fr,Prépa de l'IIT ou licence : quel chemin pour devenir ingénieur en informatique ?,COMPARAISON,FR-03,Même compréhension que la question d'origine
+FR-23,reformulation,fr,Comment s'inscrire en licence de développement des systèmes TIC ?,PREINSCRIPTION,FR-06,Même compréhension que la question d'origine
+FR-24,reformulation,fr,Une licence de l'IIT permet-elle ensuite de rejoindre le cycle ingénieur ?,INFO_FORMATION,FR-07,Même compréhension que la question d'origine
+FR-25,reformulation,fr,"Bac maths, 14 de moyenne, passionné de programmation : quelle formation à l'IIT ?",ORIENTATION,FR-04,Même compréhension et même profil extrait que la question d'origine
+FR-26,reformulation,fr,Quels métiers après un diplôme d'ingénieur en génie informatique de l'IIT ?,INFO_FORMATION,FR-05,Même compréhension que la question d'origine
+FR-27,cas_ambigu,fr,C'est combien ?,INFO_FORMATION,,Ne pas deviner : demander de quoi parle le candidat (frais ? durée ? formation ?)
+FR-28,cas_ambigu,fr,"Et pour l'ISB, c'est pareil ?",INFO_FORMATION,,"Demander à quoi « pareil » fait référence (conditions, durée, inscription…)"
+FR-29,cas_ambigu,fr,Je veux m'inscrire.,PREINSCRIPTION,,Demander l'établissement (IIT ou ISB) et la formation visés avant de lancer la préinscription
+FR-30,cas_ambigu,fr,"Le génie, c'est mieux ?",COMPARAISON,,Demander mieux que quoi et selon quel critère

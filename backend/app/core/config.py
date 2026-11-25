@@ -5,7 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Annotated
 
-from pydantic import field_validator
+from pydantic import SecretStr, field_validator
 from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 # backend/app/core/config.py -> backend/ -> racine du dépôt
@@ -40,6 +40,35 @@ class Settings(BaseSettings):
 
     # --- Redis ---
     REDIS_URL: str = "redis://localhost:6379/0"
+
+    # --- Sessions visiteurs (SA-25) ---
+    # Durée de vie d'une session visiteur, en minutes (expiration automatique par Redis)
+    VISITOR_SESSION_TTL_MINUTES: int = 60
+    # Nombre maximal de requêtes par minute pour une même session
+    VISITOR_RATE_LIMIT_PER_MINUTE: int = 30
+    # Nombre maximal de messages qu'un visiteur peut envoyer dans une session
+    VISITOR_MAX_MESSAGES_PER_SESSION: int = 50
+    # Nombre maximal de sessions créées par adresse IP et par heure
+    VISITOR_MAX_SESSIONS_PER_IP_PER_HOUR: int = 10
+
+    # --- Mémoire temporaire des conversations (SA-26) ---
+    # Nombre de derniers messages conservés par session (les plus anciens sont supprimés)
+    VISITOR_MEMORY_MAX_MESSAGES: int = 20
+    # Longueur maximale d'un message enregistré, en caractères
+    VISITOR_MESSAGE_MAX_LENGTH: int = 2000
+
+    # --- LLM (SA-36) ---
+    # Modèle retenu à l'issue du benchmark SA-33, servi en local par Ollama.
+    LLM_BASE_URL: str = "http://localhost:11434"
+    LLM_MODEL: str = "gemma4:e2b-it-qat"
+    LLM_TEMPERATURE: float = 0.2
+    LLM_MAX_TOKENS: int = 400
+    LLM_CONTEXT_SIZE: int = 4096
+    LLM_TIMEOUT_SECONDS: float = 120.0
+    # Clé d'accès facultative (fournisseur distant). Jamais affichée ni renvoyée par l'API.
+    LLM_API_KEY: SecretStr | None = None
+    # Nombre de messages récents de la session transmis au modèle (SA-37)
+    LLM_HISTORY_MAX_MESSAGES: int = 10
 
     @field_validator("BACKEND_CORS_ORIGINS", mode="before")
     @classmethod

@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "nom": "SmartCampus AI – Complément français (SA-32)",
+    "version": "1.0",
+    "date": "2026-11-22",
+    "langues": {
+      "fr": "Français",
+      "tn_ar": "Dialecte tunisien (écriture arabe)",
+      "arabizi": "Dialecte tunisien en Arabizi (latin + chiffres)",
+      "mixte": "Code-switching français / tunisien"
+    },
+    "intentions": {
+      "SALUTATION": "salutation, remerciement ou clôture",
+      "INFO_FORMATION": "question sur une formation (contenu, durée, conditions, débouchés, passerelles)",
+      "COMPARAISON": "demande de comparer des parcours",
+      "ORIENTATION": "demande de conseil d'orientation",
+      "PROFIL": "le candidat donne des informations sur lui (notes, goûts, contraintes) sans question précise",
+      "PREINSCRIPTION": "inscription, préinscription, demande de contact ou de rendez-vous",
+      "HORS_SUJET": "sans rapport avec l'orientation universitaire"
+    },
+    "champs_profil": [
+      "niveau",
+      "section_bac",
+      "moyenne",
+      "interets",
+      "preferences",
+      "points_faibles",
+      "contraintes",
+      "ville",
+      "demande_contact"
+    ],
+    "nb_questions": 20
+  },
+  "questions": [
+    {
+      "id": "FR-11",
+      "langue": "fr",
+      "categorie": "admission",
+      "question": "Quelles sont les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Ne pas inventer de moyenne ni de section exigée ; indiquer que l'information officielle IIT sera vérifiée"
+    },
+    {
+      "id": "FR-12",
+      "langue": "fr",
+      "categorie": "admission",
+      "question": "Quels documents faut-il fournir pour la préinscription en licence de gestion à l'ISB ?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Rester général, ne pas inventer de liste ; proposer de lancer la préinscription"
+    },
+    {
+      "id": "FR-13",
+      "langue": "fr",
+      "categorie": "admission",
+      "question": "Après une licence appliquée à l'IIT, est-ce que je peux intégrer directement le cycle ingénieur ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Ne pas affirmer de passerelle sans source ; proposer de vérifier"
+    },
+    {
+      "id": "FR-14",
+      "langue": "fr",
+      "categorie": "admission",
+      "question": "Est-ce qu'il y a un test ou un entretien pour être admis à l'IIT ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Mentionner le QCM et l'entretien prévus par la plateforme, sans inventer de modalités"
+    },
+    {
+      "id": "FR-15",
+      "langue": "fr",
+      "categorie": "admission",
+      "question": "La licence en administration des affaires de l'ISB est enseignée en anglais : faut-il un niveau d'anglais minimum ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Ne pas inventer de score exigé ; proposer de vérifier"
+    },
+    {
+      "id": "FR-16",
+      "langue": "fr",
+      "categorie": "admission",
+      "question": "Avec 13 de moyenne au bac technique, vous pouvez me confirmer que je suis admis en génie mécanique ?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {
+        "section_bac": "technique",
+        "moyenne": 13
+      },
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Ne jamais confirmer une admission ; renvoyer vers le responsable académique IIT"
+    },
+    {
+      "id": "FR-17",
+      "langue": "fr",
+      "categorie": "orientation",
+      "question": "J'hésite entre le génie informatique et les télécommunications à l'IIT, lequel me conviendrait ?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Poser des questions sur les intérêts du candidat avant de proposer, sans imposer"
+    },
+    {
+      "id": "FR-18",
+      "langue": "fr",
+      "categorie": "orientation",
+      "question": "J'aime créer des sites web et des vidéos, la licence multimédia et web de l'IIT est-elle faite pour moi ?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "interets": [
+          "web"
+        ]
+      },
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Relier le profil à la formation, proposer aussi une alternative"
+    },
+    {
+      "id": "FR-19",
+      "langue": "fr",
+      "categorie": "orientation",
+      "question": "Je veux travailler dans le marketing digital, vaut-il mieux une licence de gestion à l'ISB puis un mastère ?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "interets": [
+          "marketing"
+        ]
+      },
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Proposer un parcours possible sans inventer de conditions"
+    },
+    {
+      "id": "FR-20",
+      "langue": "fr",
+      "categorie": "orientation",
+      "question": "Je suis bon en physique et j'aime la robotique, quelle formation de l'IIT me correspond ?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "interets": [
+          "physique",
+          "robotique"
+        ]
+      },
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Proposer des pistes (mécatronique, systèmes embarqués…) en justifiant, sans imposer"
+    },
+    {
+      "id": "FR-21",
+      "langue": "fr",
+      "categorie": "reformulation",
+      "question": "C'est quoi la différence entre la prépa intégrée et une licence appliquée à l'IIT ?",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "question_d_origine": "FR-03",
+      "groupe_parallele": "G02_comparaison",
+      "comportement_attendu": "Même compréhension que la question d'origine"
+    },
+    {
+      "id": "FR-22",
+      "langue": "fr",
+      "categorie": "reformulation",
+      "question": "Prépa de l'IIT ou licence : quel chemin pour devenir ingénieur en informatique ?",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "question_d_origine": "FR-03",
+      "groupe_parallele": "G02_comparaison",
+      "comportement_attendu": "Même compréhension que la question d'origine"
+    },
+    {
+      "id": "FR-23",
+      "langue": "fr",
+      "categorie": "reformulation",
+      "question": "Comment s'inscrire en licence de développement des systèmes TIC ?",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "question_d_origine": "FR-06",
+      "groupe_parallele": "G05_preinscription",
+      "comportement_attendu": "Même compréhension que la question d'origine"
+    },
+    {
+      "id": "FR-24",
+      "langue": "fr",
+      "categorie": "reformulation",
+      "question": "Une licence de l'IIT permet-elle ensuite de rejoindre le cycle ingénieur ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": "FR-07",
+      "groupe_parallele": "G07_passerelle",
+      "comportement_attendu": "Même compréhension que la question d'origine"
+    },
+    {
+      "id": "FR-25",
+      "langue": "fr",
+      "categorie": "reformulation",
+      "question": "Bac maths, 14 de moyenne, passionné de programmation : quelle formation à l'IIT ?",
+      "intention_attendue": "ORIENTATION",
+      "profil_attendu": {
+        "section_bac": "mathématiques",
+        "moyenne": 14,
+        "interets": [
+          "programmation"
+        ]
+      },
+      "question_d_origine": "FR-04",
+      "groupe_parallele": "G03_orientation_profil",
+      "comportement_attendu": "Même compréhension et même profil extrait que la question d'origine"
+    },
+    {
+      "id": "FR-26",
+      "langue": "fr",
+      "categorie": "reformulation",
+      "question": "Quels métiers après un diplôme d'ingénieur en génie informatique de l'IIT ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": "FR-05",
+      "groupe_parallele": "G08_debouches",
+      "comportement_attendu": "Même compréhension que la question d'origine"
+    },
+    {
+      "id": "FR-27",
+      "langue": "fr",
+      "categorie": "cas_ambigu",
+      "question": "C'est combien ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Ne pas deviner : demander de quoi parle le candidat (frais ? durée ? formation ?)"
+    },
+    {
+      "id": "FR-28",
+      "langue": "fr",
+      "categorie": "cas_ambigu",
+      "question": "Et pour l'ISB, c'est pareil ?",
+      "intention_attendue": "INFO_FORMATION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Demander à quoi « pareil » fait référence (conditions, durée, inscription…)"
+    },
+    {
+      "id": "FR-29",
+      "langue": "fr",
+      "categorie": "cas_ambigu",
+      "question": "Je veux m'inscrire.",
+      "intention_attendue": "PREINSCRIPTION",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Demander l'établissement (IIT ou ISB) et la formation visés avant de lancer la préinscription"
+    },
+    {
+      "id": "FR-30",
+      "langue": "fr",
+      "categorie": "cas_ambigu",
+      "question": "Le génie, c'est mieux ?",
+      "intention_attendue": "COMPARAISON",
+      "profil_attendu": {},
+      "question_d_origine": null,
+      "groupe_parallele": null,
+      "comportement_attendu": "Demander mieux que quoi et selon quel critère"
+    }
+  ]
+}

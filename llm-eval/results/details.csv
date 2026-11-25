@@ -1,0 +1,1871 @@
+﻿model,id,langue_attendue,groupe_parallele,canal,intention_attendue,profil_attendu,question,sortie_brute,erreur,latence_s,tokens_generes,tokens_par_s,categorie,question_d_origine,pertinence_1_5,registre_ok_0_1,hallucination_0_1,commentaire,groupe,json_valide,reponse,reponse_vide,intention_predite,langue_predite,profil_attendu_n,profil_trouve_n,ecriture_ok,intention_ok,langue_ok
+gemma4:e2b-it-qat,FR-01,fr,G01_salutation,texte,SALUTATION,{'niveau': 'terminale'},"Bonjour, je suis en terminale et je cherche des informations sur l'IIT.","{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Marhba bik! L'IIT offre plusieurs parcours intéressants. Pour t'aider au mieux, peux-tu me dire quel domaine t'intéresse (sciences, technologie, etc.) ? On peut aussi discuter des différentes options de Licence ou de Prépa.""
+}",,13.1,91,7.34,base,,5,1,0,Accueil + question sur le domaine,Français,True,"Marhba bik! L'IIT offre plusieurs parcours intéressants. Pour t'aider au mieux, peux-tu me dire quel domaine t'intéresse (sciences, technologie, etc.) ? On peut aussi discuter des différentes options de Licence ou de Prépa.",False,INFO_FORMATION,fr,1,0,True,False,True
+gemma4:e2b-it-qat,FR-02,fr,G09_formations_isb,texte,INFO_FORMATION,{},Quelles sont les formations proposées par l'ISB ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""L'ISB propose plusieurs formations. Pour vous donner les informations précises sur les cursus, pourriez-vous me dire quel domaine vous intéresse ? Je peux vous détailler les parcours disponibles.""
+}",,10.67,75,7.43,base,,3,1,0,"Générique, sans invention",Français,True,"L'ISB propose plusieurs formations. Pour vous donner les informations précises sur les cursus, pourriez-vous me dire quel domaine vous intéresse ? Je peux vous détailler les parcours disponibles.",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-03,fr,G02_comparaison,texte,COMPARAISON,{},Quelle est la différence entre la prépa et la licence à l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},""reponse"": ""La prépa à l'IIT est une préparation intensive pour accéder aux filières d'ingénierie, tandis que la licence est un cursus de base pour acquérir les fondamentaux d'une discipline. Je peux vous donner plus de détails sur les programmes de chaque parcours si vous le souhaitez.""
+}",,14.32,95,6.98,base,,4,1,0,Différence correcte et prudente,Français,True,"La prépa à l'IIT est une préparation intensive pour accéder aux filières d'ingénierie, tandis que la licence est un cursus de base pour acquérir les fondamentaux d'une discipline. Je peux vous donner plus de détails sur les programmes de chaque parcours si vous le souhaitez.",False,COMPARAISON,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-04,fr,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 14, 'interets': ['programmation']}",J'ai eu 14 au bac maths et j'aime la programmation. Quelle formation me conseillez-vous ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""bac"",
+    ""section_bac"": ""maths"",
+    ""interets"": ""programmation""
+  },
+  ""reponse"": ""Salut ! Avec une bonne moyenne en maths et un intérêt pour la programmation, l'IIT propose des parcours en Licence ou en Ingénierie qui pourraient t'intéresser. Pour t'aider à affiner ton choix, est-ce que tu préfères une approche plus théorique ou plus orientée vers la pratique ?""
+}",,21.23,133,6.53,base,,5,1,0,"Utilise le profil, propose options + question",Français,True,"Salut ! Avec une bonne moyenne en maths et un intérêt pour la programmation, l'IIT propose des parcours en Licence ou en Ingénierie qui pourraient t'intéresser. Pour t'aider à affiner ton choix, est-ce que tu préfères une approche plus théorique ou plus orientée vers la pratique ?",False,ORIENTATION,fr,3,2,True,True,True
+gemma4:e2b-it-qat,FR-05,fr,G08_debouches,texte,INFO_FORMATION,{},Quels sont les débouchés après le cycle ingénieur en informatique ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Les débouchés après un cycle d'ingénieur en informatique sont très variés. On peut travailler dans le développement logiciel, la cybersécurité, l'intelligence artificielle, ou la gestion de projets. Pour des détails précis sur les débouchés spécifiques de l'IIT ou de l'ISB, je te conseille de consulter les fiches de parcours. Je peux t'aider à explorer les options si tu me dis quel domaine t'intéresse.""
+}",,18.14,129,7.37,base,,4,1,0,"Débouchés généraux, renvoie aux fiches",Français,True,"Les débouchés après un cycle d'ingénieur en informatique sont très variés. On peut travailler dans le développement logiciel, la cybersécurité, l'intelligence artificielle, ou la gestion de projets. Pour des détails précis sur les débouchés spécifiques de l'IIT ou de l'ISB, je te conseille de consulter les fiches de parcours. Je peux t'aider à explorer les options si tu me dis quel domaine t'intéresse.",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-06,fr,G05_preinscription,texte,PREINSCRIPTION,{},"Je veux m'inscrire en licence, comment je fais ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},
+  ""reponse"": ""Pour t'inscrire en Licence, il faut suivre la procédure officielle. Je peux t'aider à t'orienter sur les étapes à suivre. Dis-moi si tu as déjà commencé à regarder les programmes de l'IIT ou de l'ISB, et on verra ensemble la marche à suivre.""
+}",,14.93,101,7.08,base,,3,1,0,Procédure vague,Français,True,"Pour t'inscrire en Licence, il faut suivre la procédure officielle. Je peux t'aider à t'orienter sur les étapes à suivre. Dis-moi si tu as déjà commencé à regarder les programmes de l'IIT ou de l'ISB, et on verra ensemble la marche à suivre.",False,PREINSCRIPTION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-07,fr,G07_passerelle,texte,INFO_FORMATION,{},Est-ce qu'il y a des passerelles entre la licence et le cycle ingénieur ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},""reponse"": ""Oui, il existe souvent des passerelles entre la Licence et le cycle d'Ingénieur, mais cela dépend beaucoup du parcours et de l'établissement. Pour vous donner une réponse précise, pourriez-vous me dire quel domaine vous intéresse en particulier ? Je peux vous aider à explorer les options disponibles.""
+}",,14.14,95,7.08,base,,4,1,0,Prudent : dépend de l'établissement,Français,True,"Oui, il existe souvent des passerelles entre la Licence et le cycle d'Ingénieur, mais cela dépend beaucoup du parcours et de l'établissement. Pour vous donner une réponse précise, pourriez-vous me dire quel domaine vous intéresse en particulier ? Je peux vous aider à explorer les options disponibles.",False,COMPARAISON,fr,0,0,True,False,True
+gemma4:e2b-it-qat,FR-08,fr,G06_profil_preferences,texte,PROFIL,"{'preferences': ['pratique'], 'points_faibles': ['physique']}",Je préfère une formation pratique et je ne suis pas très fort en physique.,"{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""points_faibles"": ""physique""
+  },
+  ""reponse"": ""Bonjour ! Pour une formation pratique, l'IIT propose plusieurs parcours. Est-ce que tu as une idée du domaine qui t'intéresse ? On peut explorer des options qui ne sont pas trop axées sur la physique si tu préfères.""
+}",,14.9,99,7.0,base,,4,1,0,Prend en compte la préférence,Français,True,"Bonjour ! Pour une formation pratique, l'IIT propose plusieurs parcours. Est-ce que tu as une idée du domaine qui t'intéresse ? On peut explorer des options qui ne sont pas trop axées sur la physique si tu préfères.",False,ORIENTATION,fr,2,1,True,False,True
+gemma4:e2b-it-qat,FR-09,fr,G10_hors_sujet,texte,HORS_SUJET,{},Tu peux m'aider à écrire mon CV ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""HORS_SUJET"",
+  ""profil"": {},""reponse"": ""Je suis SmartCampus AI, je suis là pour vous aider avec votre orientation universitaire à l'IIT et à l'ISB. Je peux vous accompagner dans le choix de vos parcours (Licence, Prépa, Ingénierie) et vous aider pour les démarches d'inscription. Pour votre CV, je vous conseille de me donner plus de détails sur votre profil académique et vos objectifs. Comment puis-je vous aider concrètement avec votre orientation ?""
+}",,19.56,131,6.88,base,,3,1,0,Recentre mais ambigu sur le CV,Français,True,"Je suis SmartCampus AI, je suis là pour vous aider avec votre orientation universitaire à l'IIT et à l'ISB. Je peux vous accompagner dans le choix de vos parcours (Licence, Prépa, Ingénierie) et vous aider pour les démarches d'inscription. Pour votre CV, je vous conseille de me donner plus de détails sur votre profil académique et vos objectifs. Comment puis-je vous aider concrètement avec votre orientation ?",False,HORS_SUJET,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-10,fr,G11_conditions_acces,texte,INFO_FORMATION,{'section_bac': 'technique'},"J'ai un bac technique, est-ce que je peux accéder à la prépa ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""bac technique""
+  },
+  ""reponse"": ""Salut ! Pour savoir si tu peux accéder à la prépa, il faut regarder les conditions spécifiques de chaque établissement. Je peux t'aider à comparer les parcours Licence, Prépa et Ingénierie de l'IIT et de l'ISB. Dis-moi ce qui t'intéresse le plus pour que je puisse t'orienter.""
+}",,16.46,118,7.45,base,,4,1,0,"Prudent, renvoie aux conditions",Français,True,"Salut ! Pour savoir si tu peux accéder à la prépa, il faut regarder les conditions spécifiques de chaque établissement. Je peux t'aider à comparer les parcours Licence, Prépa et Ingénierie de l'IIT et de l'ISB. Dis-moi ce qui t'intéresse le plus pour que je puisse t'orienter.",False,ORIENTATION,fr,1,1,True,False,True
+gemma4:e2b-it-qat,TN-01,tn_ar,G01_salutation,texte,SALUTATION,{},عسلامة، نحب نعرف شنوة القرايات اللي عندكم,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""أهلاً بيك! عندنا برامج متنوعة في Licence، Prépa، و Ingénierie في IIT و ISB. باش نعطيك معلومات دقيقة على القرايات، لازم نعرف واش تحب تركز على مجال معين ولا عندك مستوى معين في الباك. قولي شنو نوع التخصص اللي في بالك؟""
+}",,16.93,110,6.75,base,,4,0,0,Contenu bon mais darija non tunisienne (واش، شنو),Dialecte,True,أهلاً بيك! عندنا برامج متنوعة في Licence، Prépa، و Ingénierie في IIT و ISB. باش نعطيك معلومات دقيقة على القرايات، لازم نعرف واش تحب تركز على مجال معين ولا عندك مستوى معين في الباك. قولي شنو نوع التخصص اللي في بالك؟,False,INFO_FORMATION,tn_ar,0,0,True,False,True
+gemma4:e2b-it-qat,TN-02,tn_ar,G02_comparaison,texte,COMPARAISON,{},شنوة الفرق بين البريبا والليسانس؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Ah, la différence principale c'est que la Prépa te prépare pour l'entrée en école d'ingénieur, tandis que la Licence te donne une base plus large en sciences. Pour te donner les infos précises sur les programmes et les débouchés, je te conseille de consulter les sites officiels de l'IIT. On peut aussi discuter de tes intérêts pour t'aider à voir ce qui te correspond mieux.""
+}",,18.26,126,7.12,base,,4,0,0,Correct mais répond en français,Dialecte,True,"Ah, la différence principale c'est que la Prépa te prépare pour l'entrée en école d'ingénieur, tandis que la Licence te donne une base plus large en sciences. Pour te donner les infos précises sur les programmes et les débouchés, je te conseille de consulter les sites officiels de l'IIT. On peut aussi discuter de tes intérêts pour t'aider à voir ce qui te correspond mieux.",False,COMPARAISON,arabizi,0,0,False,True,False
+gemma4:e2b-it-qat,TN-03,tn_ar,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 13, 'interets': ['informatique']}",جبت الباك رياضيات بـ 13 ونحب الإعلامية، شنوة تنصحني نقرا؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""bac"",
+    ""section_bac"": ""رياضيات"",
+    ""moyenne"": ""13"",
+    ""interets"": ""الإعلامية""
+  },
+  ""reponse"": ""Ah, bchok. Si t'a7eb l'إعلامية, tnajjem t'dir prépa en maths w t'dir une orientation vers des filières qui combinent les sciences et les médias. On peut regarder les parcours en Licence à l'IIT ou les formations de l'ISB. On va voir ensemble ce qui te correspond le mieux.""
+}",,22.51,156,7.18,base,,2,0,0,Comprend إعلامية comme 'médias' au lieu d'informatique,Dialecte,True,"Ah, bchok. Si t'a7eb l'إعلامية, tnajjem t'dir prépa en maths w t'dir une orientation vers des filières qui combinent les sciences et les médias. On peut regarder les parcours en Licence à l'IIT ou les formations de l'ISB. On va voir ensemble ce qui te correspond le mieux.",False,ORIENTATION,arabizi,3,3,False,True,False
+gemma4:e2b-it-qat,TN-04,tn_ar,G04_duree,texte,INFO_FORMATION,{},قداش تدوم القراية في الإنجينيور؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Mouch 3andi info précise 3al durée, mais ana n9der n'vérifier had l'info. N'dirch 3andi les détails officiels, mais ana n'dirch 3andi les infos. N'dirch 3andi les détails officiels, mais ana n'dirch 3andi les infos.""
+}",,16.75,111,6.87,base,,2,0,0,"Texte répétitif, incohérent",Dialecte,True,"Mouch 3andi info précise 3al durée, mais ana n9der n'vérifier had l'info. N'dirch 3andi les détails officiels, mais ana n'dirch 3andi les infos. N'dirch 3andi les détails officiels, mais ana n'dirch 3andi les infos.",False,INFO_FORMATION,arabizi,0,0,False,True,False
+gemma4:e2b-it-qat,TN-05,tn_ar,G05_preinscription,texte,PREINSCRIPTION,{},كيفاش نعمل الإنسكريبسيون؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},
+  ""reponse"": ""Ahla! Bach n3awnek, 3al 9a3a n3awnek. 3al 9a3a, t9alna chno l'formation li t7ebb tdir preinscription? N9dar n3awnek f l'étape li t7ebb tdirha, w n3awnek t3ref kifach tdirha.""
+}",,19.66,120,6.31,base,,2,0,0,Arabizi répétitif,Dialecte,True,"Ahla! Bach n3awnek, 3al 9a3a n3awnek. 3al 9a3a, t9alna chno l'formation li t7ebb tdir preinscription? N9dar n3awnek f l'étape li t7ebb tdirha, w n3awnek t3ref kifach tdirha.",False,PREINSCRIPTION,arabizi,0,0,False,True,False
+gemma4:e2b-it-qat,TN-06,tn_ar,G06_profil_preferences,texte,PROFIL,"{'preferences': ['pratique'], 'points_faibles': ['physique']}",ما نحبش الفيزيك برشا ونحب حاجة فيها تطبيق,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""interets"": ""application""
+  },
+  ""reponse"": ""Ah, t7eb chi haja fiha application ? Fi IIT, kayen parcours fiha beaucoup de pratique. Fi ISB, kayen des formations qui mettent l'accent sur l'application. Pour t'aider, t7eb t'dir comparaison entre les parcours de Licence et d'Ingénierie ?""
+}",,17.15,113,6.85,base,,3,0,0,"Compris, mais registre marocain (kayen)",Dialecte,True,"Ah, t7eb chi haja fiha application ? Fi IIT, kayen parcours fiha beaucoup de pratique. Fi ISB, kayen des formations qui mettent l'accent sur l'application. Pour t'aider, t7eb t'dir comparaison entre les parcours de Licence et d'Ingénierie ?",False,ORIENTATION,arabizi,2,0,False,False,False
+gemma4:e2b-it-qat,TN-07,tn_ar,G07_passerelle,texte,INFO_FORMATION,{},بعد الليسانس نجم نكمل إنجينيور؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Ah, t7eb tssawl 3al lisanès w l'ingénierie. 3al 9alb, l'orientation tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa tawa",,66.89,400,6.02,base,,1,0,0,Réponse vide,Dialecte,False,,True,(vide),,0,0,False,False,False
+gemma4:e2b-it-qat,TN-08,tn_ar,G08_debouches,texte,INFO_FORMATION,{},شنوة الخدمة اللي نجم نلقاها بعد الـ ISB؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Ah, ISB y'a beaucoup de débouchés. Pour te donner une idée, on peut parler des différents domaines qui proposent l'ISB. Tu veux savoir plus sur un domaine en particulier ? Je peux te donner des infos sur les parcours disponibles.""
+}",,16.0,90,5.89,base,,2,0,0,"Vague, en français",Dialecte,True,"Ah, ISB y'a beaucoup de débouchés. Pour te donner une idée, on peut parler des différents domaines qui proposent l'ISB. Tu veux savoir plus sur un domaine en particulier ? Je peux te donner des infos sur les parcours disponibles.",False,INFO_FORMATION,arabizi,0,0,False,True,False
+gemma4:e2b-it-qat,TN-09,tn_ar,G10_hors_sujet,texte,HORS_SUJET,{},شكون ربح الماتش البارح؟,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""HORS_SUJET"",
+  ""profil"": {},
+  ""reponse"": ""أنا هنا باش نعاونك في التوجيه الجامعي بين مسارات IIT و ISB. كيفاش نقدر نعاونك اليوم في اختيار المسار المناسب ليك؟""
+}",,11.63,78,7.13,base,,4,1,0,Recentre correctement,Dialecte,True,أنا هنا باش نعاونك في التوجيه الجامعي بين مسارات IIT و ISB. كيفاش نقدر نعاونك اليوم في اختيار المسار المناسب ليك؟,False,HORS_SUJET,tn_ar,0,0,True,True,True
+gemma4:e2b-it-qat,TN-10,tn_ar,G12_contact,texte,PREINSCRIPTION,{'demande_contact': True},نحب تعيطولي باش تفسرولي أكثر,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {},
+  ""reponse"": ""Ahla! 3afek, t'3aytiya chnou bghiti n'3amlek tafsir? Ana hna n'3awnk f l'orientation. Chno hia l'formation aw l'étape li bghiti t'3ref 3liha?""
+}",,15.66,98,6.43,base,,2,0,0,"Demande de rappel non comprise, registre marocain",Dialecte,True,"Ahla! 3afek, t'3aytiya chnou bghiti n'3amlek tafsir? Ana hna n'3awnk f l'orientation. Chno hia l'formation aw l'étape li bghiti t'3ref 3liha?",False,ORIENTATION,arabizi,1,0,False,False,False
+gemma4:e2b-it-qat,AZ-01,arabizi,G01_salutation,texte,SALUTATION,{},"Ahla, labes?","{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""SALUTATION"",
+  ""profil"": {},
+  ""reponse"": ""Ahla bik! Labes, kifesh rak? Ana SmartCampus AI, n'aweknik fi l'orientation. Chouf, n'a3tik chnoua t7eb tssawbel?""
+}",,11.71,84,7.51,base,,3,1,0,"Salutation correcte, fin confuse",Dialecte,True,"Ahla bik! Labes, kifesh rak? Ana SmartCampus AI, n'aweknik fi l'orientation. Chouf, n'a3tik chnoua t7eb tssawbel?",False,SALUTATION,tn_ar,0,0,True,True,False
+gemma4:e2b-it-qat,AZ-02,arabizi,G02_comparaison,texte,COMPARAISON,{},Chnowa el far9 bin prépa w licence?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Ah, c'est une question importante ! La prépa c'est plus intense et orientée vers les concours, tandis que la licence c'est plus axé sur l'approfondissement d'une matière. Pour te conseiller, il faudrait savoir ce qui te motive le plus. On peut comparer les deux parcours si tu me donnes plus de détails sur tes ambitions.""
+}",,17.32,114,6.82,base,,4,0,0,Correct mais en français,Dialecte,True,"Ah, c'est une question importante ! La prépa c'est plus intense et orientée vers les concours, tandis que la licence c'est plus axé sur l'approfondissement d'une matière. Pour te conseiller, il faudrait savoir ce qui te motive le plus. On peut comparer les deux parcours si tu me donnes plus de détails sur tes ambitions.",False,COMPARAISON,mixte,0,0,True,True,False
+gemma4:e2b-it-qat,AZ-03,arabizi,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'informatique', 'moyenne': 12, 'interets': ['développement']}","5dhit bac info b 12, nheb el dev barcha, chnowa tnasa7ni?","{
+  ""langue"": ""mixte"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""Info B"",
+    ""interets"": ""développement"",
+    ""preferences"": ""développement"",
+    ""points_faibles"": null,
+    ""contraintes"": null,
+    ""ville"": null,
+    ""demande_contact"": null
+  },
+  ""reponse"": ""Ah, t'as intérêt pour le développement, c'est une bonne base. Pour t'orienter, on peut regarder les parcours Licence à l'IIT ou les formations de l'ISB. Tu veux qu'on compare les options ou qu'on parle des débouchés spécifiques ?""
+}",,26.56,171,6.64,base,,4,0,0,"Bonne orientation, en français",Dialecte,True,"Ah, t'as intérêt pour le développement, c'est une bonne base. Pour t'orienter, on peut regarder les parcours Licence à l'IIT ou les formations de l'ISB. Tu veux qu'on compare les options ou qu'on parle des débouchés spécifiques ?",False,ORIENTATION,mixte,3,2,True,True,False
+gemma4:e2b-it-qat,AZ-04,arabizi,G04_duree,texte,INFO_FORMATION,{},9adeh ya5ou wa9t el cycle ingénieur?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Ahla bik! Cycle ingénieur f l'IIT ykoun 5an. 3andek des questions sur les matières ou les débouchés spécifiques de cette filière ? Je peux t'aider à avoir plus d'infos.""
+}",,13.43,87,6.79,base,,2,1,1,Affirme 5 ans pour le cycle ingénieur,Dialecte,True,Ahla bik! Cycle ingénieur f l'IIT ykoun 5an. 3andek des questions sur les matières ou les débouchés spécifiques de cette filière ? Je peux t'aider à avoir plus d'infos.,False,INFO_FORMATION,mixte,0,0,True,True,False
+gemma4:e2b-it-qat,AZ-05,arabizi,G05_preinscription,texte,PREINSCRIPTION,{},"Nheb nsajel fel licence, chnowa lezem?","{
+  ""langue"": ""mixte"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Ahla bik! Bach tnajjel fel licence, لازم تعرف واش تحب تخدم. Chnoua les domaines li t3jbedek? N9der n3awnek t3ref les options li f l'IIT w l'ISB. N3awnek f chnoua n9adrou n3awnek ?""
+}",,17.48,110,6.55,base,,2,0,0,"Boucle, mélange d'écritures",Dialecte,True,"Ahla bik! Bach tnajjel fel licence, لازم تعرف واش تحب تخدم. Chnoua les domaines li t3jbedek? N9der n3awnek t3ref les options li f l'IIT w l'ISB. N3awnek f chnoua n9adrou n3awnek ?",False,INFO_FORMATION,mixte,0,0,True,False,False
+gemma4:e2b-it-qat,AZ-06,arabizi,G06_profil_preferences,texte,PROFIL,"{'interets': ['informatique'], 'points_faibles': ['mathématiques']}",Ena mouch 9wi fel maths ama nheb l'informatique,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""bac"",
+    ""section_bac"": ""non spécifiée"",
+    ""moyenne"": ""non spécifiée"",
+    ""interets"": ""informatique"",
+    ""preferences"": ""informatique"",
+    ""points_faibles"": ""maths"",
+    ""contraintes"": ""non spécifiée"",
+    ""ville"": ""non spécifiée"",
+    ""demande_contact"": ""non spécifiée""
+  },
+  ""reponse"": ""Ah, c'est pas de problème. Si t'aimes l'informatique, il y a des parcours qui peuvent t'intéresser. On peut regarder les options en Licence ou en Ingénierie. Tu veux qu'on explore les formations de l'IIT ou de l'ISB pour l'informatique ?""
+}",,32.93,203,6.3,base,,4,0,0,"Bonne réponse, en français",Dialecte,True,"Ah, c'est pas de problème. Si t'aimes l'informatique, il y a des parcours qui peuvent t'intéresser. On peut regarder les options en Licence ou en Ingénierie. Tu veux qu'on explore les formations de l'IIT ou de l'ISB pour l'informatique ?",False,ORIENTATION,arabizi,2,2,True,False,True
+gemma4:e2b-it-qat,AZ-07,arabizi,G07_passerelle,texte,INFO_FORMATION,{},Ba3d el licence najjem nod5ol cycle ingénieur?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""non spécifiée"",
+    ""moyenne"": ""non spécifiée"",
+    ""interets"": ""non spécifiés"",
+    ""preferences"": ""non spécifiés"",
+    ""points_faibles"": ""non spécifiés"",
+    ""contraintes"": ""non spécifiées"",
+    ""ville"": ""non spécifiée"",
+    ""demande_contact"": ""non spécifiée""
+  },
+  ""reponse"": ""Ah, c'est une bonne question. Pour savoir si tu peux passer en cycle ingénieur après une licence, il faut regarder les passerelles spécifiques de chaque établissement. Je peux t'aider à comparer les parcours de Licence et d'Ingénierie de l'IIT et de l'ISB. Dis-moi quel domaine t'intéresse pour que je vérifie les options pour toi.""
+}",,36.98,221,6.08,base,,4,0,0,"Prudent, en français",Dialecte,True,"Ah, c'est une bonne question. Pour savoir si tu peux passer en cycle ingénieur après une licence, il faut regarder les passerelles spécifiques de chaque établissement. Je peux t'aider à comparer les parcours de Licence et d'Ingénierie de l'IIT et de l'ISB. Dis-moi quel domaine t'intéresse pour que je vérifie les options pour toi.",False,COMPARAISON,mixte,0,0,True,False,False
+gemma4:e2b-it-qat,AZ-08,arabizi,G08_debouches,texte,INFO_FORMATION,{},Chnowa el 5edma elli nal9aha ba3d ISB?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Ah, chnowa t7eb t9oul 5edma wla chnowa t7eb t9oul 3al formation? 3al 5edma, n9oulk 3al étapes, w 3al formation, n9oulk 3al contenu. Ana n9oulk chnowa t7eb t9oul.""
+}",,17.67,116,6.83,base,,1,1,0,Arabizi incohérent,Dialecte,True,"Ah, chnowa t7eb t9oul 5edma wla chnowa t7eb t9oul 3al formation? 3al 5edma, n9oulk 3al étapes, w 3al formation, n9oulk 3al contenu. Ana n9oulk chnowa t7eb t9oul.",False,INFO_FORMATION,mixte,0,0,True,True,False
+gemma4:e2b-it-qat,AZ-09,arabizi,G09_formations_iit,texte,INFO_FORMATION,{},Chniya les formations elli 3andkom fel IIT?,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""أهلاً بيك! عندكم في IIT مسارات Licence، Prépa، و Ingénierie. باش نعطيك تفاصيل أكثر على كل مسار، لازم نعرف واش تحب تركز عليه. تحب نبدأ بالمعلومات ديال Licence ولا Prépa؟""
+}",,17.26,97,5.84,base,,3,0,0,"Liste correcte mais écriture arabe, registre marocain",Dialecte,True,أهلاً بيك! عندكم في IIT مسارات Licence، Prépa، و Ingénierie. باش نعطيك تفاصيل أكثر على كل مسار، لازم نعرف واش تحب تركز عليه. تحب نبدأ بالمعلومات ديال Licence ولا Prépa؟,False,INFO_FORMATION,tn_ar,0,0,False,True,False
+gemma4:e2b-it-qat,AZ-10,arabizi,G10_hors_sujet,texte,HORS_SUJET,{},A3tini recette mta3 couscous,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""HORS_SUJET"",
+  ""profil"": {},""reponse"": ""أنا هنا باش نعاونك في التوجيه الجامعي، ما نقدرش نعطيك وصفات طبخ. تحب نرجعوا للحديث على parcours Licence، Prépa ولا Ingénierie في IIT ولا ISB؟""
+}",,14.26,89,6.51,base,,4,0,0,"Recentre, écriture arabe",Dialecte,True,أنا هنا باش نعاونك في التوجيه الجامعي، ما نقدرش نعطيك وصفات طبخ. تحب نرجعوا للحديث على parcours Licence، Prépa ولا Ingénierie في IIT ولا ISB؟,False,HORS_SUJET,tn_ar,0,0,False,True,False
+gemma4:e2b-it-qat,MX-01,mixte,G08_debouches,texte,INFO_FORMATION,"{'niveau': 'terminale', 'interets': ['génie logiciel']}","Salut, ena fi terminale w nheb na3ref les débouchés mta3 génie logiciel","{
+  ""langue"": ""mixte"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""terminale"",
+    ""section_bac"": ""non spécifiée"",
+    ""moyenne"": ""non spécifiée"",
+    ""interets"": ""génie logiciel"",
+    ""preferences"": ""génie logiciel"",
+    ""points_faibles"": ""non spécifiés"",
+    ""contraintes"": ""non spécifiées"",
+    ""ville"": ""non spécifiée"",
+    ""demande_contact"": ""non spécifiée""
+  },
+  ""reponse"": ""Ah, le génie logiciel c'est un domaine très intéressant. Pour te donner les débouchés, il faut regarder les formations spécifiques à l'IIT et à l'ISB. Je peux te donner plus d'infos sur les parcours disponibles. Qu'est-ce qui t'intéresse le plus dans ce domaine ?""
+}",,33.17,208,6.43,base,,4,1,0,"Correct, prudent",Dialecte,True,"Ah, le génie logiciel c'est un domaine très intéressant. Pour te donner les débouchés, il faut regarder les formations spécifiques à l'IIT et à l'ISB. Je peux te donner plus d'infos sur les parcours disponibles. Qu'est-ce qui t'intéresse le plus dans ce domaine ?",False,INFO_FORMATION,mixte,2,2,True,True,True
+gemma4:e2b-it-qat,MX-02,mixte,G13_difficulte,texte,INFO_FORMATION,{},Est-ce que la prépa s3iba barcha wala normal?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Salam ! La difficulté de la prépa dépend beaucoup de ton niveau et de tes matières. Pour t'aider à t'orienter, peux-tu me dire quel niveau tu vises ou quelles sont tes matières préférées ? On pourra comparer les options.""
+}",,13.88,88,6.68,base,,4,1,0,"Correct, demande le profil",Dialecte,True,"Salam ! La difficulté de la prépa dépend beaucoup de ton niveau et de tes matières. Pour t'aider à t'orienter, peux-tu me dire quel niveau tu vises ou quelles sont tes matières préférées ? On pourra comparer les options.",False,INFO_FORMATION,mixte,0,0,True,True,True
+gemma4:e2b-it-qat,MX-03,mixte,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'sciences expérimentales', 'interets': ['informatique']}","Bonjour, عندي باك علوم تجريبية, est-ce que nnajjem na9ra informatique?","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""bac"",
+    ""section_bac"": ""علوم تجريبية"",
+    ""interets"": ""informatique""
+  },
+  ""reponse"": ""Ah, bach t'dir informatique, y'a des options. L'IIT et l'ISB ont des parcours qui peuvent t'intéresser. Pour te donner des infos précises sur les filières disponibles, je vais vérifier ça. Tu veux qu'on regarde les détails des parcours en informatique ?""
+}",,21.7,134,6.39,base,,4,1,0,"Prudent, propose de vérifier",Dialecte,True,"Ah, bach t'dir informatique, y'a des options. L'IIT et l'ISB ont des parcours qui peuvent t'intéresser. Pour te donner des infos précises sur les filières disponibles, je vais vérifier ça. Tu veux qu'on regarde les détails des parcours en informatique ?",False,INFO_FORMATION,arabizi,2,2,True,False,False
+gemma4:e2b-it-qat,MX-04,mixte,G03_orientation_profil,texte,ORIENTATION,"{'preferences': ['pratique', 'progressive']}","J'hésite entre prépa w licence, nheb voie pratique w progressive","{
+  ""langue"": ""mixte"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {},
+  ""reponse"": ""Ah, c'est une question importante ! Pour t'aider à choisir entre la prépa et la licence, il faut qu'on regarde tes goûts et tes attentes. Tu dis que tu veux une voie pratique et progressive, qu'est-ce qui t'attire le plus dans ces deux options ? On peut discuter des débouchés de chaque parcours.""
+}",,17.48,111,6.67,base,,4,1,0,Reprend la préférence pratique/progressive,Dialecte,True,"Ah, c'est une question importante ! Pour t'aider à choisir entre la prépa et la licence, il faut qu'on regarde tes goûts et tes attentes. Tu dis que tu veux une voie pratique et progressive, qu'est-ce qui t'attire le plus dans ces deux options ? On peut discuter des débouchés de chaque parcours.",False,ORIENTATION,mixte,2,0,True,True,True
+gemma4:e2b-it-qat,MX-05,mixte,G05_preinscription,texte,PREINSCRIPTION,{},"Comment je fais la préinscription, w chnowa les papiers elli lezmin?","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},
+  ""reponse"": ""Ah, pour la préinscription, il faut que tu me dises de quelle formation tu veux commencer. On va vérifier ensemble les papiers nécessaires. Dis-moi quel parcours t'intéresse pour que je puisse t'aider au mieux.""
+}",,15.32,87,6.0,base,,3,1,0,Demande la formation visée,Dialecte,True,"Ah, pour la préinscription, il faut que tu me dises de quelle formation tu veux commencer. On va vérifier ensemble les papiers nécessaires. Dis-moi quel parcours t'intéresse pour que je puisse t'aider au mieux.",False,PREINSCRIPTION,arabizi,0,0,True,True,False
+gemma4:e2b-it-qat,MX-06,mixte,G06_profil_preferences,texte,PROFIL,"{'moyenne': 15, 'contraintes': ['durée courte']}","Ma moyenne c'est 15, ama ma n7ebech na9ra 5 ans","{
+  ""langue"": ""mixte"",
+  ""intention"": ""PROFIL"",
+  ""profil"": {
+    ""niveau"": ""bac"",
+    ""moyenne"": ""15"",
+    ""preferences"": ""ne veut pas étudier 5 ans""
+  },
+  ""reponse"": ""Ah, 15 c'est un bon début ! Pour t'aider à choisir, dis-moi quels sont tes centres d'intérêt. Est-ce que tu as une idée du type de métier que tu aimerais faire ? On peut voir des options pour la Licence, la Prépa ou l'Ingénierie.""
+}",,22.33,139,6.46,base,,3,1,0,Ignore la contrainte de durée,Dialecte,True,"Ah, 15 c'est un bon début ! Pour t'aider à choisir, dis-moi quels sont tes centres d'intérêt. Est-ce que tu as une idée du type de métier que tu aimerais faire ? On peut voir des options pour la Licence, la Prépa ou l'Ingénierie.",False,PROFIL,mixte,2,2,True,True,True
+gemma4:e2b-it-qat,MX-07,mixte,G02_comparaison,texte,COMPARAISON,{},"Compare-moi licence info w ingénieur, chkoun a7sen pour le travail?","{
+  ""langue"": ""mixte"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Ah, tbech t3ref chkoun a7sen. Licence Info w Ingénieur, kayn différence f l'orientation. Pour le travail, ça dépend de tes goûts et de ce que t'a7eb dir. On peut comparer les débouchés de chaque parcours. Qu'est-ce qui t'intéresse plus : la théorie ou la pratique ?""
+}",,18.42,117,6.64,base,,3,1,0,"Comparaison légère, registre marocain",Dialecte,True,"Ah, tbech t3ref chkoun a7sen. Licence Info w Ingénieur, kayn différence f l'orientation. Pour le travail, ça dépend de tes goûts et de ce que t'a7eb dir. On peut comparer les débouchés de chaque parcours. Qu'est-ce qui t'intéresse plus : la théorie ou la pratique ?",False,COMPARAISON,mixte,0,0,True,True,True
+gemma4:e2b-it-qat,MX-08,mixte,G14_contrainte_geo,texte,PROFIL,"{'ville': 'Sfax', 'contraintes': ['géographique']}",Ena men Sfax w ma najjemch nbadel el wileya,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""PROFIL"",
+  ""profil"": {},""reponse"": ""أهلاً بيك! فهمت بلي أنت من صفاقس وما نجمش تبدل الولاية. باش نقدر نعاونك، لازم نعرف شوية على مستواك الدراسي واهتماماتك. تحب نبدأ نعرفك على برامج اللي تناسبك في IIT ولا ISB؟""
+}",,16.39,100,6.37,base,,4,1,0,Contrainte bien comprise,Dialecte,True,أهلاً بيك! فهمت بلي أنت من صفاقس وما نجمش تبدل الولاية. باش نقدر نعاونك، لازم نعرف شوية على مستواك الدراسي واهتماماتك. تحب نبدأ نعرفك على برامج اللي تناسبك في IIT ولا ISB؟,False,PROFIL,tn_ar,2,0,True,True,False
+gemma4:e2b-it-qat,MX-09,mixte,G12_contact,texte,PREINSCRIPTION,{},Tu peux me fixer un rendez-vous pour l'entretien?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},""reponse"": ""Bien sûr, pour fixer un rendez-vous d'entretien, j'ai besoin de quelques informations supplémentaires sur ton profil et tes préférences. Peux-tu me dire quel parcours t'intéresse (Licence, Prépa ou Ingénierie) et tes disponibilités ? Je vérifierai ensuite avec les responsables académiques les créneaux possibles.""
+}",,16.19,106,6.87,base,,5,1,0,"Demande disponibilités, vérifie avec les responsables",Dialecte,True,"Bien sûr, pour fixer un rendez-vous d'entretien, j'ai besoin de quelques informations supplémentaires sur ton profil et tes préférences. Peux-tu me dire quel parcours t'intéresse (Licence, Prépa ou Ingénierie) et tes disponibilités ? Je vérifierai ensuite avec les responsables académiques les créneaux possibles.",False,PREINSCRIPTION,fr,0,0,True,True,False
+gemma4:e2b-it-qat,MX-10,mixte,G01_salutation,texte,SALUTATION,{},"Ok merci, ya3tik essa7a","{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""SALUTATION"",
+  ""profil"": {},
+  ""reponse"": ""أهلاً بيك! أنا هنا باش نعاونك في كلش. قولي واش تحب تبدا منين بالضبط؟""
+}",,12.18,67,5.84,base,,3,0,0,"Clôture ratée, registre algérien",Dialecte,True,أهلاً بيك! أنا هنا باش نعاونك في كلش. قولي واش تحب تبدا منين بالضبط؟,False,SALUTATION,tn_ar,0,0,True,True,False
+gemma4:e2b-it-qat,FR-11,fr,,texte,INFO_FORMATION,{},Quelles sont les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Pour connaître les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac, je vais vérifier les informations officielles. Un responsable académique pourra vous donner tous les détails précis concernant les prérequis.""
+}",,13.77,79,6.09,admission,,3,1,0,"Prudent, renvoie à l'info officielle, sans relance",Français,True,"Pour connaître les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac, je vais vérifier les informations officielles. Un responsable académique pourra vous donner tous les détails précis concernant les prérequis.",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-12,fr,,texte,PREINSCRIPTION,{},Quels documents faut-il fournir pour la préinscription en licence de gestion à l'ISB ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},
+  ""reponse"": ""Pour connaître la liste exacte des documents nécessaires pour la préinscription en Licence de Gestion à l'ISB, je te conseille de consulter directement le site officiel de l'ISB. Je peux t'aider à trouver le lien si tu me précises ce que tu cherches, mais les exigences peuvent varier. Un responsable académique pourra te donner les informations précises.""
+}",,19.72,111,5.88,admission,,3,1,0,"Prudent, renvoie au site",Français,True,"Pour connaître la liste exacte des documents nécessaires pour la préinscription en Licence de Gestion à l'ISB, je te conseille de consulter directement le site officiel de l'ISB. Je peux t'aider à trouver le lien si tu me précises ce que tu cherches, mais les exigences peuvent varier. Un responsable académique pourra te donner les informations précises.",False,PREINSCRIPTION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-13,fr,,texte,INFO_FORMATION,{},"Après une licence appliquée à l'IIT, est-ce que je peux intégrer directement le cycle ingénieur ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},""reponse"": ""Bonjour ! Pour savoir si vous pouvez intégrer directement le cycle ingénieur après une licence appliquée à l'IIT, il faut vérifier les conditions spécifiques de transition entre les deux cursus. Je vous conseille de consulter les documents officiels de l'IIT pour avoir les informations les plus précises sur les passerelles possibles. Un responsable académique pourra vous donner une réponse définitive.""
+}",,18.78,108,5.95,admission,,3,1,0,"Prudent, renvoie au responsable",Français,True,"Bonjour ! Pour savoir si vous pouvez intégrer directement le cycle ingénieur après une licence appliquée à l'IIT, il faut vérifier les conditions spécifiques de transition entre les deux cursus. Je vous conseille de consulter les documents officiels de l'IIT pour avoir les informations les plus précises sur les passerelles possibles. Un responsable académique pourra vous donner une réponse définitive.",False,COMPARAISON,fr,0,0,True,False,True
+gemma4:e2b-it-qat,FR-14,fr,,texte,INFO_FORMATION,{},Est-ce qu'il y a un test ou un entretien pour être admis à l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Pour savoir s'il y a un test ou un entretien pour l'IIT, je vais vérifier les informations officielles. Il est important de consulter le site de l'IIT pour connaître les modalités d'admission précises. Je vous conseille de me donner plus de détails sur le niveau que vous visez.""
+}",,16.1,98,6.35,admission,,3,1,0,"Prudent, demande le niveau visé",Français,True,"Pour savoir s'il y a un test ou un entretien pour l'IIT, je vais vérifier les informations officielles. Il est important de consulter le site de l'IIT pour connaître les modalités d'admission précises. Je vous conseille de me donner plus de détails sur le niveau que vous visez.",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-15,fr,,texte,INFO_FORMATION,{},La licence en administration des affaires de l'ISB est enseignée en anglais : faut-il un niveau d'anglais minimum ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Pour savoir si un niveau d'anglais minimum est requis pour la Licence en Administration des Affaires de l'ISB, je vais vérifier les informations officielles. Je vous conseille de consulter directement le site de l'ISB pour obtenir les détails précis sur les prérequis linguistiques.""
+}",,15.02,94,6.64,admission,,3,1,0,"Prudent, propose de vérifier",Français,True,"Pour savoir si un niveau d'anglais minimum est requis pour la Licence en Administration des Affaires de l'ISB, je vais vérifier les informations officielles. Je vous conseille de consulter directement le site de l'ISB pour obtenir les détails précis sur les prérequis linguistiques.",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-16,fr,,texte,PREINSCRIPTION,"{'section_bac': 'technique', 'moyenne': 13}","Avec 13 de moyenne au bac technique, vous pouvez me confirmer que je suis admis en génie mécanique ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""bac technique"",
+    ""moyenne"": 13,
+    ""preferences"": ""génie mécanique""
+  },
+  ""reponse"": ""Bonjour. Pour confirmer ton admission en génie mécanique, il faut vérifier les conditions spécifiques de l'IIT. Je te conseille de consulter le site officiel ou de prendre contact avec un responsable académique pour avoir les informations les plus précises.""
+}",,17.86,116,6.81,admission,,4,1,0,"Ne confirme pas l'admission, renvoie au responsable",Français,True,"Bonjour. Pour confirmer ton admission en génie mécanique, il faut vérifier les conditions spécifiques de l'IIT. Je te conseille de consulter le site officiel ou de prendre contact avec un responsable académique pour avoir les informations les plus précises.",False,INFO_FORMATION,fr,2,2,True,False,True
+gemma4:e2b-it-qat,FR-17,fr,,texte,ORIENTATION,{},"J'hésite entre le génie informatique et les télécommunications à l'IIT, lequel me conviendrait ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Salut ! Pour t'aider à choisir entre le Génie Informatique et les Télécommunications à l'IIT, il faudrait qu'on regarde tes affinités. Est-ce que tu es plus intéressé par le développement logiciel et les algorithmes, ou par les réseaux, la communication et les systèmes embarqués ? On peut aussi voir les débouchés de chaque filière. Dis-moi ce qui t'attire le plus !""
+}",,20.68,127,6.38,orientation,,5,1,0,Distingue les deux filières et questionne,Français,True,"Salut ! Pour t'aider à choisir entre le Génie Informatique et les Télécommunications à l'IIT, il faudrait qu'on regarde tes affinités. Est-ce que tu es plus intéressé par le développement logiciel et les algorithmes, ou par les réseaux, la communication et les systèmes embarqués ? On peut aussi voir les débouchés de chaque filière. Dis-moi ce qui t'attire le plus !",False,COMPARAISON,fr,0,0,True,False,True
+gemma4:e2b-it-qat,FR-18,fr,,texte,ORIENTATION,{'interets': ['web']},"J'aime créer des sites web et des vidéos, la licence multimédia et web de l'IIT est-elle faite pour moi ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""interets"": [
+      ""créer des sites web"",
+      ""créer des vidéos""
+    ]
+  },
+  ""reponse"": ""Salut ! La Licence Multimédia et Web de l'IIT est une excellente option si tu aimes créer des sites et des vidéos. Pour te donner plus d'infos, je peux vérifier les conditions d'admission et les débouchés. Qu'est-ce qui t'attire le plus dans ce domaine ?""
+}",,21.96,134,6.33,orientation,,4,1,0,"Relie le profil, propose de vérifier",Français,True,"Salut ! La Licence Multimédia et Web de l'IIT est une excellente option si tu aimes créer des sites et des vidéos. Pour te donner plus d'infos, je peux vérifier les conditions d'admission et les débouchés. Qu'est-ce qui t'attire le plus dans ce domaine ?",False,INFO_FORMATION,fr,1,1,True,False,True
+gemma4:e2b-it-qat,FR-19,fr,,texte,ORIENTATION,{'interets': ['marketing']},"Je veux travailler dans le marketing digital, vaut-il mieux une licence de gestion à l'ISB puis un mastère ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},""reponse"": ""Pour le marketing digital, la licence de gestion à l'ISB peut être une bonne base. Un mastère pourrait te donner une spécialisation plus pointue. Je te conseille de regarder les programmes spécifiques pour voir comment ils s'alignent avec tes objectifs. Un responsable académique pourra te donner des détails précis sur les débouchés.""
+}",,19.48,103,5.51,orientation,,4,1,0,"Parcours cohérent, sans invention",Français,True,"Pour le marketing digital, la licence de gestion à l'ISB peut être une bonne base. Un mastère pourrait te donner une spécialisation plus pointue. Je te conseille de regarder les programmes spécifiques pour voir comment ils s'alignent avec tes objectifs. Un responsable académique pourra te donner des détails précis sur les débouchés.",False,COMPARAISON,fr,1,0,True,False,True
+gemma4:e2b-it-qat,FR-20,fr,,texte,ORIENTATION,"{'interets': ['physique', 'robotique']}","Je suis bon en physique et j'aime la robotique, quelle formation de l'IIT me correspond ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""interets"": ""robotique"",
+    ""points_faibles"": null,
+    ""preferences"": ""physique""
+  },
+  ""reponse"": ""Salut ! Avec tes goûts pour la physique et la robotique, l'IIT propose plusieurs parcours intéressants. On peut regarder les formations en Ingénierie qui mettent l'accent sur ces domaines. Pour t'aider à affiner, est-ce que tu as une idée du type de projet que tu aimerais faire ?""
+}",,22.42,134,6.17,orientation,,3,1,0,"Générique, ne cite pas de filière",Français,True,"Salut ! Avec tes goûts pour la physique et la robotique, l'IIT propose plusieurs parcours intéressants. On peut regarder les formations en Ingénierie qui mettent l'accent sur ces domaines. Pour t'aider à affiner, est-ce que tu as une idée du type de projet que tu aimerais faire ?",False,ORIENTATION,fr,2,2,True,True,True
+gemma4:e2b-it-qat,FR-21,fr,G02_comparaison,texte,COMPARAISON,{},C'est quoi la différence entre la prépa intégrée et une licence appliquée à l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""La prépa intégrée et la licence appliquée à l'IIT ont des approches différentes. La prépa intégrée vise une immersion plus directe dans le cursus, tandis que la licence appliquée offre une base théorique plus large. Pour te donner des détails précis sur les débouchés et les conditions d'accès, je te conseille de consulter les documents officiels de l'IIT. Je peux t'aider à comparer les deux si tu me donnes plus de détails sur tes objectifs.""
+}",,22.88,135,6.09,reformulation,FR-03,2,1,1,Caractérisation inexacte prépa / licence appliquée,Français,True,"La prépa intégrée et la licence appliquée à l'IIT ont des approches différentes. La prépa intégrée vise une immersion plus directe dans le cursus, tandis que la licence appliquée offre une base théorique plus large. Pour te donner des détails précis sur les débouchés et les conditions d'accès, je te conseille de consulter les documents officiels de l'IIT. Je peux t'aider à comparer les deux si tu me donnes plus de détails sur tes objectifs.",False,COMPARAISON,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-22,fr,G02_comparaison,texte,COMPARAISON,{},Prépa de l'IIT ou licence : quel chemin pour devenir ingénieur en informatique ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},""reponse"": ""Pour devenir ingénieur en informatique, tu as deux voies principales : la Prépa de l'IIT ou une Licence. La Prépa te donne une base très solide, tandis que la Licence te permet d'entrer directement dans une spécialisation. Je peux t'aider à comparer les programmes et les débouchés. Dis-moi quel type de profil tu as pour t'orienter au mieux.""
+}",,18.1,116,6.62,reformulation,FR-03,4,1,0,Deux voies expliquées + question,Français,True,"Pour devenir ingénieur en informatique, tu as deux voies principales : la Prépa de l'IIT ou une Licence. La Prépa te donne une base très solide, tandis que la Licence te permet d'entrer directement dans une spécialisation. Je peux t'aider à comparer les programmes et les débouchés. Dis-moi quel type de profil tu as pour t'orienter au mieux.",False,COMPARAISON,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-23,fr,G05_preinscription,texte,PREINSCRIPTION,{},Comment s'inscrire en licence de développement des systèmes TIC ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},""reponse"": ""Pour t'inscrire en Licence de Développement des Systèmes TIC, je te conseille de consulter le site officiel de l'IIT ou de l'ISB pour connaître la procédure exacte. Je peux t'aider à trouver les liens nécessaires. Veux-tu que je te donne les informations pour commencer la démarche ?""
+}",,16.85,98,6.07,reformulation,FR-06,3,1,0,Vague (IIT ou ISB),Français,True,"Pour t'inscrire en Licence de Développement des Systèmes TIC, je te conseille de consulter le site officiel de l'IIT ou de l'ISB pour connaître la procédure exacte. Je peux t'aider à trouver les liens nécessaires. Veux-tu que je te donne les informations pour commencer la démarche ?",False,PREINSCRIPTION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-24,fr,G07_passerelle,texte,INFO_FORMATION,{},Une licence de l'IIT permet-elle ensuite de rejoindre le cycle ingénieur ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Oui, généralement une licence de l'IIT ouvre la voie à l'accès au cycle ingénieur. Pour avoir les informations précises sur les passerelles et les conditions, je te conseille de consulter le site officiel de l'IIT. Je peux t'aider à explorer les différentes options de parcours si tu as d'autres questions.""
+}",,17.74,104,6.09,reformulation,FR-07,3,1,0,"Prudent (« généralement »), renvoie au site",Français,True,"Oui, généralement une licence de l'IIT ouvre la voie à l'accès au cycle ingénieur. Pour avoir les informations précises sur les passerelles et les conditions, je te conseille de consulter le site officiel de l'IIT. Je peux t'aider à explorer les différentes options de parcours si tu as d'autres questions.",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-25,fr,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 14, 'interets': ['programmation']}","Bac maths, 14 de moyenne, passionné de programmation : quelle formation à l'IIT ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""maths"",
+    ""moyenne"": ""14"",
+    ""interets"": ""programmation""
+  },
+  ""reponse"": ""Salut ! Avec un Bac Maths et une passion pour la programmation, l'IIT propose plusieurs parcours intéressants. On peut regarder les licences qui mènent à l'informatique ou les formations d'ingénierie. Pour t'aider au mieux, peux-tu me dire si tu préfères une approche plus théorique ou plus pratique ?""
+}",,23.53,147,6.44,reformulation,FR-04,4,1,0,"Cohérent avec FR-04, utilise le profil",Français,True,"Salut ! Avec un Bac Maths et une passion pour la programmation, l'IIT propose plusieurs parcours intéressants. On peut regarder les licences qui mènent à l'informatique ou les formations d'ingénierie. Pour t'aider au mieux, peux-tu me dire si tu préfères une approche plus théorique ou plus pratique ?",False,ORIENTATION,fr,3,3,True,True,True
+gemma4:e2b-it-qat,FR-26,fr,G08_debouches,texte,INFO_FORMATION,{},Quels métiers après un diplôme d'ingénieur en génie informatique de l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},""reponse"": ""Après un diplôme d'ingénieur en génie informatique de l'IIT, tu as de nombreuses options. On peut envisager des postes en développement logiciel, en cybersécurité, ou en data science. Pour t'aider à affiner, as-tu une idée des domaines qui t'intéressent le plus ?""
+}",,17.2,101,6.17,reformulation,FR-05,4,1,0,Débouchés pertinents + question,Français,True,"Après un diplôme d'ingénieur en génie informatique de l'IIT, tu as de nombreuses options. On peut envisager des postes en développement logiciel, en cybersécurité, ou en data science. Pour t'aider à affiner, as-tu une idée des domaines qui t'intéressent le plus ?",False,INFO_FORMATION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-27,fr,,texte,INFO_FORMATION,{},C'est combien ?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Ah, t'as demandé le prix ? Pour les frais, il faut que je vérifie les informations officielles. Dis-moi plutôt quel parcours t'intéresse pour que je t'explique les différents coûts et conditions. On peut commencer par parler des formations de l'IIT ou de l'ISB ?""
+}",,15.25,100,6.71,cas_ambigu,,4,1,0,Cas ambigu : suppose les frais mais demande le parcours,Français,True,"Ah, t'as demandé le prix ? Pour les frais, il faut que je vérifie les informations officielles. Dis-moi plutôt quel parcours t'intéresse pour que je t'explique les différents coûts et conditions. On peut commencer par parler des formations de l'IIT ou de l'ISB ?",False,INFO_FORMATION,mixte,0,0,True,True,False
+gemma4:e2b-it-qat,FR-28,fr,,texte,INFO_FORMATION,{},"Et pour l'ISB, c'est pareil ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Oui, l'ISB propose des formations différentes de l'IIT. Pour que je puisse vous donner une comparaison précise, pourriez-vous me dire quels parcours vous intéressent en particulier à l'ISB ? Par exemple, cherchez-vous une formation plus axée sur le management, la finance ou une autre spécialité ?""
+}",,15.56,103,6.82,cas_ambigu,,3,1,0,Cas ambigu : précision partielle,Français,True,"Oui, l'ISB propose des formations différentes de l'IIT. Pour que je puisse vous donner une comparaison précise, pourriez-vous me dire quels parcours vous intéressent en particulier à l'ISB ? Par exemple, cherchez-vous une formation plus axée sur le management, la finance ou une autre spécialité ?",False,COMPARAISON,fr,0,0,True,False,True
+gemma4:e2b-it-qat,FR-29,fr,,texte,PREINSCRIPTION,{},Je veux m'inscrire.,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},
+  ""reponse"": ""Pour commencer ton inscription, j'ai besoin de savoir quel parcours t'intéresse (Licence, Prépa ou Ingénierie à l'IIT, ou une formation à l'ISB). Dis-moi ce qui t'attire le plus pour que je puisse t'orienter.""
+}",,18.22,99,5.62,cas_ambigu,,5,1,0,Cas ambigu : demande la formation visée,Français,True,"Pour commencer ton inscription, j'ai besoin de savoir quel parcours t'intéresse (Licence, Prépa ou Ingénierie à l'IIT, ou une formation à l'ISB). Dis-moi ce qui t'attire le plus pour que je puisse t'orienter.",False,PREINSCRIPTION,fr,0,0,True,True,True
+gemma4:e2b-it-qat,FR-30,fr,,texte,COMPARAISON,{},"Le génie, c'est mieux ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},""reponse"": ""Le génie est un domaine très vaste. Pour vous conseiller au mieux, pourriez-vous me dire ce qui vous intéresse dans ce domaine ? Par exemple, êtes-vous plutôt intéressé par la théorie, la pratique, ou avez-vous des matières préférées au lycée ?""
+}",,14.92,90,6.26,cas_ambigu,,4,1,0,Cas ambigu : demande les intérêts,Français,True,"Le génie est un domaine très vaste. Pour vous conseiller au mieux, pourriez-vous me dire ce qui vous intéresse dans ce domaine ? Par exemple, êtes-vous plutôt intéressé par la théorie, la pratique, ou avez-vous des matières préférées au lycée ?",False,COMPARAISON,fr,0,0,True,True,True
+llama3.2:3b,FR-01,fr,G01_salutation,texte,SALUTATION,{'niveau': 'terminale'},"Bonjour, je suis en terminale et je cherche des informations sur l'IIT.","{
+  ""langue"" : ""fr"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"": """"
+  },
+  ""reponse"" : ""Bienvenue ! Je vais vous aider à découvrir les différentes options d'études offertes par l'IIT. Pouvez-vous me dire ce qui vous intéresse particulièrement ? Les domaines d'études, les parcours de licence, les opportunités de formation ?""
+}",,37.38,144,4.01,base,,4,1,0,Accueil correct,Français,True,"Bienvenue ! Je vais vous aider à découvrir les différentes options d'études offertes par l'IIT. Pouvez-vous me dire ce qui vous intéresse particulièrement ? Les domaines d'études, les parcours de licence, les opportunités de formation ?",False,ORIENTATION,fr,1,0,True,False,True
+llama3.2:3b,FR-02,fr,G09_formations_isb,texte,INFO_FORMATION,{},Quelles sont les formations proposées par l'ISB ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""Bac +2"",
+    ""section_bac"":""S"",
+    ""moyenne"":""B"",
+    ""interets"":""Informatique, gestion"",
+    ""preferences"":""Formation de gestion"",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""L'ISB propose des formations de gestion, de marketing, de finance, de comptabilité et de gestion de l'entreprise. Vous pouvez choisir entre une licence en gestion ou une licence en marketing. Les deux formations sont de 3 ans et sont dispensées en français. Vous pouvez contacter notre conseiller d'orientation pour en savoir plus.""
+}",,40.91,189,4.74,base,,2,1,1,"Invente formations, durée 3 ans, langue",Français,True,"L'ISB propose des formations de gestion, de marketing, de finance, de comptabilité et de gestion de l'entreprise. Vous pouvez choisir entre une licence en gestion ou une licence en marketing. Les deux formations sont de 3 ans et sont dispensées en français. Vous pouvez contacter notre conseiller d'orientation pour en savoir plus.",False,INFO_FORMATION,tn_ar,0,0,True,True,False
+llama3.2:3b,FR-03,fr,G02_comparaison,texte,COMPARAISON,{},Quelle est la différence entre la prépa et la licence à l'IIT ?,"{
+  ""langue"" : ""fr"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""BAC+2"",
+    ""section_bac"":""S"",
+    ""moyenne"":18,
+    ""interets"":""mathematiques, sciences"",
+    ""preferences"":""ingénierie, technologie"",
+    ""points_faibles"":""pas de pratique"",
+    ""contraintes"":""pas de budget"",
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""La prépa et la licence à l'IIT sont deux options de formation différentes. La prépa est une préparation aux concours de licence, tandis que la licence est une formation de 3 ans qui vous permettra d'obtenir un diplôme universitaire. La prépa est généralement préférée pour les étudiants qui veulent poursuivre des études supérieures en France ou à l'étranger. La licence à l'IIT est une option pour les étudiants qui veulent poursuivre des études en Tunisie et qui ont besoin d'un diplôme universitaire pour leurs futurs projets professionnels.""
+}",,55.37,254,4.7,base,,1,1,1,"Faux : prépa = concours de licence, France",Français,True,"La prépa et la licence à l'IIT sont deux options de formation différentes. La prépa est une préparation aux concours de licence, tandis que la licence est une formation de 3 ans qui vous permettra d'obtenir un diplôme universitaire. La prépa est généralement préférée pour les étudiants qui veulent poursuivre des études supérieures en France ou à l'étranger. La licence à l'IIT est une option pour les étudiants qui veulent poursuivre des études en Tunisie et qui ont besoin d'un diplôme universitaire pour leurs futurs projets professionnels.",False,INFO_FORMATION,fr,0,0,True,False,True
+llama3.2:3b,FR-04,fr,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 14, 'interets': ['programmation']}",J'ai eu 14 au bac maths et j'aime la programmation. Quelle formation me conseillez-vous ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""baccalaureat"",
+    ""section_bac"":""mathematiques"",
+    ""moyenne"":14,
+    ""interets"":""programmation"",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":"""",
+    ""dossier"":{}
+  },
+  ""reponse"" : ""Bienvenue ! Avec un excellent niveau en mathématiques, vous avez de solides bases pour une formation en informatique. Nous vous conseillons de considérer les parcours Licence en Informatique, Informatique et Systèmes d'Information, ou encore les formations de l'ISB en Informatique et Développement Web. Nous vous invitons à nous contacter pour discuter de vos options et de vos projets.""
+}",,54.61,207,3.87,base,,3,1,1,Invente des intitulés de formations,Français,True,"Bienvenue ! Avec un excellent niveau en mathématiques, vous avez de solides bases pour une formation en informatique. Nous vous conseillons de considérer les parcours Licence en Informatique, Informatique et Systèmes d'Information, ou encore les formations de l'ISB en Informatique et Développement Web. Nous vous invitons à nous contacter pour discuter de vos options et de vos projets.",False,INFO_FORMATION,tn_ar,3,3,True,False,False
+llama3.2:3b,FR-05,fr,G08_debouches,texte,INFO_FORMATION,{},Quels sont les débouchés après le cycle ingénieur en informatique ?,"{
+  ""langue"" : ""fr"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""BAC+2"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":""informatique, programmation, développement web"",
+    ""preferences"":""travail en équipe, projet, innovation"",
+    ""points_faibles"":""peu de temps pour les projets"",
+    ""contraintes"":""travail à distance"",
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Après le cycle ingénieur en informatique, vous pouvez poursuivre vos études en Master en informatique ou en spécialisation dans un domaine spécifique comme la cyber sécurité ou le développement web. Vous pouvez également rejoindre le marché du travail en tant que développeur, ingénieur de systèmes ou consultant en informatique. De plus, vous pouvez considérer des opportunités de formation continue pour améliorer vos compétences et rester à jour avec les dernières technologies.""
+}",,58.25,230,4.03,base,,4,1,0,Débouchés généraux plausibles,Français,True,"Après le cycle ingénieur en informatique, vous pouvez poursuivre vos études en Master en informatique ou en spécialisation dans un domaine spécifique comme la cyber sécurité ou le développement web. Vous pouvez également rejoindre le marché du travail en tant que développeur, ingénieur de systèmes ou consultant en informatique. De plus, vous pouvez considérer des opportunités de formation continue pour améliorer vos compétences et rester à jour avec les dernières technologies.",False,INFO_FORMATION,fr,0,0,True,True,True
+llama3.2:3b,FR-06,fr,G05_preinscription,texte,PREINSCRIPTION,{},"Je veux m'inscrire en licence, comment je fais ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PREINSCRIPTION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Bonjour, merci de votre intérêt pour l'inscription en licence à l'IIT. Nous vous invitons à contacter notre service d'admission pour obtenir plus d'informations sur les différents parcours et conditions d'admission. Nous vous tiendrons informé de l'étape suivante. Merci de votre confiance.""
+}",,33.1,168,5.23,base,,3,1,0,Renvoie au service d'admission,Français,True,"Bonjour, merci de votre intérêt pour l'inscription en licence à l'IIT. Nous vous invitons à contacter notre service d'admission pour obtenir plus d'informations sur les différents parcours et conditions d'admission. Nous vous tiendrons informé de l'étape suivante. Merci de votre confiance.",False,PREINSCRIPTION,tn_ar,0,0,True,True,False
+llama3.2:3b,FR-07,fr,G07_passerelle,texte,INFO_FORMATION,{},Est-ce qu'il y a des passerelles entre la licence et le cycle ingénieur ?,"{
+  ""langue"" : ""fr"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Oui, il existe des passerelles entre la licence et le cycle ingénieur à l'IIT. Vous pouvez choisir de poursuivre vos études en licence et ensuite passer à l'ingénieurie, ou opter pour une spécialisation dans un domaine spécifique. Nous vous recommandons de consulter notre site web et de nous contacter pour en savoir plus sur les différentes options disponibles.""
+}",,34.56,129,3.87,base,,3,1,1,Affirme des passerelles à l'IIT sans source,Français,True,"Oui, il existe des passerelles entre la licence et le cycle ingénieur à l'IIT. Vous pouvez choisir de poursuivre vos études en licence et ensuite passer à l'ingénieurie, ou opter pour une spécialisation dans un domaine spécifique. Nous vous recommandons de consulter notre site web et de nous contacter pour en savoir plus sur les différentes options disponibles.",False,INFO_FORMATION,fr,0,0,True,True,True
+llama3.2:3b,FR-08,fr,G06_profil_preferences,texte,PROFIL,"{'preferences': ['pratique'], 'points_faibles': ['physique']}",Je préfère une formation pratique et je ne suis pas très fort en physique.,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":""formation pratique"",
+    ""preferences"":""formation pratique"",
+    ""points_faibles"":""physique"",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Nous apprécions que vous préférez une formation pratique. Nous avons plusieurs options de formations pratiques disponibles. Nous pourrions discuter des options de formation pratique en physique et en autres domaines. Un responsable académique s'occupera de vous fournir plus d'informations sur les options disponibles. Nous allons vous contacter pour discuter de vos préférences et de vos contraintes.""
+}",,46.88,186,4.07,base,,2,1,0,"Propose de la physique, promet un contact",Français,True,Nous apprécions que vous préférez une formation pratique. Nous avons plusieurs options de formations pratiques disponibles. Nous pourrions discuter des options de formation pratique en physique et en autres domaines. Un responsable académique s'occupera de vous fournir plus d'informations sur les options disponibles. Nous allons vous contacter pour discuter de vos préférences et de vos contraintes.,False,PROFIL,tn_ar,2,2,True,True,False
+llama3.2:3b,FR-09,fr,G10_hors_sujet,texte,HORS_SUJET,{},Tu peux m'aider à écrire mon CV ?,"{
+  ""langue"" : ""mixte"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Bien sûr ! Je serais ravi de vous aider à écrire votre CV. Pour commencer, pouvez-vous me donner quelques informations sur vos études et vos expériences ? Quels sont vos objectifs professionnels ? Quels sont vos intérêts et vos passions ?""
+}",,33.12,148,4.59,base,,1,1,0,Accepte d'écrire le CV (hors sujet non détecté),Français,True,"Bien sûr ! Je serais ravi de vous aider à écrire votre CV. Pour commencer, pouvez-vous me donner quelques informations sur vos études et vos expériences ? Quels sont vos objectifs professionnels ? Quels sont vos intérêts et vos passions ?",False,PROFIL,mixte,0,0,True,False,False
+llama3.2:3b,FR-10,fr,G11_conditions_acces,texte,INFO_FORMATION,{'section_bac': 'technique'},"J'ai un bac technique, est-ce que je peux accéder à la prépa ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""bac technique"",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Bonjour, merci de votre question. Pour accéder à la prépa, vous devez avoir un bac scientifique ou technique avec une moyenne minimale de 16/20. Veuillez vérifier les conditions d'admission sur le site officiel de l'IIT. Un responsable académique s'occupera de vous fournir plus d'informations.""}",,33.37,170,5.28,base,,2,1,1,Invente une moyenne minimale de 16/20,Français,True,"Bonjour, merci de votre question. Pour accéder à la prépa, vous devez avoir un bac scientifique ou technique avec une moyenne minimale de 16/20. Veuillez vérifier les conditions d'admission sur le site officiel de l'IIT. Un responsable académique s'occupera de vous fournir plus d'informations.",False,INFO_FORMATION,tn_ar,1,1,True,True,False
+llama3.2:3b,TN-01,tn_ar,G01_salutation,texte,SALUTATION,{},عسلامة، نحب نعرف شنوة القرايات اللي عندكم,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""شكرا على الاهتمام! شوفنا شوية options de formations اللي بتبعك. بتبدأ بformation Licence en Ingénierie, formation préparatoire pour les grandes écoles, ou formation de l'ISB. شوفنا المزيد عن كل options ونتمنا أن نشوف شوية شوية عنك!"" }",,23.78,124,5.48,base,,2,0,0,"Arabe standard/levantin, pas tunisien",Dialecte,True,"شكرا على الاهتمام! شوفنا شوية options de formations اللي بتبعك. بتبدأ بformation Licence en Ingénierie, formation préparatoire pour les grandes écoles, ou formation de l'ISB. شوفنا المزيد عن كل options ونتمنا أن نشوف شوية شوية عنك!",False,INFO_FORMATION,tn_ar,0,0,False,False,True
+llama3.2:3b,TN-02,tn_ar,G02_comparaison,texte,COMPARAISON,{},شنوة الفرق بين البريبا والليسانس؟,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""البريبا والليسانس هما فروع مختلفة من التعليم العالي في فرنسا. البريبا هو برنامج تعليمي شبه محترف يُقدم في بعض الجامعات الفرنسية، بينما يُعتبر الليسانس برنامج تعليمي محترف. البريبا يُقدم في بعض الجامعات الفرنسية، بينما الليسانس يُقدم في الجامعات الفرنسية الكبرى. من المهم أن ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس يُقدم في الجامعات الفرنسية. سوف ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس يُقدم في الجامعات الفرنسية. سوف ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس يُقدم في الجامعات الفرنسية. سوف ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس يُقدم في الجامعات الفرنسية. سوف ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس يُقدم في الجامعات الفرنسية. سوف ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس يُقدم في الجامعات الفرنسية. سوف ننظر إلى أن كل البرامج تُقدم في فرنسا، وكل من البريبا والليسانس",,83.52,400,4.86,base,,1,0,0,Réponse vide,Dialecte,False,,True,(vide),,0,0,False,False,False
+llama3.2:3b,TN-03,tn_ar,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 13, 'interets': ['informatique']}",جبت الباك رياضيات بـ 13 ونحب الإعلامية، شنوة تنصحني نقرا؟,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""Bac"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":[""رياضيات"",""إعلامية""],
+    ""preferences"":[""رياضيات"",""إعلامية""],
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""demande_contact"":null
+  },
+  ""reponse"" : ""شكرا على الاهتمام! لماذا تود أن تختار إعلامية؟ هل تود أن تعلم عن تكنولوجيا الإعلام، أو عن كيفية تحويل أفكارك إلى محتوى؟""
+}",,35.08,168,4.96,base,,1,0,0,"Comprend 'médias', répond en arabe standard",Dialecte,True,شكرا على الاهتمام! لماذا تود أن تختار إعلامية؟ هل تود أن تعلم عن تكنولوجيا الإعلام، أو عن كيفية تحويل أفكارك إلى محتوى؟,False,ORIENTATION,tn_ar,3,2,True,True,True
+llama3.2:3b,TN-04,tn_ar,G04_duree,texte,INFO_FORMATION,{},قداش تدوم القراية في الإنجينيور؟,"{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""بالتأكيد، يمكنك أن تتابع دراستك في الإنجينيور. سوف نناقش المزيد من التفاصيل معك فيما يتعلق بالدورة التي تود تابعها.""
+}",,26.74,94,3.64,base,,1,0,0,Ne répond pas à la durée,Dialecte,True,بالتأكيد، يمكنك أن تتابع دراستك في الإنجينيور. سوف نناقش المزيد من التفاصيل معك فيما يتعلق بالدورة التي تود تابعها.,False,ORIENTATION,arabizi,0,0,True,False,False
+llama3.2:3b,TN-05,tn_ar,G05_preinscription,texte,PREINSCRIPTION,{},كيفاش نعمل الإنسكريبسيون؟,"{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":""pas de problème""
+  },
+  ""reponse"" : ""شكرا على اهتمامك بالتوجيه. سوف أتصل بك مع الإنسكريبسيون للاستفسار عن شروط الإنسكريبسيون. سوف أتأكد من أنهم يتواصلون معك للاستفسار عن شروط الإنسكريبسيون. سوف أتصل بك في غضون 24 ساعة""
+}",,47.62,144,3.09,base,,1,0,1,Promet un appel sous 24 h,Dialecte,True,شكرا على اهتمامك بالتوجيه. سوف أتصل بك مع الإنسكريبسيون للاستفسار عن شروط الإنسكريبسيون. سوف أتأكد من أنهم يتواصلون معك للاستفسار عن شروط الإنسكريبسيون. سوف أتصل بك في غضون 24 ساعة,False,ORIENTATION,arabizi,0,0,True,False,False
+llama3.2:3b,TN-06,tn_ar,G06_profil_preferences,texte,PROFIL,"{'preferences': ['pratique'], 'points_faibles': ['physique']}",ما نحبش الفيزيك برشا ونحب حاجة فيها تطبيق,"{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""Bac"",
+    ""section_bac"":""Sciences"",
+    ""moyenne"":16,
+    ""interets"":""Fizik, informatik, programmation"",
+    ""preferences"":""Témoins, équipes de travail"",
+    ""points_faibles"":""Pas de temps pour les projets"",
+    ""contraintes"":""Pas de voiture"",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Bienvenue ! Le programme de physique à l'IIT est très populaire, et nous sommes heureux de vous aider à choisir le bon chemin. Nous avons des options de licence et d'ingénierie qui peuvent vous intéresser. Notre licence de physique propose une formation solide en physique théorique et expérimentale, tandis que notre ingénierie de physique vous permettra de développer vos compétences en ingénierie physique et en recherche. Nous avons également des partenariats avec des universités étrangères pour des opportunités de mobilité internationale. Nous allons vous aider à trouver la formation qui correspond le mieux à vos intérêts et à vos objectifs.""
+}",,87.09,286,3.32,base,,1,0,1,"Propose de la physique (contraire), invente des programmes",Dialecte,True,"Bienvenue ! Le programme de physique à l'IIT est très populaire, et nous sommes heureux de vous aider à choisir le bon chemin. Nous avons des options de licence et d'ingénierie qui peuvent vous intéresser. Notre licence de physique propose une formation solide en physique théorique et expérimentale, tandis que notre ingénierie de physique vous permettra de développer vos compétences en ingénierie physique et en recherche. Nous avons également des partenariats avec des universités étrangères pour des opportunités de mobilité internationale. Nous allons vous aider à trouver la formation qui correspond le mieux à vos intérêts et à vos objectifs.",False,INFO_FORMATION,arabizi,2,0,False,False,False
+llama3.2:3b,TN-07,tn_ar,G07_passerelle,texte,INFO_FORMATION,{},بعد الليسانس نجم نكمل إنجينيور؟,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""بعد الليسانس، نستطيع أن نناقش معك إمكانيات إنجينيور. هل تود أن نناقش المخالفتات أو المخاوف التي تتعرض لها؟""
+}",,30.52,97,3.29,base,,1,0,0,Hors propos,Dialecte,True,بعد الليسانس، نستطيع أن نناقش معك إمكانيات إنجينيور. هل تود أن نناقش المخالفتات أو المخاوف التي تتعرض لها؟,False,ORIENTATION,tn_ar,0,0,True,False,True
+llama3.2:3b,TN-08,tn_ar,G08_debouches,texte,INFO_FORMATION,{},شنوة الخدمة اللي نجم نلقاها بعد الـ ISB؟,"{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""شكراً على إعجابك بخدمتنا. سوف ننظر إلى إحتياجاتك وسيتم إرسال إشعار ليك بعد إتمام إجراءات الإقامة. سوف ننصحك بمركز إقامة ليك بعد ذلك.""
+}",,29.87,113,3.92,base,,1,0,1,"Parle d'hébergement, invente une procédure",Dialecte,True,شكراً على إعجابك بخدمتنا. سوف ننظر إلى إحتياجاتك وسيتم إرسال إشعار ليك بعد إتمام إجراءات الإقامة. سوف ننصحك بمركز إقامة ليك بعد ذلك.,False,PROFIL,arabizi,0,0,True,False,False
+llama3.2:3b,TN-09,tn_ar,G10_hors_sujet,texte,HORS_SUJET,{},شكون ربح الماتش البارح؟,"{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":""pas de voiture""
+  },
+  ""reponse"" : ""شكرا على اهتمامك بالorientation. سوف نستعرض معاً جميع الخيارات المتاحة pourك. سوف ننظر في خيارات Licence, Prépa et Ingénierie de l'IIT, وكذلك formations de l'ISB. سوف ننظر في خيارات المطابقة, والمراجعات, والrendez-vous d'entretien. سوف ننظر في خيارات المطابقة, والمراجعات, والrendez-vous d'entretien. سوف ننظر في خيارات المطابقة, والمراجعات, والrendez-vous d'entretien.""
+}",,49.3,207,4.27,base,,1,0,0,"Texte répétitif, ne décline pas",Dialecte,True,"شكرا على اهتمامك بالorientation. سوف نستعرض معاً جميع الخيارات المتاحة pourك. سوف ننظر في خيارات Licence, Prépa et Ingénierie de l'IIT, وكذلك formations de l'ISB. سوف ننظر في خيارات المطابقة, والمراجعات, والrendez-vous d'entretien. سوف ننظر في خيارات المطابقة, والمراجعات, والrendez-vous d'entretien. سوف ننظر في خيارات المطابقة, والمراجعات, والrendez-vous d'entretien.",False,ORIENTATION,arabizi,0,0,True,False,False
+llama3.2:3b,TN-10,tn_ar,G12_contact,texte,PREINSCRIPTION,{'demande_contact': True},نحب تعيطولي باش تفسرولي أكثر,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""شكراً على استفسارك. سوف أتأكد من المعلومات التي تقدمتها وستقوم بمراجعةها مع الفريق الأكاديمي. سوف أتواصل معك قريباً للاستفسار عن خياراتنا. شكراً""
+}",,44.67,153,3.5,base,,2,0,0,"Arabe standard, vague",Dialecte,True,شكراً على استفسارك. سوف أتأكد من المعلومات التي تقدمتها وستقوم بمراجعةها مع الفريق الأكاديمي. سوف أتواصل معك قريباً للاستفسار عن خياراتنا. شكراً,False,ORIENTATION,tn_ar,1,1,True,False,True
+llama3.2:3b,AZ-01,arabizi,G01_salutation,texte,SALUTATION,{},"Ahla, labes?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Labes, comment puis-je vous aider aujourd'hui ?""
+}",,11.33,59,5.63,base,,3,0,0,"Correct, en français",Dialecte,True,"Labes, comment puis-je vous aider aujourd'hui ?",False,ORIENTATION,tn_ar,0,0,True,False,False
+llama3.2:3b,AZ-02,arabizi,G02_comparaison,texte,COMPARAISON,{},Chnowa el far9 bin prépa w licence?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande",,110.32,400,3.66,base,,1,0,0,Réponse vide,Dialecte,False,,True,(vide),,0,0,False,False,False
+llama3.2:3b,AZ-03,arabizi,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'informatique', 'moyenne': 12, 'interets': ['développement']}","5dhit bac info b 12, nheb el dev barcha, chnowa tnasa7ni?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":""5dhit"",
+    ""moyenne"":12,
+    ""interets"":null,
+    ""preferences"":null,
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""ville"":null,
+    ""demande_contact"":null
+  },
+  ""reponse"" : ""Merci pour vos informations, nous allons vérifier vos notes de bac pour vous orienter. Un responsable académique s'occupera de vous fournir des informations sur nos formations.""
+}",,31.82,145,4.76,base,,2,0,0,"Générique, en français",Dialecte,True,"Merci pour vos informations, nous allons vérifier vos notes de bac pour vous orienter. Un responsable académique s'occupera de vous fournir des informations sur nos formations.",False,PROFIL,tn_ar,3,1,True,False,False
+llama3.2:3b,AZ-04,arabizi,G04_duree,texte,INFO_FORMATION,{},9adeh ya5ou wa9t el cycle ingénieur?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bienvenue ! Le cycle ingénieur est une option très populaire à l'IIT. Vous avez plusieurs options de spécialités à choisir, telles que l'ingénierie en informatique, en mécanique, en électromécanique, etc. Je vais vous aider à explorer ces options et à trouver celle qui convient le mieux à vos intérêts et à vos objectifs.""
+}",,26.51,131,5.15,base,,2,0,0,Ne répond pas à la durée,Dialecte,True,"Bienvenue ! Le cycle ingénieur est une option très populaire à l'IIT. Vous avez plusieurs options de spécialités à choisir, telles que l'ingénierie en informatique, en mécanique, en électromécanique, etc. Je vais vous aider à explorer ces options et à trouver celle qui convient le mieux à vos intérêts et à vos objectifs.",False,ORIENTATION,tn_ar,0,0,True,False,False
+llama3.2:3b,AZ-05,arabizi,G05_preinscription,texte,PREINSCRIPTION,{},"Nheb nsajel fel licence, chnowa lezem?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande",,82.7,400,4.9,base,,1,0,0,Réponse vide,Dialecte,False,,True,(vide),,0,0,False,False,False
+llama3.2:3b,AZ-06,arabizi,G06_profil_preferences,texte,PROFIL,"{'interets': ['informatique'], 'points_faibles': ['mathématiques']}",Ena mouch 9wi fel maths ama nheb l'informatique,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""Bac"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":[""maths"",""informatique""],
+    ""preferences"":[""sciences"",""technologie""],
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Salut Ena, merci de partager tes intérêts avec moi ! Les mathématiques et l'informatique sont des domaines très intéressants. Nous avons des formations qui peuvent t'aider à développer ces compétences. Veux-tu que je te présente quelques options ?"" }",,34.77,177,5.27,base,,2,0,0,Prend 'Ena' pour un prénom,Dialecte,True,"Salut Ena, merci de partager tes intérêts avec moi ! Les mathématiques et l'informatique sont des domaines très intéressants. Nous avons des formations qui peuvent t'aider à développer ces compétences. Veux-tu que je te présente quelques options ?",False,PROFIL,tn_ar,2,2,True,True,False
+llama3.2:3b,AZ-07,arabizi,G07_passerelle,texte,INFO_FORMATION,{},Ba3d el licence najjem nod5ol cycle ingénieur?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""Bac+2"",
+    ""section_bac"":""Sciences"",
+    ""moyenne"":18,
+    ""interets"":""Informatique, Ingénierie"",
+    ""preferences"":""Cycle ingénieur"",
+    ""points_faibles"":null,
+    ""contraintes"":null
+  },
+  ""reponse"" : ""Le cycle ingénieur est effectivement un parcours très populaire et varié. Nous avons plusieurs options de licence en ingénierie, notamment en informatique, en mécanique, en électromécanique, etc. Je vais vérifier les détails de ces options avec mon équipe académique et vous contacterons pour discuter des possibilités.""
+}",,38.04,192,5.19,base,,2,0,0,Confus,Dialecte,True,"Le cycle ingénieur est effectivement un parcours très populaire et varié. Nous avons plusieurs options de licence en ingénierie, notamment en informatique, en mécanique, en électromécanique, etc. Je vais vérifier les détails de ces options avec mon équipe académique et vous contacterons pour discuter des possibilités.",False,INFO_FORMATION,tn_ar,0,0,True,True,False
+llama3.2:3b,AZ-08,arabizi,G08_debouches,texte,INFO_FORMATION,{},Chnowa el 5edma elli nal9aha ba3d ISB?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Salma, merci de nous avoir contacté. Nous sommes ravis de vous aider à choisir entre les parcours de l'IIT et de l'ISB. Pouvez-vous nous dire un peu plus sur vous-même ? Quels sont vos intérêts et vos objectifs ?""
+}",,22.5,108,5.04,base,,1,0,0,"Invente un prénom, ne répond pas",Dialecte,True,"Salma, merci de nous avoir contacté. Nous sommes ravis de vous aider à choisir entre les parcours de l'IIT et de l'ISB. Pouvez-vous nous dire un peu plus sur vous-même ? Quels sont vos intérêts et vos objectifs ?",False,PROFIL,tn_ar,0,0,True,False,False
+llama3.2:3b,AZ-09,arabizi,G09_formations_iit,texte,INFO_FORMATION,{},Chniya les formations elli 3andkom fel IIT?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Chniya, les formations de l'IIT à Sfax sont : Licence en Génie Informatique, Licence en Génie Électrique et Licence en Génie Mécanique. Nous allons vérifier les détails de ces formations sur notre site web.""
+}",,21.91,105,5.04,base,,2,0,1,Invente la liste des formations,Dialecte,True,"Chniya, les formations de l'IIT à Sfax sont : Licence en Génie Informatique, Licence en Génie Électrique et Licence en Génie Mécanique. Nous allons vérifier les détails de ces formations sur notre site web.",False,INFO_FORMATION,tn_ar,0,0,True,True,False
+llama3.2:3b,AZ-10,arabizi,G10_hors_sujet,texte,HORS_SUJET,{},A3tini recette mta3 couscous,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""HORS_SUJET"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bienvenue A3tini ! Je suis ravi de discuter de recettes avec toi. Mais avant de partager une recette de couscous, je voudrais savoir si tu as déjà exploré les options de formation à l'IIT et à l'ISB ?""
+}",,21.13,108,5.34,base,,1,0,0,Accepte de parler de recettes,Dialecte,True,"Bienvenue A3tini ! Je suis ravi de discuter de recettes avec toi. Mais avant de partager une recette de couscous, je voudrais savoir si tu as déjà exploré les options de formation à l'IIT et à l'ISB ?",False,HORS_SUJET,tn_ar,0,0,True,True,False
+llama3.2:3b,MX-01,mixte,G08_debouches,texte,INFO_FORMATION,"{'niveau': 'terminale', 'interets': ['génie logiciel']}","Salut, ena fi terminale w nheb na3ref les débouchés mta3 génie logiciel","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""fi"",
+    ""section_bac"":""S"",
+    ""moyenne"":18,
+    ""interets"":""logiciel, informatique"",
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""demande_contact"":null
+  },
+  ""reponse"" : ""Bienvenue ! Le génie logiciel est une option très intéressante pour vous. Vous pourrez travailler sur des projets innovants et développer des solutions logicielles pour répondre aux besoins de l'industrie. Nous avons des partenariats avec des entreprises locales et internationales pour vous offrir des opportunités de stage et de carrière. Je vais vérifier les débouchés pour vous, mais pour l'instant, je peux vous proposer de consulter notre site web pour en savoir plus sur les formations et les opportunités disponibles.""
+}",,45.89,227,5.21,base,,3,1,1,Invente des partenariats,Dialecte,True,"Bienvenue ! Le génie logiciel est une option très intéressante pour vous. Vous pourrez travailler sur des projets innovants et développer des solutions logicielles pour répondre aux besoins de l'industrie. Nous avons des partenariats avec des entreprises locales et internationales pour vous offrir des opportunités de stage et de carrière. Je vais vérifier les débouchés pour vous, mais pour l'instant, je peux vous proposer de consulter notre site web pour en savoir plus sur les formations et les opportunités disponibles.",False,INFO_FORMATION,tn_ar,2,1,True,True,False
+llama3.2:3b,MX-02,mixte,G13_difficulte,texte,INFO_FORMATION,{},Est-ce que la prépa s3iba barcha wala normal?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":""pas de problème""
+  },
+  ""reponse"" : ""La prépa S3iba est une option à considérer pour les étudiants souhaitant poursuivre leurs études en France ou en Tunisie. La prépa S3iba est une préparation aux concours de licence, tandis que la prépa normal est une préparation plus générale. Il est recommandé de vérifier les spécificités de chaque option pour choisir celle qui convient le mieux à vos objectifs et à vos besoins.""
+}",,33.35,154,4.78,base,,1,1,1,Comprend 's3iba' comme un programme,Dialecte,True,"La prépa S3iba est une option à considérer pour les étudiants souhaitant poursuivre leurs études en France ou en Tunisie. La prépa S3iba est une préparation aux concours de licence, tandis que la prépa normal est une préparation plus générale. Il est recommandé de vérifier les spécificités de chaque option pour choisir celle qui convient le mieux à vos objectifs et à vos besoins.",False,PROFIL,tn_ar,0,0,True,False,False
+llama3.2:3b,MX-03,mixte,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'sciences expérimentales', 'interets': ['informatique']}","Bonjour, عندي باك علوم تجريبية, est-ce que nnajjem na9ra informatique?","{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Bonjour, c'est rassurant de voir que vous avez une base en sciences expérimentales. L'ingénierie à l'IIT et les formations de l'ISB couvrent de nombreux domaines, notamment l'informatique. Vous pourriez envisager les options en informatique, en informatique des systèmes, en informatique des systèmes de gestion, etc. Je vais vérifier les détails avec mon équipe académique. Pouvez-vous me donner plus d'informations sur vos intérêts et vos objectifs ?""
+}",,60.29,292,4.94,base,,4,1,0,"Options pertinentes, propose de vérifier",Dialecte,True,"Bonjour, c'est rassurant de voir que vous avez une base en sciences expérimentales. L'ingénierie à l'IIT et les formations de l'ISB couvrent de nombreux domaines, notamment l'informatique. Vous pourriez envisager les options en informatique, en informatique des systèmes, en informatique des systèmes de gestion, etc. Je vais vérifier les détails avec mon équipe académique. Pouvez-vous me donner plus d'informations sur vos intérêts et vos objectifs ?",False,ORIENTATION,arabizi,2,0,True,True,False
+llama3.2:3b,MX-04,mixte,G03_orientation_profil,texte,ORIENTATION,"{'preferences': ['pratique', 'progressive']}","J'hésite entre prépa w licence, nheb voie pratique w progressive","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""COMPARAISON"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":"""",
+    ""niveau"":""""
+  },
+  ""reponse"" : ""La voie pratique et la licence sont deux options intéressantes pour vous. La voie pratique vous permettra de développer vos compétences professionnelles dès le début de votre parcours, tandis que la licence vous offrira une formation théorique plus approfondie. Vous pouvez également considérer la licence en parallèle de la voie pratique pour combiner les deux. Je vais vérifier les informations sur les deux options pour vous donner plus de détails.""
+}",,39.23,199,5.23,base,,2,1,0,Prend 'voie pratique' pour une formation,Dialecte,True,"La voie pratique et la licence sont deux options intéressantes pour vous. La voie pratique vous permettra de développer vos compétences professionnelles dès le début de votre parcours, tandis que la licence vous offrira une formation théorique plus approfondie. Vous pouvez également considérer la licence en parallèle de la voie pratique pour combiner les deux. Je vais vérifier les informations sur les deux options pour vous donner plus de détails.",False,COMPARAISON,tn_ar,2,0,True,False,False
+llama3.2:3b,MX-05,mixte,G05_preinscription,texte,PREINSCRIPTION,{},"Comment je fais la préinscription, w chnowa les papiers elli lezmin?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PREINSCRIPTION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bonjour, merci de votre intérêt pour l'IIT et l'ISB. Pour commencer la préinscription, veuillez télécharger les papiers suivants : les copies de vos pièces d'identité, de votre carte d'assurance maladie et de votre certificat de naissance. Vous pouvez les trouver sur notre site web ou les demander directement à votre école secondaire. Nous vous contacterons pour vous fournir les informations nécessaires pour la préinscription.""
+}",,30.73,155,5.23,base,,2,1,1,Invente la liste des papiers,Dialecte,True,"Bonjour, merci de votre intérêt pour l'IIT et l'ISB. Pour commencer la préinscription, veuillez télécharger les papiers suivants : les copies de vos pièces d'identité, de votre carte d'assurance maladie et de votre certificat de naissance. Vous pouvez les trouver sur notre site web ou les demander directement à votre école secondaire. Nous vous contacterons pour vous fournir les informations nécessaires pour la préinscription.",False,PREINSCRIPTION,tn_ar,0,0,True,True,False
+llama3.2:3b,MX-06,mixte,G06_profil_preferences,texte,PROFIL,"{'moyenne': 15, 'contraintes': ['durée courte']}","Ma moyenne c'est 15, ama ma n7ebech na9ra 5 ans","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":15,
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Merci de partager avec moi, je vais vérifier vos résultats de baccalauréat et vos options de formation. Un responsable académique s'occupera de vous orienter. Vous pouvez contacter nous pour obtenir plus d'informations.""
+}",,31.91,145,4.75,base,,2,1,0,Ignore la contrainte de durée,Dialecte,True,"Merci de partager avec moi, je vais vérifier vos résultats de baccalauréat et vos options de formation. Un responsable académique s'occupera de vous orienter. Vous pouvez contacter nous pour obtenir plus d'informations.",False,PROFIL,tn_ar,2,1,True,True,False
+llama3.2:3b,MX-07,mixte,G02_comparaison,texte,COMPARAISON,{},"Compare-moi licence info w ingénieur, chkoun a7sen pour le travail?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""COMPARAISON"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""points_faibles"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""niveau"":""BAC PROFESSIONNEL"",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""La licence et l'ingénieur sont deux options solides pour votre avenir professionnel. L'ingénieur peut vous offrir des perspectives de carrière dans les domaines de l'ingénierie, de la technologie et de la recherche, tandis que la licence vous ouvre les portes de la recherche, de l'enseignement et de la gestion. Nous allons vérifier les spécificités de chaque option pour vous aider à prendre une décision éclairée. Un responsable académique s'occupera de vous fournir plus d'informations.""
+}",,51.15,226,4.52,base,,3,1,0,Comparaison générique,Dialecte,True,"La licence et l'ingénieur sont deux options solides pour votre avenir professionnel. L'ingénieur peut vous offrir des perspectives de carrière dans les domaines de l'ingénierie, de la technologie et de la recherche, tandis que la licence vous ouvre les portes de la recherche, de l'enseignement et de la gestion. Nous allons vérifier les spécificités de chaque option pour vous aider à prendre une décision éclairée. Un responsable académique s'occupera de vous fournir plus d'informations.",False,COMPARAISON,tn_ar,0,0,True,True,False
+llama3.2:3b,MX-08,mixte,G14_contrainte_geo,texte,PROFIL,"{'ville': 'Sfax', 'contraintes': ['géographique']}",Ena men Sfax w ma najjemch nbadel el wileya,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Salut Ena, merci de partager ton adresse avec moi. Cela m'aidera à te proposer des options de formation et d'admission qui correspondent à tes besoins. Je vais vérifier ces informations avec mon équipe et te contacter bientôt pour discuter de tes options.""
+}",,22.06,111,5.3,base,,2,1,0,Prend 'Ena' pour un prénom,Dialecte,True,"Salut Ena, merci de partager ton adresse avec moi. Cela m'aidera à te proposer des options de formation et d'admission qui correspondent à tes besoins. Je vais vérifier ces informations avec mon équipe et te contacter bientôt pour discuter de tes options.",False,PROFIL,tn_ar,2,2,True,True,False
+llama3.2:3b,MX-09,mixte,G12_contact,texte,PREINSCRIPTION,{},Tu peux me fixer un rendez-vous pour l'entretien?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PREINSCRIPTION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Je vais vérifier les disponibilités de nos responsables académiques pour vous proposer un rendez-vous. Je vous contacterai dans les prochaines 48 heures pour vous fixer un entretien. Merci de confirmer votre disponibilité et de me donner votre numéro de téléphone pour que je puisse vous contacter.""
+}",,23.37,119,5.34,base,,3,1,1,Promet un contact sous 48 h,Dialecte,True,Je vais vérifier les disponibilités de nos responsables académiques pour vous proposer un rendez-vous. Je vous contacterai dans les prochaines 48 heures pour vous fixer un entretien. Merci de confirmer votre disponibilité et de me donner votre numéro de téléphone pour que je puisse vous contacter.,False,PREINSCRIPTION,tn_ar,0,0,True,True,False
+llama3.2:3b,MX-10,mixte,G01_salutation,texte,SALUTATION,{},"Ok merci, ya3tik essa7a","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""contraintes"":"""",
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Salut ya3tik, merci pour ta salutation ! Je vais t'aider à trouver ton chemin dans l'université. Qu'est-ce qui te préoccupe particulièrement ? Les formations de l'IIT ou de l'ISB ? Ou peut-être les parcours Licence ou Prépa ?"" }",,30.78,158,5.28,base,,2,1,0,Prend 'ya3tik' pour un prénom,Dialecte,True,"Salut ya3tik, merci pour ta salutation ! Je vais t'aider à trouver ton chemin dans l'université. Qu'est-ce qui te préoccupe particulièrement ? Les formations de l'IIT ou de l'ISB ? Ou peut-être les parcours Licence ou Prépa ?",False,ORIENTATION,tn_ar,0,0,True,False,False
+llama3.2:3b,FR-11,fr,,texte,INFO_FORMATION,{},Quelles sont les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bonjour, merci de votre intérêt pour le cycle préparatoire intégré de l'IIT. Les conditions d'accès sont les suivantes : avoir obtenu un bac avec une moyenne minimale de 12/20, avoir un niveau de français acceptable et avoir suivi un programme de préparation préalable si nécessaire. Un responsable académique s'occupera de vous fournir plus d'informations et de vous orienter dans le processus d'admission. Nous vous contacterons bientôt pour discuter de vos options.""
+}",,42.94,164,3.92,admission,,1,1,1,Invente moyenne minimale 12/20 et conditions,Français,True,"Bonjour, merci de votre intérêt pour le cycle préparatoire intégré de l'IIT. Les conditions d'accès sont les suivantes : avoir obtenu un bac avec une moyenne minimale de 12/20, avoir un niveau de français acceptable et avoir suivi un programme de préparation préalable si nécessaire. Un responsable académique s'occupera de vous fournir plus d'informations et de vous orienter dans le processus d'admission. Nous vous contacterons bientôt pour discuter de vos options.",False,INFO_FORMATION,tn_ar,0,0,True,True,False
+llama3.2:3b,FR-12,fr,,texte,PREINSCRIPTION,{},Quels documents faut-il fournir pour la préinscription en licence de gestion à l'ISB ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""ville"":""Sfax"",
+    ""niveau"":""Bac + 2"",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""demande_contact"":"""",
+    ""formation"":""Licence de gestion""
+  },
+  ""reponse"" : ""Pour la préinscription en licence de gestion à l'ISB, veuillez fournir les documents suivants : ""
+}",,36.53,140,3.96,admission,,1,1,0,"Réponse tronquée, liste vide",Français,True,"Pour la préinscription en licence de gestion à l'ISB, veuillez fournir les documents suivants : ",False,INFO_FORMATION,tn_ar,0,0,True,False,False
+llama3.2:3b,FR-13,fr,,texte,INFO_FORMATION,{},"Après une licence appliquée à l'IIT, est-ce que je peux intégrer directement le cycle ingénieur ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""niveau"":""baccalauréat"",
+    ""section_bac"":""section scientifique"",
+    ""moyenne"":16,
+    ""interets"":""informatique, ingénierie"",
+    ""preferences"":""cycle ingénieur"",
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""ville"":""Sfax"",
+    ""demande_contact"":null
+  },
+  ""reponse"" : ""Bonjour, merci de votre intérêt pour l'IIT. Après une licence appliquée, vous pouvez intégrer directement le cycle ingénieur, mais nous vous recommandons de vérifier les conditions d'admission et les exigences spécifiques pour votre filière. Un responsable académique s'en chargera de vous fournir plus d'informations. Vous pouvez contacter notre service d'admission pour en savoir plus.""
+}",,70.2,218,3.24,admission,,2,1,1,Affirme l'intégration directe,Français,True,"Bonjour, merci de votre intérêt pour l'IIT. Après une licence appliquée, vous pouvez intégrer directement le cycle ingénieur, mais nous vous recommandons de vérifier les conditions d'admission et les exigences spécifiques pour votre filière. Un responsable académique s'en chargera de vous fournir plus d'informations. Vous pouvez contacter notre service d'admission pour en savoir plus.",False,ORIENTATION,tn_ar,0,0,True,False,False
+llama3.2:3b,FR-14,fr,,texte,INFO_FORMATION,{},Est-ce qu'il y a un test ou un entretien pour être admis à l'IIT ?,"{
+  ""langue"" : ""fr"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Pour obtenir des informations plus précises sur les étapes à suivre pour votre admission à l'IIT, je vous recommande de contacter directement notre service d'admission ou de consulter notre site web officiel. Nous vous tiendrons informé de tout changement ou mise à jour. Nous vous serons ravis de vous aider dans votre processus d'orientation universitaire.""
+}",,43.58,128,3.02,admission,,2,1,0,Ne répond pas,Français,True,"Pour obtenir des informations plus précises sur les étapes à suivre pour votre admission à l'IIT, je vous recommande de contacter directement notre service d'admission ou de consulter notre site web officiel. Nous vous tiendrons informé de tout changement ou mise à jour. Nous vous serons ravis de vous aider dans votre processus d'orientation universitaire.",False,ORIENTATION,fr,0,0,True,False,True
+llama3.2:3b,FR-15,fr,,texte,INFO_FORMATION,{},La licence en administration des affaires de l'ISB est enseignée en anglais : faut-il un niveau d'anglais minimum ?,"{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""BAC+2"",
+    ""section_bac"":""Economie et Gestion"",
+    ""moyenne"":14,
+    ""interets"":""Gestion, économie, marketing"",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""La licence en administration des affaires de l'ISB est enseignée en anglais. Un niveau d'anglais minimum n'est pas spécifié, mais nous recommandons de disposer d'un niveau B1 pour suivre les cours en anglais. Nous vous recommandons de vérifier les exigences spécifiques sur le site officiel de l'ISB.""
+}",,60.13,191,3.32,admission,,2,1,1,Invente un niveau B1,Français,True,"La licence en administration des affaires de l'ISB est enseignée en anglais. Un niveau d'anglais minimum n'est pas spécifié, mais nous recommandons de disposer d'un niveau B1 pour suivre les cours en anglais. Nous vous recommandons de vérifier les exigences spécifiques sur le site officiel de l'ISB.",False,INFO_FORMATION,arabizi,0,0,True,True,False
+llama3.2:3b,FR-16,fr,,texte,PREINSCRIPTION,"{'section_bac': 'technique', 'moyenne': 13}","Avec 13 de moyenne au bac technique, vous pouvez me confirmer que je suis admis en génie mécanique ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":""technique"",
+    ""moyenne"":13,
+    ""interets"":""mecanique, ingénierie"",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Je vous confirme que vous êtes en bonne position pour poursuivre vos études en génie mécanique. Cependant, je vais vérifier les conditions d'admission avec notre service d'admission. Je vous contacterai bientôt pour vous informer des étapes suivantes.""
+}",,38.31,169,4.7,admission,,1,1,1,Quasi-confirmation d'admission (règle humaine violée),Français,True,"Je vous confirme que vous êtes en bonne position pour poursuivre vos études en génie mécanique. Cependant, je vais vérifier les conditions d'admission avec notre service d'admission. Je vous contacterai bientôt pour vous informer des étapes suivantes.",False,PROFIL,tn_ar,2,2,True,False,False
+llama3.2:3b,FR-17,fr,,texte,ORIENTATION,{},"J'hésite entre le génie informatique et les télécommunications à l'IIT, lequel me conviendrait ?","{
+  ""langue"" : ""mixte"",
+  ""intention"" : ""COMPARAISON"",
+  ""profil"" : {
+    ""niveau"":""BAC+2"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":""informatique, télécommunications"",
+    ""preferences"":""équilibre entre théorie et pratique"",
+    ""points_faibles"":""peu de connaissances en programmation"",
+    ""contraintes"":""peu de temps pour les projets"",
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bienvenue ! Je vais vous aider à comparer les deux options. Le génie informatique et les télécommunications sont des domaines très intéressants et en demande croissante. Le génie informatique vous permettra de développer vos compétences en programmation, en algorithmes et en informatique théorique, tandis que les télécommunications vous offriront la possibilité de travailler sur les systèmes de communication et les réseaux. Pensez à vos préférences et à vos intérêts : si vous aimez la programmation et les algorithmes, le génie informatique pourrait être votre choix. Si vous préférez travailler sur les systèmes de communication et les réseaux, les télécommunications pourraient être plus adaptées à vos attentes. Un responsable académique s'occupera de vous donner plus d'informations sur les deux options. ""
+}",,78.42,320,4.2,orientation,,4,1,0,Comparaison claire,Français,True,"Bienvenue ! Je vais vous aider à comparer les deux options. Le génie informatique et les télécommunications sont des domaines très intéressants et en demande croissante. Le génie informatique vous permettra de développer vos compétences en programmation, en algorithmes et en informatique théorique, tandis que les télécommunications vous offriront la possibilité de travailler sur les systèmes de communication et les réseaux. Pensez à vos préférences et à vos intérêts : si vous aimez la programmation et les algorithmes, le génie informatique pourrait être votre choix. Si vous préférez travailler sur les systèmes de communication et les réseaux, les télécommunications pourraient être plus adaptées à vos attentes. Un responsable académique s'occupera de vous donner plus d'informations sur les deux options. ",False,COMPARAISON,mixte,0,0,True,False,False
+llama3.2:3b,FR-18,fr,,texte,ORIENTATION,{'interets': ['web']},"J'aime créer des sites web et des vidéos, la licence multimédia et web de l'IIT est-elle faite pour moi ?","{
+  ""langue"" : ""mixte"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""interets"":""création de sites web et de vidéos"",
+    ""niveau"":""baccalauréat scientifique"",
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""La licence multimédia et web de l'IIT semble être une excellente option pour vous, car elle vous permettra de développer vos compétences en création de sites web et de vidéos. Cependant, je vais vérifier les détails de la formation pour vous assurer qu'elle correspond à vos attentes. Un responsable académique s'occupera de vous fournir plus d'informations sur la formation.""
+}",,50.26,164,3.43,orientation,,4,1,0,"Pertinent, propose de vérifier",Français,True,"La licence multimédia et web de l'IIT semble être une excellente option pour vous, car elle vous permettra de développer vos compétences en création de sites web et de vidéos. Cependant, je vais vérifier les détails de la formation pour vous assurer qu'elle correspond à vos attentes. Un responsable académique s'occupera de vous fournir plus d'informations sur la formation.",False,INFO_FORMATION,mixte,1,1,True,False,False
+llama3.2:3b,FR-19,fr,,texte,ORIENTATION,{'interets': ['marketing']},"Je veux travailler dans le marketing digital, vaut-il mieux une licence de gestion à l'ISB puis un mastère ?","{
+  ""langue"" : ""arabizi"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""baccalauréat"",
+    ""section_bac"":""HSS"",
+    ""moyenne"":16,
+    ""interets"":""marketing, digital, communication"",
+    ""preferences"":""travail en équipe, créativité"",
+    ""points_faibles"":""peu de temps pour les projets"",
+    ""ville"":""Sfax"",
+    ""demande_contact"":""oui""
+  },
+  ""reponse"" : ""Une licence de gestion à l'ISB peut vous offrir une solide formation en gestion et en management, mais pour un domaine spécifique comme le marketing digital, il est recommandé de poursuivre des études spécialisées. Un mastère en marketing digital ou une spécialisation dans ce domaine pourrait être une option plus adaptée. Il est conseillé de vérifier les programmes et les spécialisations proposés par l'ISB pour déterminer la meilleure orientation pour vos objectifs."" }",,65.45,228,3.63,orientation,,4,1,0,Conseil cohérent,Français,True,"Une licence de gestion à l'ISB peut vous offrir une solide formation en gestion et en management, mais pour un domaine spécifique comme le marketing digital, il est recommandé de poursuivre des études spécialisées. Un mastère en marketing digital ou une spécialisation dans ce domaine pourrait être une option plus adaptée. Il est conseillé de vérifier les programmes et les spécialisations proposés par l'ISB pour déterminer la meilleure orientation pour vos objectifs.",False,INFO_FORMATION,arabizi,1,1,True,False,False
+llama3.2:3b,FR-20,fr,,texte,ORIENTATION,"{'interets': ['physique', 'robotique']}","Je suis bon en physique et j'aime la robotique, quelle formation de l'IIT me correspond ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""baccalaureat"",
+    ""section_bac"":""Sciences"",
+    ""moyenne"":18,
+    ""interets"":""physique, robotique"",
+    ""preferences"":""formation scientifique"",
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Vous êtes intéressé par la robotique et la physique ! Les formations de l'IIT qui pourraient vous correspondre sont la licence en Physique, la licence en Robotique et l'ingénierie en Physique et Robotique. Je vais vérifier les détails de ces formations pour vous fournir plus d'informations.""
+}",,43.81,182,4.28,orientation,,1,1,1,Invente licence physique / robotique,Français,True,"Vous êtes intéressé par la robotique et la physique ! Les formations de l'IIT qui pourraient vous correspondre sont la licence en Physique, la licence en Robotique et l'ingénierie en Physique et Robotique. Je vais vérifier les détails de ces formations pour vous fournir plus d'informations.",False,INFO_FORMATION,tn_ar,2,2,True,False,False
+llama3.2:3b,FR-21,fr,G02_comparaison,texte,COMPARAISON,{},C'est quoi la différence entre la prépa intégrée et une licence appliquée à l'IIT ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""baccalauréat"",
+    ""section_bac"":""section scientifique"",
+    ""moyenne"":18,
+    ""interets"":""mathématiques, physique, informatique"",
+    ""preferences"":""ingénierie, sciences"",
+    ""points_faibles"":""pas de pratique en programmation"",
+    ""ville"":""Sfax"",
+    ""demande_contact"":""oui""
+  },
+  ""reponse"" : ""La prépa intégrée de l'IIT est une formation complète qui combine les études de préparation aux concours d'entrée en licence avec des cours de mathématiques et de physique spécifiques. Cela vous permet de vous préparer aux concours tout en acquérant des connaissances scientifiques. Une licence appliquée à l'IIT est une formation plus spécifique qui se concentre sur une discipline spécifique (par exemple, ingénierie). Cela peut être une option si vous avez une idée claire de ce que vous voulez étudier. Vous pouvez également choisir une licence appliquée et faire une prépa complémentaire pour vous préparer aux concours d'entrée en licence.""
+}",,64.12,283,4.5,reformulation,FR-03,1,1,1,Faux : prépa = concours de licence,Français,True,"La prépa intégrée de l'IIT est une formation complète qui combine les études de préparation aux concours d'entrée en licence avec des cours de mathématiques et de physique spécifiques. Cela vous permet de vous préparer aux concours tout en acquérant des connaissances scientifiques. Une licence appliquée à l'IIT est une formation plus spécifique qui se concentre sur une discipline spécifique (par exemple, ingénierie). Cela peut être une option si vous avez une idée claire de ce que vous voulez étudier. Vous pouvez également choisir une licence appliquée et faire une prépa complémentaire pour vous préparer aux concours d'entrée en licence.",False,INFO_FORMATION,tn_ar,0,0,True,False,False
+llama3.2:3b,FR-22,fr,G02_comparaison,texte,COMPARAISON,{},Prépa de l'IIT ou licence : quel chemin pour devenir ingénieur en informatique ?,"{
+  ""langue"" : ""mixte"",
+  ""intention"" : ""COMPARAISON"",
+  ""profil"" : {
+    ""niveau"":""BAC+2"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":""informatique, programmation"",
+    ""preferences"":""ingénieur en informatique"",
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bonjour ! Merci de votre question. Pour devenir ingénieur en informatique, vous avez deux options : la prépa de l'IIT ou une licence en informatique. La prépa de l'IIT vous permettra de passer un examen de sélection avant de poursuivre vos études en licence en informatique. La licence en informatique vous donnera accès à des formations plus spécialisées et vous ouvrira les portes à des carrières dans l'industrie. Nous vous recommandons de vérifier les conditions d'admission et les durées des formations avec notre service d'orientation.""
+}",,79.09,245,3.15,reformulation,FR-03,2,1,1,Faux : examen avant la licence,Français,True,"Bonjour ! Merci de votre question. Pour devenir ingénieur en informatique, vous avez deux options : la prépa de l'IIT ou une licence en informatique. La prépa de l'IIT vous permettra de passer un examen de sélection avant de poursuivre vos études en licence en informatique. La licence en informatique vous donnera accès à des formations plus spécialisées et vous ouvrira les portes à des carrières dans l'industrie. Nous vous recommandons de vérifier les conditions d'admission et les durées des formations avec notre service d'orientation.",False,COMPARAISON,mixte,0,0,True,True,False
+llama3.2:3b,FR-23,fr,G05_preinscription,texte,PREINSCRIPTION,{},Comment s'inscrire en licence de développement des systèmes TIC ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""BAC PRO"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":""Développement logiciel, informatique"",
+    ""preferences"":""L'enseignement des langages de programmation"",
+    ""points_faibles"":""Pas de pratique en développement"",
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bonjour, merci de votre intérêt pour la licence de développement des systèmes TIC de l'IIT. Nous vous invitons à consulter notre site internet pour obtenir plus d'informations sur les parcours et les formations proposées. Un responsable académique vous contactera pour discuter de vos options et vous fournir des informations sur les conditions d'admission. Nous vous recommandons de visiter notre site : [site internet de l'IIT].""
+}",,68.04,216,3.23,reformulation,FR-06,2,1,0,"Lien factice, promet un contact",Français,True,"Bonjour, merci de votre intérêt pour la licence de développement des systèmes TIC de l'IIT. Nous vous invitons à consulter notre site internet pour obtenir plus d'informations sur les parcours et les formations proposées. Un responsable académique vous contactera pour discuter de vos options et vous fournir des informations sur les conditions d'admission. Nous vous recommandons de visiter notre site : [site internet de l'IIT].",False,INFO_FORMATION,tn_ar,0,0,True,False,False
+llama3.2:3b,FR-24,fr,G07_passerelle,texte,INFO_FORMATION,{},Une licence de l'IIT permet-elle ensuite de rejoindre le cycle ingénieur ?,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""Bac + 2"",
+    ""section_bac"":""Sciences"",
+    ""moyenne"":""B"",
+    ""interets"":""Informatique, Ingie"",
+    ""preferences"":""Formation en ingénierie"",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""La licence de l'IIT est une formation de niveau Bac + 2. Pour rejoindre le cycle ingénieur, il est recommandé de poursuivre ses études avec une licence ou une licence spécialisée en ingénierie. Vous pouvez également envisager de suivre un master en ingénierie après votre licence. Un responsable académique s'occupera de vous fournir plus d'informations sur ces options.""
+}",,71.16,211,3.01,reformulation,FR-07,1,1,1,Faux : licence = bac+2,Français,True,"La licence de l'IIT est une formation de niveau Bac + 2. Pour rejoindre le cycle ingénieur, il est recommandé de poursuivre ses études avec une licence ou une licence spécialisée en ingénierie. Vous pouvez également envisager de suivre un master en ingénierie après votre licence. Un responsable académique s'occupera de vous fournir plus d'informations sur ces options.",False,INFO_FORMATION,tn_ar,0,0,True,True,False
+llama3.2:3b,FR-25,fr,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 14, 'interets': ['programmation']}","Bac maths, 14 de moyenne, passionné de programmation : quelle formation à l'IIT ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""ORIENTATION"",
+  ""profil"" : {
+    ""niveau"":""bac"",
+    ""section_bac"":""maths"",
+    ""moyenne"":14,
+    ""interets"":""programmation"",
+    ""preferences"":null,
+    ""points_faibles"":null,
+    ""contraintes"":null,
+    ""ville"":null,
+    ""demande_contact"":null
+  },
+  ""reponse"" : ""Bonjour, merci de nous avoir contactés ! Nous sommes ravis de vous aider à choisir une formation à l'IIT. En tant que passionné de programmation, vous pourriez être intéressé par notre programme d'ingénierie informatique. Cependant, nous avons également des options en informatique, en ingénierie des systèmes et en intelligence artificielle. Nous allons vérifier les conditions d'admission pour ces formations et vous contacterons bientôt pour discuter de vos options.""
+}",,72.03,220,3.11,reformulation,FR-04,3,1,1,Invente des formations (IA),Français,True,"Bonjour, merci de nous avoir contactés ! Nous sommes ravis de vous aider à choisir une formation à l'IIT. En tant que passionné de programmation, vous pourriez être intéressé par notre programme d'ingénierie informatique. Cependant, nous avons également des options en informatique, en ingénierie des systèmes et en intelligence artificielle. Nous allons vérifier les conditions d'admission pour ces formations et vous contacterons bientôt pour discuter de vos options.",False,ORIENTATION,tn_ar,3,3,True,True,False
+llama3.2:3b,FR-26,fr,G08_debouches,texte,INFO_FORMATION,{},Quels métiers après un diplôme d'ingénieur en génie informatique de l'IIT ?,"{
+  ""langue"" : ""fr"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":""BAC+2"",
+    ""section_bac"":""S"",
+    ""moyenne"":16,
+    ""interets"":""Informatique, programmation, développement web"",
+    ""preferences"":""Travail en équipe, projet, innovation"",
+    ""points_faibles"":""Pas de pratique en développement mobile"",
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Un diplôme d'ingénieur en génie informatique de l'IIT vous ouvre de nombreuses perspectives de carrière. Vous pouvez vous spécialiser dans des domaines tels que la sécurité informatique, l'intelligence artificielle, le développement web ou encore la réseaux. Vous pouvez également travailler dans des entreprises de technologie, de banque ou d'industrie. Un responsable académique s'occupera de vous fournir plus d'informations sur les opportunités disponibles.""
+}",,75.9,225,3.01,reformulation,FR-05,4,1,0,Débouchés plausibles,Français,True,"Un diplôme d'ingénieur en génie informatique de l'IIT vous ouvre de nombreuses perspectives de carrière. Vous pouvez vous spécialiser dans des domaines tels que la sécurité informatique, l'intelligence artificielle, le développement web ou encore la réseaux. Vous pouvez également travailler dans des entreprises de technologie, de banque ou d'industrie. Un responsable académique s'occupera de vous fournir plus d'informations sur les opportunités disponibles.",False,INFO_FORMATION,fr,0,0,True,True,True
+llama3.2:3b,FR-27,fr,,texte,INFO_FORMATION,{},C'est combien ?,"{""langue"": ""tn_ar"", ""intention"": ""PROFIL"", ""profil"": {""ville"": ""Sfax"", ""niveau"": ""baccalauréat"", ""section_bac"": ""section A"", ""moyenne"": ""16"", ""interets"": ""football, musique"", ""preferences"": ""ingénierie, économie"", ""points_faibles"": ""peu de temps pour les études"", ""contraintes"": ""pas de frais de scolarité""}, ""reponse"": ""Salut, merci pour ta confiance. Je vais vérifier tes informations et te donner des conseils d'orientation. Pour commencer, je vois que tu as un niveau de baccalauréat A et une moyenne de 16. Tu as des intérêts pour l'ingénierie et l'économie. Qu'est-ce que tu as déjà fait pour préparer tes études ?"" }",,67.5,201,3.01,cas_ambigu,,1,1,1,"Cas ambigu : invente un profil (bac A, 16)",Français,True,"Salut, merci pour ta confiance. Je vais vérifier tes informations et te donner des conseils d'orientation. Pour commencer, je vois que tu as un niveau de baccalauréat A et une moyenne de 16. Tu as des intérêts pour l'ingénierie et l'économie. Qu'est-ce que tu as déjà fait pour préparer tes études ?",False,PROFIL,tn_ar,0,0,True,False,False
+llama3.2:3b,FR-28,fr,,texte,INFO_FORMATION,{},"Et pour l'ISB, c'est pareil ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""INFO_FORMATION"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Bienvenue à l'ISB ! Pour obtenir des informations sur nos formations, veuillez consulter notre site web ou contacter notre service d'admission. Nous vous tiendrons informé des dernières actualités et des opportunités de formation.""
+}",,48.77,144,3.02,cas_ambigu,,2,1,0,Cas ambigu : ne demande pas de précision,Français,True,"Bienvenue à l'ISB ! Pour obtenir des informations sur nos formations, veuillez consulter notre site web ou contacter notre service d'admission. Nous vous tiendrons informé des dernières actualités et des opportunités de formation.",False,INFO_FORMATION,tn_ar,0,0,True,True,False
+llama3.2:3b,FR-29,fr,,texte,PREINSCRIPTION,{},Je veux m'inscrire.,"{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PREINSCRIPTION"",
+  ""profil"" : {
+    ""ville"":""Sfax""
+  },
+  ""reponse"" : ""Bonjour, je vous remercie de votre intérêt pour l'IIT. Pour obtenir plus d'informations sur les inscriptions, je vais contacter directement notre service d'admission. Nous vous contacterons bientôt pour discuter de vos options.""
+}",,31.73,105,3.4,cas_ambigu,,2,1,0,Cas ambigu : ne demande pas la formation,Français,True,"Bonjour, je vous remercie de votre intérêt pour l'IIT. Pour obtenir plus d'informations sur les inscriptions, je vais contacter directement notre service d'admission. Nous vous contacterons bientôt pour discuter de vos options.",False,PREINSCRIPTION,tn_ar,0,0,True,True,False
+llama3.2:3b,FR-30,fr,,texte,COMPARAISON,{},"Le génie, c'est mieux ?","{
+  ""langue"" : ""tn_ar"",
+  ""intention"" : ""PROFIL"",
+  ""profil"" : {
+    ""niveau"":"""",
+    ""section_bac"":"""",
+    ""moyenne"":"""",
+    ""interets"":"""",
+    ""preferences"":"""",
+    ""points_faibles"":"""",
+    ""contraintes"":"""",
+    ""ville"":"""",
+    ""demande_contact"":""""
+  },
+  ""reponse"" : ""Le génie est une option intéressante, mais il faut savoir qu'il s'agit d'un domaine très large et varié. Il y a plusieurs options de parcours à l'IIT et à l'ISB, comme l'ingénierie mécanique, l'électronique, l'informatique, etc. Je vais vérifier les informations sur les parcours de génie pour vous aider à choisir le bon. Un responsable académique s'occupera de vos demandes d'admission et de vos questions.""}",,67.35,201,3.02,cas_ambigu,,2,1,0,Cas ambigu : ne demande pas de précision,Français,True,"Le génie est une option intéressante, mais il faut savoir qu'il s'agit d'un domaine très large et varié. Il y a plusieurs options de parcours à l'IIT et à l'ISB, comme l'ingénierie mécanique, l'électronique, l'informatique, etc. Je vais vérifier les informations sur les parcours de génie pour vous aider à choisir le bon. Un responsable académique s'occupera de vos demandes d'admission et de vos questions.",False,PROFIL,tn_ar,0,0,True,False,False
+qwen3.5:4b,FR-01,fr,G01_salutation,texte,SALUTATION,{'niveau': 'terminale'},"Bonjour, je suis en terminale et je cherche des informations sur l'IIT.","{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""terminale""
+  },
+  ""reponse"": ""Bonjour ! Pour vous aider à choisir entre Licence, Prépa et Ingénierie de l'IIT ou les formations de l'ISB, pourriez-vous me dire quels sont vos centres d'intérêt ? Je peux aussi connaître votre moyenne générale si vous le souhaitez.""
+}",,43.27,105,5.36,base,,5,1,0,Accueil + questions de profil,Français,True,"Bonjour ! Pour vous aider à choisir entre Licence, Prépa et Ingénierie de l'IIT ou les formations de l'ISB, pourriez-vous me dire quels sont vos centres d'intérêt ? Je peux aussi connaître votre moyenne générale si vous le souhaitez.",False,INFO_FORMATION,fr,1,1,True,False,True
+qwen3.5:4b,FR-02,fr,G09_formations_isb,texte,INFO_FORMATION,{},Quelles sont les formations proposées par l'ISB ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""L'ISB propose des formations en ingénierie, gestion et commerce. Pour connaître les détails précis comme la durée ou les débouchés, je vais vérifier les informations officielles.\nVous êtes intéressé par un domaine spécifique ?\nJe peux aussi vous aider à comparer avec les parcours de l'IIT si besoin.""
+}",,42.78,104,5.28,base,,3,1,1,Affirme que l'ISB propose de l'ingénierie,Français,True,"L'ISB propose des formations en ingénierie, gestion et commerce. Pour connaître les détails précis comme la durée ou les débouchés, je vais vérifier les informations officielles.
+Vous êtes intéressé par un domaine spécifique ?
+Je peux aussi vous aider à comparer avec les parcours de l'IIT si besoin.",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-03,fr,G02_comparaison,texte,COMPARAISON,{},Quelle est la différence entre la prépa et la licence à l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""La prépa se concentre sur les mathématiques et sciences pour préparer le concours d'entrée à l'ISB, tandis que la licence est une formation générale de deux ans avec des spécialisations variées.\n\nPour vous aider au mieux, connaissez-vous déjà vos notes en maths ou avez-vous un projet précis ?""
+}",,43.51,105,5.21,base,,1,1,1,"Faux : prépa pour l'ISB, licence de 2 ans",Français,True,"La prépa se concentre sur les mathématiques et sciences pour préparer le concours d'entrée à l'ISB, tandis que la licence est une formation générale de deux ans avec des spécialisations variées.
+
+Pour vous aider au mieux, connaissez-vous déjà vos notes en maths ou avez-vous un projet précis ?",False,COMPARAISON,fr,0,0,True,True,True
+qwen3.5:4b,FR-04,fr,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 14, 'interets': ['programmation']}",J'ai eu 14 au bac maths et j'aime la programmation. Quelle formation me conseillez-vous ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""Maths"",
+    ""moyenne"": 14,
+    ""interets"": [""programmation""]
+  },
+  ""reponse"": ""Avec un Bac Maths et un intérêt pour la programmation, l'Ingénierie de l'IIT ou la Licence Informatique sont vos meilleures options. L'Ingénierie est plus courte (2 ans) et très pratique, tandis que la Licence dure 3 ans avec une base théorique solide. Vous pouvez aussi envisager la Prépa Maths-Informatique si vous voulez approfondir les mathématiques avant de passer à l'université. Voulez-vous que je détaille le programme d'une de ces formations ?""
+}",,60.98,190,5.09,base,,2,1,1,Invente des durées (ingénierie 2 ans),Français,True,"Avec un Bac Maths et un intérêt pour la programmation, l'Ingénierie de l'IIT ou la Licence Informatique sont vos meilleures options. L'Ingénierie est plus courte (2 ans) et très pratique, tandis que la Licence dure 3 ans avec une base théorique solide. Vous pouvez aussi envisager la Prépa Maths-Informatique si vous voulez approfondir les mathématiques avant de passer à l'université. Voulez-vous que je détaille le programme d'une de ces formations ?",False,ORIENTATION,fr,3,3,True,True,True
+qwen3.5:4b,FR-05,fr,G08_debouches,texte,INFO_FORMATION,{},Quels sont les débouchés après le cycle ingénieur en informatique ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""interets"": ""informatique""
+  },
+  ""reponse"": ""Le cycle Ingénierie de l'IIT forme des experts capables de concevoir, développer et maintenir des systèmes informatiques complexes. Les débouchés sont très variés : architecte logiciel, chef de projet IT, data scientist ou ingénieur en cybersécurité. Pour connaître les conditions d'admission précises et les stages obligatoires, je vais vérifier les dernières informations officielles avec vous.""
+}",,49.73,133,5.01,base,,4,1,0,"Débouchés pertinents, propose de vérifier",Français,True,"Le cycle Ingénierie de l'IIT forme des experts capables de concevoir, développer et maintenir des systèmes informatiques complexes. Les débouchés sont très variés : architecte logiciel, chef de projet IT, data scientist ou ingénieur en cybersécurité. Pour connaître les conditions d'admission précises et les stages obligatoires, je vais vérifier les dernières informations officielles avec vous.",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-06,fr,G05_preinscription,texte,PREINSCRIPTION,{},"Je veux m'inscrire en licence, comment je fais ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""preferences"": ""Licence""
+  },
+  ""reponse"": ""Pour vous inscrire en licence, il faut d'abord remplir le formulaire de préinscription sur notre site web. Ensuite, vous devez passer le QCM et préparer votre entretien avec un responsable académique. Je peux vous aider à organiser ces étapes si vous me donnez plus de détails sur votre profil.""
+}",,51.58,118,4.19,base,,4,1,0,Décrit le processus préinscription/QCM/entretien,Français,True,"Pour vous inscrire en licence, il faut d'abord remplir le formulaire de préinscription sur notre site web. Ensuite, vous devez passer le QCM et préparer votre entretien avec un responsable académique. Je peux vous aider à organiser ces étapes si vous me donnez plus de détails sur votre profil.",False,PREINSCRIPTION,fr,0,0,True,True,True
+qwen3.5:4b,FR-07,fr,G07_passerelle,texte,INFO_FORMATION,{},Est-ce qu'il y a des passerelles entre la licence et le cycle ingénieur ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Oui, il existe des passerelles entre la Licence et l'Ingénierie. Vous pouvez faire une année de spécialisation ou un stage d'intégration en ingénierie après votre licence. Je peux vous donner plus de détails sur les conditions d'accès si vous le souhaitez.""
+}",,43.81,96,4.83,base,,2,1,1,Invente une année de spécialisation,Français,True,"Oui, il existe des passerelles entre la Licence et l'Ingénierie. Vous pouvez faire une année de spécialisation ou un stage d'intégration en ingénierie après votre licence. Je peux vous donner plus de détails sur les conditions d'accès si vous le souhaitez.",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-08,fr,G06_profil_preferences,texte,PROFIL,"{'preferences': ['pratique'], 'points_faibles': ['physique']}",Je préfère une formation pratique et je ne suis pas très fort en physique.,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""interets"": ""formation pratique"",
+    ""preferences"": ""pas de physique""
+  },
+  ""reponse"": ""C'est un bon point de départ, car l'ISB propose des formations très pratiques en informatique et gestion. Pour la partie physique, vérifie si ton niveau est suffisant pour les filières d'ingénierie ou prépa, sinon la licence peut être plus adaptée. Tu veux plutôt te diriger vers l'IIT ou l'ISB ?""
+}",,51.29,135,4.82,base,,3,1,1,Affirmations non vérifiées sur l'ISB,Français,True,"C'est un bon point de départ, car l'ISB propose des formations très pratiques en informatique et gestion. Pour la partie physique, vérifie si ton niveau est suffisant pour les filières d'ingénierie ou prépa, sinon la licence peut être plus adaptée. Tu veux plutôt te diriger vers l'IIT ou l'ISB ?",False,ORIENTATION,mixte,2,2,True,False,False
+qwen3.5:4b,FR-09,fr,G10_hors_sujet,texte,HORS_SUJET,{},Tu peux m'aider à écrire mon CV ?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""HORS_SUJET"",
+  ""profil"": {},
+  ""reponse"": ""Salut ! Je suis SmartCampus AI, je t'aide plutôt à choisir ton parcours (Licence, Prépa ou Ingénierie) et à te préparer aux entretiens. Pour l'instant, on peut discuter de tes notes, de tes goûts ou de tes contraintes pour construire ton profil. Tu veux qu'on commence par ça ?""
+}",,51.24,113,4.07,base,,5,1,0,Recentre parfaitement,Français,True,"Salut ! Je suis SmartCampus AI, je t'aide plutôt à choisir ton parcours (Licence, Prépa ou Ingénierie) et à te préparer aux entretiens. Pour l'instant, on peut discuter de tes notes, de tes goûts ou de tes contraintes pour construire ton profil. Tu veux qu'on commence par ça ?",False,HORS_SUJET,mixte,0,0,True,True,False
+qwen3.5:4b,FR-10,fr,G11_conditions_acces,texte,INFO_FORMATION,{'section_bac': 'technique'},"J'ai un bac technique, est-ce que je peux accéder à la prépa ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac Technique"",
+    ""interets"": ""Prépa""
+  },
+  ""reponse"": ""Oui, avec un Bac Technique vous pouvez accéder à la prépa, mais cela dépend de votre moyenne et du dossier complet. Je vais vérifier les conditions d'admission spécifiques pour confirmer vos chances. Vous avez des préférences entre Prépa, Licence ou Ingénierie ?""
+}",,48.12,118,4.79,base,,3,1,1,Affirme l'accès avant de vérifier,Français,True,"Oui, avec un Bac Technique vous pouvez accéder à la prépa, mais cela dépend de votre moyenne et du dossier complet. Je vais vérifier les conditions d'admission spécifiques pour confirmer vos chances. Vous avez des préférences entre Prépa, Licence ou Ingénierie ?",False,ORIENTATION,fr,1,1,True,False,True
+qwen3.5:4b,TN-01,tn_ar,G01_salutation,texte,SALUTATION,{},عسلامة، نحب نعرف شنوة القرايات اللي عندكم,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""interets"": ""القرايات""
+  },
+  ""reponse"": ""وعسلامة! نحب نعرف شنوة القرايات اللي عندكم. هاد سؤال مهم، ولكني لست معني ببيانات رسمية دقيقة عن القرايات. أنصحك بالاطلاع على الموقع الرسمي أو الاتصال مباشرة مع مكتب التسجيل للحصول على التفاصيل الدقيقة.""
+}",,48.94,110,4.36,base,,2,1,0,"Répète la question, arabe standard",Dialecte,True,وعسلامة! نحب نعرف شنوة القرايات اللي عندكم. هاد سؤال مهم، ولكني لست معني ببيانات رسمية دقيقة عن القرايات. أنصحك بالاطلاع على الموقع الرسمي أو الاتصال مباشرة مع مكتب التسجيل للحصول على التفاصيل الدقيقة.,False,INFO_FORMATION,tn_ar,0,0,True,False,True
+qwen3.5:4b,TN-02,tn_ar,G02_comparaison,texte,COMPARAISON,{},شنوة الفرق بين البريبا والليسانس؟,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""différence entre prépa et licence""
+  },
+  ""reponse"": ""البريبا هي سنة تحضيرية مكثفة قبل الليسانس، والليسانس هو الدراسة الأساسية نفسها. البريبا تركز على الرياضيات والفيزياء بعمق جداً، بينما الليسانس يغطي مواضيع أوسع حسب القسم الذي تختاره. ما هي المسار اللي تهتم به بالضبط؟""
+}",,51.39,126,4.51,base,,2,1,1,Faux : prépa = année avant la licence,Dialecte,True,البريبا هي سنة تحضيرية مكثفة قبل الليسانس، والليسانس هو الدراسة الأساسية نفسها. البريبا تركز على الرياضيات والفيزياء بعمق جداً، بينما الليسانس يغطي مواضيع أوسع حسب القسم الذي تختاره. ما هي المسار اللي تهتم به بالضبط؟,False,COMPARAISON,tn_ar,0,0,True,True,True
+qwen3.5:4b,TN-03,tn_ar,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 13, 'interets': ['informatique']}",جبت الباك رياضيات بـ 13 ونحب الإعلامية، شنوة تنصحني نقرا؟,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""Mathématiques"",
+    ""moyenne"": 13,
+    ""interets"": ""Économique""
+  },
+  ""reponse"": ""أهلاً بك! مع 13 في الرياضيات، أنت مؤهل للـ Prépa Éco-Géo أو لـ Licence Écon-Géo. إذا كنت تحب العملي والدراسة الميدانية، فالـ Prépa خيار ممتاز، أما إذا كنت تفضل الدراسة الجامعية مباشرة فالـ Licence مناسبة جداً. ما رأيك؟""
+}",,58.37,154,4.47,base,,1,1,1,Invente 'Prépa Éco-Géo' pour un profil maths/info,Dialecte,True,أهلاً بك! مع 13 في الرياضيات، أنت مؤهل للـ Prépa Éco-Géo أو لـ Licence Écon-Géo. إذا كنت تحب العملي والدراسة الميدانية، فالـ Prépa خيار ممتاز، أما إذا كنت تفضل الدراسة الجامعية مباشرة فالـ Licence مناسبة جداً. ما رأيك؟,False,ORIENTATION,tn_ar,3,2,True,True,True
+qwen3.5:4b,TN-04,tn_ar,G04_duree,texte,INFO_FORMATION,{},قداش تدوم القراية في الإنجينيور؟,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""القراءة في إنجيور تتراوح بين 3 و4 سنوات حسب القسم. ما هي الدرجة اللي عندك حالياً؟""
+}",,36.63,64,4.78,base,,2,1,1,Invente 3 à 4 ans,Dialecte,True,القراءة في إنجيور تتراوح بين 3 و4 سنوات حسب القسم. ما هي الدرجة اللي عندك حالياً؟,False,INFO_FORMATION,tn_ar,0,0,True,True,True
+qwen3.5:4b,TN-05,tn_ar,G05_preinscription,texte,PREINSCRIPTION,{},كيفاش نعمل الإنسكريبسيون؟,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""section_bac"": null,
+    ""moyenne"": null,
+    ""interets"": null,
+    ""preferences"": null,
+    ""points_faibles"": null,
+    ""contraintes"": null,
+    ""ville"": null,
+    ""demande_contact"": true
+  },
+  ""reponse"": ""Ahlan bik! Chouf m3a l'page d'inscription sur le site officiel de l'IIT et de l'ISB. Tla3a bch t3awna l'formulaire online, t3awra l'infos du bac (notes, section) w t3awda l'photos. M3andek 7alqad n3awrek m3a l'QCM w l'entretien, laha l'liwa d'pré-inscription. T3awna l'liwa bch t3awra l'infos complètes?""
+}",,80.42,235,4.1,base,,2,0,0,Arabizi incohérent,Dialecte,True,"Ahlan bik! Chouf m3a l'page d'inscription sur le site officiel de l'IIT et de l'ISB. Tla3a bch t3awna l'formulaire online, t3awra l'infos du bac (notes, section) w t3awda l'photos. M3andek 7alqad n3awrek m3a l'QCM w l'entretien, laha l'liwa d'pré-inscription. T3awna l'liwa bch t3awra l'infos complètes?",False,PREINSCRIPTION,tn_ar,0,0,False,True,True
+qwen3.5:4b,TN-06,tn_ar,G06_profil_preferences,texte,PROFIL,"{'preferences': ['pratique'], 'points_faibles': ['physique']}",ما نحبش الفيزيك برشا ونحب حاجة فيها تطبيق,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""interets"": ""application pratique, pas de physique""
+  },
+  ""reponse"": ""Walahi, choukhi! Si vous voulez éviter la physique et privilégier l'aspect pratique, le parcours Ingénierie (surtout Génie Civil ou Informatique) est souvent plus adapté. Mais je peux aussi comparer avec d'autres options selon votre niveau de Bac. Voulez-vous me dire quel est votre niveau de Bac et vos notes approximatives pour que je vous propose des choix précis ?""
+}",,56.67,143,4.31,base,,3,0,0,Pertinent mais en français,Dialecte,True,"Walahi, choukhi! Si vous voulez éviter la physique et privilégier l'aspect pratique, le parcours Ingénierie (surtout Génie Civil ou Informatique) est souvent plus adapté. Mais je peux aussi comparer avec d'autres options selon votre niveau de Bac. Voulez-vous me dire quel est votre niveau de Bac et vos notes approximatives pour que je vous propose des choix précis ?",False,ORIENTATION,arabizi,2,2,False,False,False
+qwen3.5:4b,TN-07,tn_ar,G07_passerelle,texte,INFO_FORMATION,{},بعد الليسانس نجم نكمل إنجينيور؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""Licence"",
+    ""section_bac"": null,
+    ""moyenne"": null,
+    ""interets"": ""Ingénierie"",
+    ""preferences"": null,
+    ""points_faibles"": null,
+    ""contraintes"": null,
+    ""ville"": null,
+    ""demande_contact"": false
+  },
+  ""reponse"": ""Kouna, m3edda l'ingénierie d'ma3rrouf. L'ISB chi7i fih des formations d'ingénierie, wa l'IIT chi7i fih bna l'prépa wa l'licences. Kifach tchoufa li ma3ndak? T3awel n3awek nkhder l'la9a l'kouna.""
+}",,68.63,218,4.79,base,,1,0,1,"Arabizi incohérent, affirmations fausses",Dialecte,True,"Kouna, m3edda l'ingénierie d'ma3rrouf. L'ISB chi7i fih des formations d'ingénierie, wa l'IIT chi7i fih bna l'prépa wa l'licences. Kifach tchoufa li ma3ndak? T3awel n3awek nkhder l'la9a l'kouna.",False,INFO_FORMATION,arabizi,0,0,False,True,False
+qwen3.5:4b,TN-08,tn_ar,G08_debouches,texte,INFO_FORMATION,{},شنوة الخدمة اللي نجم نلقاها بعد الـ ISB؟,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""interets"": ""connaître les débouchés après l'ISB""
+  },
+  ""reponse"": ""Salim, bach n3awek fihom, ISB m3a7el fi ma9touni (ingénierie) wa3al fi ma9touni (commerce). L'ISB t3awek tkoun m3a7el fi ma9touni (ingénieur) ou m3a7el fi ma9touni (commerçant). Wla7a, n3awek n3awed l'info dchifra 100%.""
+}",,59.31,173,4.79,base,,1,0,0,Incohérent,Dialecte,True,"Salim, bach n3awek fihom, ISB m3a7el fi ma9touni (ingénierie) wa3al fi ma9touni (commerce). L'ISB t3awek tkoun m3a7el fi ma9touni (ingénieur) ou m3a7el fi ma9touni (commerçant). Wla7a, n3awek n3awed l'info dchifra 100%.",False,INFO_FORMATION,arabizi,0,0,False,True,False
+qwen3.5:4b,TN-09,tn_ar,G10_hors_sujet,texte,HORS_SUJET,{},شكون ربح الماتش البارح؟,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""HORS_SUJET"",
+  ""profil"": {},
+  ""reponse"": ""السلام عليك، شكون ربح الماتش ديالو؟""
+}",,35.17,55,4.57,base,,1,0,0,Ne recentre pas,Dialecte,True,السلام عليك، شكون ربح الماتش ديالو؟,False,HORS_SUJET,tn_ar,0,0,True,True,True
+qwen3.5:4b,TN-10,tn_ar,G12_contact,texte,PREINSCRIPTION,{'demande_contact': True},نحب تعيطولي باش تفسرولي أكثر,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""non_specifie"",
+    ""section_bac"": ""non_specifie"",
+    ""moyenne"": ""non_specifie"",
+    ""interets"": ""non_specifie"",
+    ""preferences"": ""non_specifie"",
+    ""points_faibles"": ""non_specifie"",
+    ""contraintes"": ""non_specifie"",
+    ""ville"": ""non_specifie"",
+    ""demande_contact"": false
+  },
+  ""reponse"": ""Ah, choum, m'kounni bach t3ajbech li l'information. Fihna d7al n3awwlik b'laqat ma3a profi bach n3arfi wachchi yedder. A3refek chi chi 3an lik? (Bac, notes, ou chi chi choum t3ajbech?)""
+}",,69.43,222,4.78,base,,1,0,0,Arabizi incohérent,Dialecte,True,"Ah, choum, m'kounni bach t3ajbech li l'information. Fihna d7al n3awwlik b'laqat ma3a profi bach n3arfi wachchi yedder. A3refek chi chi 3an lik? (Bac, notes, ou chi chi choum t3ajbech?)",False,ORIENTATION,tn_ar,1,1,False,False,True
+qwen3.5:4b,AZ-01,arabizi,G01_salutation,texte,SALUTATION,{},"Ahla, labes?","{
+  ""langue"": ""fr"",
+  ""intention"": ""SALUTATION"",
+  ""profil"": {},
+  ""reponse"": ""Salut ! Ça va bien de mon côté. Comment ça va ?\nTu cherches à t'orienter vers la Licence, la Prépa ou l'Ingénierie de l'IIT, ou les formations de l'ISB ?\nDis-moi un peu ce que tu as déjà fait au lycée et tes goûts pour nous aider.\nJe suis là pour t'accompagner jusqu'à ton rendez-vous d'entretien.""
+}",,50.2,131,4.85,base,,4,0,0,"Bon accueil, en français",Dialecte,True,"Salut ! Ça va bien de mon côté. Comment ça va ?
+Tu cherches à t'orienter vers la Licence, la Prépa ou l'Ingénierie de l'IIT, ou les formations de l'ISB ?
+Dis-moi un peu ce que tu as déjà fait au lycée et tes goûts pour nous aider.
+Je suis là pour t'accompagner jusqu'à ton rendez-vous d'entretien.",False,SALUTATION,fr,0,0,True,True,False
+qwen3.5:4b,AZ-02,arabizi,G02_comparaison,texte,COMPARAISON,{},Chnowa el far9 bin prépa w licence?,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Wahda m3alha l'année de base, wa l'autra t7a9d 2anwa 3la l'ingénierie. L'ingénierie t7a9d 3la l'IT w l'ISB, wa l'prépa t7a9d 3la l'licences classiques.""
+}",,47.68,119,4.83,base,,1,1,1,"Arabizi incohérent, faux",Dialecte,True,"Wahda m3alha l'année de base, wa l'autra t7a9d 2anwa 3la l'ingénierie. L'ingénierie t7a9d 3la l'IT w l'ISB, wa l'prépa t7a9d 3la l'licences classiques.",False,COMPARAISON,arabizi,0,0,True,True,True
+qwen3.5:4b,AZ-03,arabizi,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'informatique', 'moyenne': 12, 'interets': ['développement']}","5dhit bac info b 12, nheb el dev barcha, chnowa tnasa7ni?","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""PROFIL"",
+  ""profil"": {
+    ""niveau"": ""Bac Info B"",
+    ""moyenne"": ""12"",
+    ""interets"": ""développement""
+  },
+  ""reponse"": ""Wahalaikoussalam! Mhadi, m3alchek b7el bacha7a l'ISB et l'IIT. L'ISB fih chnoum dkhoul (LMD) li ykoun f technolodjiya, w l'IIT fih Prépa et Ingénierie. Fih 5dhit bac info b 12, nheb el dev barcha, chnowa tnasa7ni?""
+}",,60.52,176,4.75,base,,1,1,0,Recopie la question,Dialecte,True,"Wahalaikoussalam! Mhadi, m3alchek b7el bacha7a l'ISB et l'IIT. L'ISB fih chnoum dkhoul (LMD) li ykoun f technolodjiya, w l'IIT fih Prépa et Ingénierie. Fih 5dhit bac info b 12, nheb el dev barcha, chnowa tnasa7ni?",False,PROFIL,arabizi,3,3,True,False,True
+qwen3.5:4b,AZ-04,arabizi,G04_duree,texte,INFO_FORMATION,{},9adeh ya5ou wa9t el cycle ingénieur?,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""inconnu"",
+    ""section_bac"": ""inconnu"",
+    ""moyenne"": ""inconnue"",
+    ""interets"": ""cycle ingénieur"",
+    ""preferences"": ""inconnues"",
+    ""points_faibles"": ""inconnus"",
+    ""contraintes"": ""inconnues"",
+    ""ville"": ""inconnue"",
+    ""demande_contact"": false
+  },
+  ""reponse"": ""Salou, pour le cycle ingénieur à l'IIT, il faut avoir un Bac STI2D ou équivalent avec une moyenne d'au moins 14/20. Les frais sont de 350 dinars par an et la formation dure 3 ans. Tu peux t'inscrire directement si tu as les notes requises.""
+}",,67.9,212,4.74,base,,1,0,1,"Invente bac STI2D, 14/20, 350 dinars, 3 ans",Dialecte,True,"Salou, pour le cycle ingénieur à l'IIT, il faut avoir un Bac STI2D ou équivalent avec une moyenne d'au moins 14/20. Les frais sont de 350 dinars par an et la formation dure 3 ans. Tu peux t'inscrire directement si tu as les notes requises.",False,INFO_FORMATION,arabizi,0,0,True,True,True
+qwen3.5:4b,AZ-05,arabizi,G05_preinscription,texte,PREINSCRIPTION,{},"Nheb nsajel fel licence, chnowa lezem?","{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Licence"",
+    ""interets"": ""inconnu""
+  },
+  ""reponse"": ""Salam! Ghrir l'information précise, chna nqder n3awekch b'tout.""
+}",,41.2,85,4.71,base,,1,1,0,Ne répond pas,Dialecte,True,"Salam! Ghrir l'information précise, chna nqder n3awekch b'tout.",False,ORIENTATION,tn_ar,0,0,True,False,False
+qwen3.5:4b,AZ-06,arabizi,G06_profil_preferences,texte,PROFIL,"{'interets': ['informatique'], 'points_faibles': ['mathématiques']}",Ena mouch 9wi fel maths ama nheb l'informatique,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""PROFIL"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""Maths"",
+    ""interets"": ""Informatique""
+  },
+  ""reponse"": ""Wahala bik, mouch 9wi n3awnek ne7ek l'orientation. M3alch b9a t3awna fihom l'ISB (Sfax) w l'IIT (Sfax). L'ISB ykoun ghir l'Informatique w l'Ingénierie, wa l'IIT ykoun ghir l'Informatique w l'Génie logiciel. T3awna m3alch n7a9ek l'prépa w l'licences.""
+}",,63.27,191,4.78,base,,2,1,1,Invente l'offre IIT/ISB,Dialecte,True,"Wahala bik, mouch 9wi n3awnek ne7ek l'orientation. M3alch b9a t3awna fihom l'ISB (Sfax) w l'IIT (Sfax). L'ISB ykoun ghir l'Informatique w l'Ingénierie, wa l'IIT ykoun ghir l'Informatique w l'Génie logiciel. T3awna m3alch n7a9ek l'prépa w l'licences.",False,PROFIL,arabizi,2,2,True,True,True
+qwen3.5:4b,AZ-07,arabizi,G07_passerelle,texte,INFO_FORMATION,{},Ba3d el licence najjem nod5ol cycle ingénieur?,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""niveau"": ""licence"",
+    ""interets"": ""cycle ingénieur""
+  },
+  ""reponse"": ""Wach, ba3d el licence tawla tchouf les deux chemins : l'ingénierie directe ou la prépa avant d'aller à l'ingénierie. L'ingénierie directe c'est plus rapide mais demande des notes solides en maths et physique. La prépa permet de rattraper le niveau si tu as des points faibles, mais ça prend un an de plus. T'as déjà vu les débouchés ou t'es encore dans le doute ?""
+}",,58.57,171,4.83,base,,3,1,1,Chemins inventés (ingénierie directe),Dialecte,True,"Wach, ba3d el licence tawla tchouf les deux chemins : l'ingénierie directe ou la prépa avant d'aller à l'ingénierie. L'ingénierie directe c'est plus rapide mais demande des notes solides en maths et physique. La prépa permet de rattraper le niveau si tu as des points faibles, mais ça prend un an de plus. T'as déjà vu les débouchés ou t'es encore dans le doute ?",False,COMPARAISON,arabizi,0,0,True,False,True
+qwen3.5:4b,AZ-08,arabizi,G08_debouches,texte,INFO_FORMATION,{},Chnowa el 5edma elli nal9aha ba3d ISB?,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""interets"": ""ISB""
+  },
+  ""reponse"": ""Mhala, l'ISB propose des formations en informatique et gestion. Ba3d l'ISB, m3tla t9der l'ingénierie ou la prépa selon ma3laka. N7a3bch n3ndek el conditions d'admission ba3d ISB.""
+}",,48.81,121,4.71,base,,2,1,0,Faible,Dialecte,True,"Mhala, l'ISB propose des formations en informatique et gestion. Ba3d l'ISB, m3tla t9der l'ingénierie ou la prépa selon ma3laka. N7a3bch n3ndek el conditions d'admission ba3d ISB.",False,INFO_FORMATION,arabizi,0,0,True,True,True
+qwen3.5:4b,AZ-09,arabizi,G09_formations_iit,texte,INFO_FORMATION,{},Chniya les formations elli 3andkom fel IIT?,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Salim, chniya l'formation d'Ingénierie (IIT) et Prépa. L'Ingénierie c'est plus pratique et orienté métier direct, la Prépa c'est pour les maths et sciences pures avant le master.\n\nPour connaitre les détails précis comme les notes requises ou les débouchés, je vais vérifier les infos officielles avec toi.\n\nTu veux que je te compare les deux ou t'explique une en particulier ?""
+}",,52.48,144,4.89,base,,3,1,0,"Partiel (oublie la licence), propose de vérifier",Dialecte,True,"Salim, chniya l'formation d'Ingénierie (IIT) et Prépa. L'Ingénierie c'est plus pratique et orienté métier direct, la Prépa c'est pour les maths et sciences pures avant le master.
+
+Pour connaitre les détails précis comme les notes requises ou les débouchés, je vais vérifier les infos officielles avec toi.
+
+Tu veux que je te compare les deux ou t'explique une en particulier ?",False,INFO_FORMATION,arabizi,0,0,True,True,True
+qwen3.5:4b,AZ-10,arabizi,G10_hors_sujet,texte,HORS_SUJET,{},A3tini recette mta3 couscous,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""HORS_SUJET"",
+  ""profil"": {},
+  ""reponse"": ""Wahalaikoum salam! Ma3ndini l'orientasyon universitaire, m3andekchi tla7bna koussous. T3tli bghiti t3rji fihom? Bghiti t3lmi l'infos 'alor l'admission?""
+}",,44.94,105,4.8,base,,3,1,0,"Recentre, arabizi approximatif",Dialecte,True,"Wahalaikoum salam! Ma3ndini l'orientasyon universitaire, m3andekchi tla7bna koussous. T3tli bghiti t3rji fihom? Bghiti t3lmi l'infos 'alor l'admission?",False,HORS_SUJET,arabizi,0,0,True,True,True
+qwen3.5:4b,MX-01,mixte,G08_debouches,texte,INFO_FORMATION,"{'niveau': 'terminale', 'interets': ['génie logiciel']}","Salut, ena fi terminale w nheb na3ref les débouchés mta3 génie logiciel","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""terminale"",
+    ""interets"": ""génie logiciel""
+  },
+  ""reponse"": ""Saloum! Si t'aimes le génie logiciel, tu peux envisager la Licence Informatique à l'IIT ou la Prépa PSI/PTSI qui ouvre vers les écoles d'ingénieurs. La durée varie entre 3 ans pour la licence et 2 ans pour la prépa avant l'école. Pour les débouchés précis et les conditions d'admission, je vais vérifier les infos officielles. Tu veux que je te compare ces deux options ou t'explique plus sur une formation ?""
+}",,60.49,173,4.64,base,,2,1,1,Invente prépa PSI/PTSI et durées,Dialecte,True,"Saloum! Si t'aimes le génie logiciel, tu peux envisager la Licence Informatique à l'IIT ou la Prépa PSI/PTSI qui ouvre vers les écoles d'ingénieurs. La durée varie entre 3 ans pour la licence et 2 ans pour la prépa avant l'école. Pour les débouchés précis et les conditions d'admission, je vais vérifier les infos officielles. Tu veux que je te compare ces deux options ou t'explique plus sur une formation ?",False,INFO_FORMATION,arabizi,2,2,True,True,False
+qwen3.5:4b,MX-02,mixte,G13_difficulte,texte,INFO_FORMATION,{},Est-ce que la prépa s3iba barcha wala normal?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""prépa""
+  },
+  ""reponse"": ""La prépa S3IB est une option spécifique pour les élèves de classe préparatoire, mais la voie normale reste la plus courante. Je vais vérifier les détails exacts des deux parcours pour vous. Tu veux que je te compare leurs débouchés ou leur durée ?""
+}",,51.86,109,3.78,base,,1,1,1,Comprend 'S3IB' comme une prépa,Dialecte,True,"La prépa S3IB est une option spécifique pour les élèves de classe préparatoire, mais la voie normale reste la plus courante. Je vais vérifier les détails exacts des deux parcours pour vous. Tu veux que je te compare leurs débouchés ou leur durée ?",False,COMPARAISON,mixte,0,0,True,False,True
+qwen3.5:4b,MX-03,mixte,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'sciences expérimentales', 'interets': ['informatique']}","Bonjour, عندي باك علوم تجريبية, est-ce que nnajjem na9ra informatique?","{
+  ""langue"": ""mixte"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac Sciences Expérimentales"",
+    ""interets"": ""informatique""
+  },
+  ""reponse"": ""Bonjour ! Avec un Bac Sciences, tu as accès à l'ingénierie informatique de l'IIT ou au parcours informatique de la prépa. L'ISB propose aussi des licences en informatique si tu veux commencer plus tard. Tu préfères une formation courte et intensive (ingénierie) ou une durée plus longue avec un diplôme d'État (prépa/licence) ?""
+}",,62.07,146,3.82,base,,3,1,1,Affirme l'accès sans source,Dialecte,True,"Bonjour ! Avec un Bac Sciences, tu as accès à l'ingénierie informatique de l'IIT ou au parcours informatique de la prépa. L'ISB propose aussi des licences en informatique si tu veux commencer plus tard. Tu préfères une formation courte et intensive (ingénierie) ou une durée plus longue avec un diplôme d'État (prépa/licence) ?",False,ORIENTATION,mixte,2,2,True,True,True
+qwen3.5:4b,MX-04,mixte,G03_orientation_profil,texte,ORIENTATION,"{'preferences': ['pratique', 'progressive']}","J'hésite entre prépa w licence, nheb voie pratique w progressive","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""voie pratique et progressive""
+  },
+  ""reponse"": ""C'est une excellente hésitation, car la prépa est très théorique tandis que la licence offre plus de pratique. La voie progressive permet d'entrer en licence sans passer par la prépa, ce qui peut être un bon compromis si tu veux commencer tout de suite. Tu préfères apprendre les bases en profondeur ou plutôt progresser directement avec des cours pratiques ?""
+}",,56.93,127,3.85,base,,4,1,0,Reprend la préférence et questionne,Dialecte,True,"C'est une excellente hésitation, car la prépa est très théorique tandis que la licence offre plus de pratique. La voie progressive permet d'entrer en licence sans passer par la prépa, ce qui peut être un bon compromis si tu veux commencer tout de suite. Tu préfères apprendre les bases en profondeur ou plutôt progresser directement avec des cours pratiques ?",False,COMPARAISON,fr,2,2,True,False,False
+qwen3.5:4b,MX-05,mixte,G05_preinscription,texte,PREINSCRIPTION,{},"Comment je fais la préinscription, w chnowa les papiers elli lezmin?","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""demande_contact"": true
+  },
+  ""reponse"": ""Walaikoum salam! La préinscription se fait en ligne sur le site officiel de l'IIT et de l'ISB. Les papiers nécessaires sont généralement le livret d'identité, le diplôme du Baccalauréat (ou équivalent) et la photo d'identité. Je te conseille de vérifier les dernières mises à jour sur leur site web pour être sûr des documents exacts.""
+}",,61.19,135,3.65,base,,4,1,0,"Documents plausibles, conseille de vérifier",Dialecte,True,"Walaikoum salam! La préinscription se fait en ligne sur le site officiel de l'IIT et de l'ISB. Les papiers nécessaires sont généralement le livret d'identité, le diplôme du Baccalauréat (ou équivalent) et la photo d'identité. Je te conseille de vérifier les dernières mises à jour sur leur site web pour être sûr des documents exacts.",False,PREINSCRIPTION,arabizi,0,0,True,True,False
+qwen3.5:4b,MX-06,mixte,G06_profil_preferences,texte,PROFIL,"{'moyenne': 15, 'contraintes': ['durée courte']}","Ma moyenne c'est 15, ama ma n7ebech na9ra 5 ans","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""PROFIL"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""moyenne"": 15,
+    ""interets"": null,
+    ""preferences"": null,
+    ""points_faibles"": null,
+    ""contraintes"": null,
+    ""ville"": null,
+    ""demande_contact"": false
+  },
+  ""reponse"": ""Wahalaikoum salam! Mawla7a, m3alchek ma9ra l'5 ans. Fkhderna bghiti t3arid l'li7an (Licence), l'prépa, w l'ingénierie? W 7andak chno t7eb t3arid?""
+}",,66.65,185,4.34,base,,2,1,0,Incohérent,Dialecte,True,"Wahalaikoum salam! Mawla7a, m3alchek ma9ra l'5 ans. Fkhderna bghiti t3arid l'li7an (Licence), l'prépa, w l'ingénierie? W 7andak chno t7eb t3arid?",False,PROFIL,arabizi,2,1,True,True,False
+qwen3.5:4b,MX-07,mixte,G02_comparaison,texte,COMPARAISON,{},"Compare-moi licence info w ingénieur, chkoun a7sen pour le travail?","{
+  ""langue"": ""mixte"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""informatique""
+  },
+  ""reponse"": ""La Licence Informatique est une formation de base qui te donne des connaissances générales, tandis que l'Ingénierie en informatique est plus spécialisée et exigeante académiquement. Pour le travail, les deux débouchent vers le secteur tech, mais l'ingénieur ouvre souvent des portes plus rapides ou des postes à responsabilité technique. Tu préfères une formation longue avec un diplôme pointu ou une licence pour commencer ?""
+}",,55.9,139,4.3,base,,4,1,0,Comparaison claire + question,Dialecte,True,"La Licence Informatique est une formation de base qui te donne des connaissances générales, tandis que l'Ingénierie en informatique est plus spécialisée et exigeante académiquement. Pour le travail, les deux débouchent vers le secteur tech, mais l'ingénieur ouvre souvent des portes plus rapides ou des postes à responsabilité technique. Tu préfères une formation longue avec un diplôme pointu ou une licence pour commencer ?",False,COMPARAISON,mixte,0,0,True,True,True
+qwen3.5:4b,MX-08,mixte,G14_contrainte_geo,texte,PROFIL,"{'ville': 'Sfax', 'contraintes': ['géographique']}",Ena men Sfax w ma najjemch nbadel el wileya,"{
+  ""langue"": ""tn_ar"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""ville"": ""Sfax"",
+    ""demande_contact"": false
+  },
+  ""reponse"": ""Aha, wala ma njiemch nbadel el wileya? Sfax mna l'ISB (Institut Supérieur de Business) li ddi l'formation. Wla l'IIT (Institut des Sciences et Techniques) li ddi l'Licence, la Prépa, w l'Ingénierie. L'ISB li ddi l'Commerce, l'Marketing, w l'Gestion. L'IIT li ddi l'Informatique, l'Électronique, w l'Biologie. Kifach ma njiemch? Wla mna l'Commerce w la Gestion?""
+}",,67.1,195,4.47,base,,2,1,1,Invente le nom de l'IIT et ses filières,Dialecte,True,"Aha, wala ma njiemch nbadel el wileya? Sfax mna l'ISB (Institut Supérieur de Business) li ddi l'formation. Wla l'IIT (Institut des Sciences et Techniques) li ddi l'Licence, la Prépa, w l'Ingénierie. L'ISB li ddi l'Commerce, l'Marketing, w l'Gestion. L'IIT li ddi l'Informatique, l'Électronique, w l'Biologie. Kifach ma njiemch? Wla mna l'Commerce w la Gestion?",False,ORIENTATION,tn_ar,2,2,True,False,False
+qwen3.5:4b,MX-09,mixte,G12_contact,texte,PREINSCRIPTION,{},Tu peux me fixer un rendez-vous pour l'entretien?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""demande_contact"": true
+  },
+  ""reponse"": ""Bonjour ! Je peux vous aider à prendre rendez-vous pour l'entretien. Pourriez-vous me préciser votre ville de résidence et le parcours qui vous intéresse (Licence, Prépa ou Ingénierie) ?""
+}",,42.91,93,4.82,base,,4,1,0,Demande les infos nécessaires,Dialecte,True,"Bonjour ! Je peux vous aider à prendre rendez-vous pour l'entretien. Pourriez-vous me préciser votre ville de résidence et le parcours qui vous intéresse (Licence, Prépa ou Ingénierie) ?",False,PREINSCRIPTION,fr,0,0,True,True,False
+qwen3.5:4b,MX-10,mixte,G01_salutation,texte,SALUTATION,{},"Ok merci, ya3tik essa7a","{
+  ""langue"": ""arabizi"",
+  ""intention"": ""SALUTATION"",
+  ""profil"": {},
+  ""reponse"": ""Aha, msh hna l'kifaya. Kana fihom? Ya3tik n7der n9der n3awnek nkhdmek ma3l l'IIT wa l'ISB?""
+}",,43.36,88,4.4,base,,2,1,0,Clôture confuse,Dialecte,True,"Aha, msh hna l'kifaya. Kana fihom? Ya3tik n7der n9der n3awnek nkhdmek ma3l l'IIT wa l'ISB?",False,SALUTATION,arabizi,0,0,True,True,False
+qwen3.5:4b,FR-11,fr,,texte,INFO_FORMATION,{},Quelles sont les conditions d'accès au cycle préparatoire intégré de l'IIT après le bac ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""interets"": ""Cycle préparatoire intégré""
+  },
+  ""reponse"": ""Bonjour ! Pour le cycle préparatoire intégré de l'IIT, les conditions d'accès dépendent du parcours spécifique (Maths, Physique-Chimie ou Sciences Économiques) et des notes obtenues au baccalauréat. Je vais vérifier les critères exacts pour vous donner une réponse précise. Souhaitez-vous aussi savoir si ce cycle permet de passer directement en ingénierie ?""
+}",,56.38,145,4.57,admission,,2,1,1,Invente des parcours de prépa,Français,True,"Bonjour ! Pour le cycle préparatoire intégré de l'IIT, les conditions d'accès dépendent du parcours spécifique (Maths, Physique-Chimie ou Sciences Économiques) et des notes obtenues au baccalauréat. Je vais vérifier les critères exacts pour vous donner une réponse précise. Souhaitez-vous aussi savoir si ce cycle permet de passer directement en ingénierie ?",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-12,fr,,texte,PREINSCRIPTION,{},Quels documents faut-il fournir pour la préinscription en licence de gestion à l'ISB ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""niveau"": ""Licence"",
+    ""section_bac"": null,
+    ""moyenne"": null,
+    ""interets"": ""Gestion"",
+    ""preferences"": ""ISB"",
+    ""points_faibles"": null,
+    ""contraintes"": null,
+    ""ville"": null,
+    ""demande_contact"": true
+  },
+  ""reponse"": ""Pour la préinscription en licence de gestion à l'ISB, il faut généralement fournir un dossier complet incluant le bulletin scolaire et une photo d'identité. Je vais vérifier les dernières conditions officielles pour vous confirmer précisément ce qui est demandé. N'hésitez pas si vous avez besoin d'aide pour préparer votre dossier.""
+}",,64.6,187,4.54,admission,,4,1,0,"Documents plausibles, propose de vérifier",Français,True,"Pour la préinscription en licence de gestion à l'ISB, il faut généralement fournir un dossier complet incluant le bulletin scolaire et une photo d'identité. Je vais vérifier les dernières conditions officielles pour vous confirmer précisément ce qui est demandé. N'hésitez pas si vous avez besoin d'aide pour préparer votre dossier.",False,PREINSCRIPTION,fr,0,0,True,True,True
+qwen3.5:4b,FR-13,fr,,texte,INFO_FORMATION,{},"Après une licence appliquée à l'IIT, est-ce que je peux intégrer directement le cycle ingénieur ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""Licence Appliquée IIT""
+  },
+  ""reponse"": ""Oui, les titulaires d'une Licence Appliquée à l'IIT peuvent intégrer le cycle ingénieur via la passerelle interne. Cela dépend de vos notes et de votre dossier académique.\nJe vous recommande de vérifier vos éligibilités précises sur le site de l'IIT ou de contacter directement le service des admissions pour connaître les conditions exactes de cette année.\nVous pouvez aussi envisager d'attendre un an si vous souhaitez renforcer vos compétences avant de postuler.\nSouhaitez-vous que je vous aide à préparer votre dossier ou à trouver un rendez-vous ?""
+}",,62.31,175,4.54,admission,,2,1,1,Affirme une passerelle interne,Français,True,"Oui, les titulaires d'une Licence Appliquée à l'IIT peuvent intégrer le cycle ingénieur via la passerelle interne. Cela dépend de vos notes et de votre dossier académique.
+Je vous recommande de vérifier vos éligibilités précises sur le site de l'IIT ou de contacter directement le service des admissions pour connaître les conditions exactes de cette année.
+Vous pouvez aussi envisager d'attendre un an si vous souhaitez renforcer vos compétences avant de postuler.
+Souhaitez-vous que je vous aide à préparer votre dossier ou à trouver un rendez-vous ?",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-14,fr,,texte,INFO_FORMATION,{},Est-ce qu'il y a un test ou un entretien pour être admis à l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Oui, l'admission à l'IIT se fait généralement via un concours national (QCM) suivi d'un entretien. Je peux vous donner plus de détails sur le QCM ou préparer votre entretien si vous voulez.""
+}",,42.3,82,4.29,admission,,2,1,1,Invente un concours national,Français,True,"Oui, l'admission à l'IIT se fait généralement via un concours national (QCM) suivi d'un entretien. Je peux vous donner plus de détails sur le QCM ou préparer votre entretien si vous voulez.",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-15,fr,,texte,INFO_FORMATION,{},La licence en administration des affaires de l'ISB est enseignée en anglais : faut-il un niveau d'anglais minimum ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""interets"": ""administration des affaires""
+  },
+  ""reponse"": ""Oui, la Licence en administration des affaires de l'ISB est effectivement enseignée en anglais. Il n'y a pas de niveau d'anglais minimum officiellement fixé pour l'admission, mais le programme exige une bonne maîtrise du langage pour suivre les cours et réussir les examens. Je vais vérifier les détails précis sur les conditions d'accès avec un responsable académique. Souhaitez-vous que je vous propose aussi d'autres formations en anglais ou en français ?""
+}",,57.14,147,4.39,admission,,3,1,1,Affirme l'absence de niveau minimum,Français,True,"Oui, la Licence en administration des affaires de l'ISB est effectivement enseignée en anglais. Il n'y a pas de niveau d'anglais minimum officiellement fixé pour l'admission, mais le programme exige une bonne maîtrise du langage pour suivre les cours et réussir les examens. Je vais vérifier les détails précis sur les conditions d'accès avec un responsable académique. Souhaitez-vous que je vous propose aussi d'autres formations en anglais ou en français ?",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-16,fr,,texte,PREINSCRIPTION,"{'section_bac': 'technique', 'moyenne': 13}","Avec 13 de moyenne au bac technique, vous pouvez me confirmer que je suis admis en génie mécanique ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""niveau"": ""Bac Technique"",
+    ""moyenne"": 13,
+    ""interets"": ""Génie mécanique""
+  },
+  ""reponse"": ""Bonjour ! Avec une moyenne de 13 au Bac Technique, vous êtes éligible pour l'admission en Génie Mécanique à l'IIT. Cependant, je ne peux pas confirmer votre admission directement ; c'est le responsable académique qui gère les listes d'inscription et les places disponibles. Je vous conseille de vérifier les conditions spécifiques sur le site officiel ou de contacter notre service d'orientation pour obtenir un rendez-vous d'entretien où nous pourrons discuter de vos options précises.""
+}",,62.16,177,4.57,admission,,3,1,1,"Affirme l'éligibilité, mais renvoie au responsable",Français,True,"Bonjour ! Avec une moyenne de 13 au Bac Technique, vous êtes éligible pour l'admission en Génie Mécanique à l'IIT. Cependant, je ne peux pas confirmer votre admission directement ; c'est le responsable académique qui gère les listes d'inscription et les places disponibles. Je vous conseille de vérifier les conditions spécifiques sur le site officiel ou de contacter notre service d'orientation pour obtenir un rendez-vous d'entretien où nous pourrons discuter de vos options précises.",False,PREINSCRIPTION,fr,2,2,True,True,True
+qwen3.5:4b,FR-17,fr,,texte,ORIENTATION,{},"J'hésite entre le génie informatique et les télécommunications à l'IIT, lequel me conviendrait ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": [
+      ""génie informatique"",
+      ""télécommunications""
+    ]
+  },
+  ""reponse"": ""Les deux filières de l'IIT sont excellentes et offrent des débouchés très larges. Le génie informatique se concentre sur le développement logiciel, les réseaux et la cybersécurité, tandis que les télécommunications visent plutôt les infrastructures physiques, la radiofréquence et la gestion des réseaux mobiles.\nPour vous aider à choisir, pourriez-vous me dire si vous préférez travailler davantage avec du code et des logiciels ou avec du matériel et des signaux ?\nAussi, avez-vous déjà des notes en mathématiques, physique ou informatique qui pourraient influencer votre choix ?""
+}",,73.65,189,3.79,orientation,,5,1,0,Comparaison précise + questions,Français,True,"Les deux filières de l'IIT sont excellentes et offrent des débouchés très larges. Le génie informatique se concentre sur le développement logiciel, les réseaux et la cybersécurité, tandis que les télécommunications visent plutôt les infrastructures physiques, la radiofréquence et la gestion des réseaux mobiles.
+Pour vous aider à choisir, pourriez-vous me dire si vous préférez travailler davantage avec du code et des logiciels ou avec du matériel et des signaux ?
+Aussi, avez-vous déjà des notes en mathématiques, physique ou informatique qui pourraient influencer votre choix ?",False,COMPARAISON,fr,0,0,True,False,True
+qwen3.5:4b,FR-18,fr,,texte,ORIENTATION,{'interets': ['web']},"J'aime créer des sites web et des vidéos, la licence multimédia et web de l'IIT est-elle faite pour moi ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""interets"": [
+      ""création de sites web"",
+      ""vidéos""
+    ]
+  },
+  ""reponse"": ""Oui, la Licence Multimédia et Web de l'IIT semble parfaitement adaptée à vos intérêts. Vous pourrez y développer des compétences techniques en programmation et création de contenu visuel. Je vous recommande aussi d'explorer les options d'ingénierie si vous souhaitez une formation plus pratique et professionnelle. Dites-moi ce qui vous attire le plus pour que je puisse affiner mes conseils.""
+}",,54.58,145,4.66,orientation,,4,1,0,Pertinent + question,Français,True,"Oui, la Licence Multimédia et Web de l'IIT semble parfaitement adaptée à vos intérêts. Vous pourrez y développer des compétences techniques en programmation et création de contenu visuel. Je vous recommande aussi d'explorer les options d'ingénierie si vous souhaitez une formation plus pratique et professionnelle. Dites-moi ce qui vous attire le plus pour que je puisse affiner mes conseils.",False,ORIENTATION,fr,1,1,True,True,True
+qwen3.5:4b,FR-19,fr,,texte,ORIENTATION,{'interets': ['marketing']},"Je veux travailler dans le marketing digital, vaut-il mieux une licence de gestion à l'ISB puis un mastère ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""interets"": ""marketing digital""
+  },
+  ""reponse"": ""Pour le marketing digital, une licence de gestion à l'ISB est un bon point de départ pour comprendre les bases du marché. Vous pourriez ensuite envisager des spécialisations ou des mastères en ligne si vous avez la possibilité. Cependant, je ne peux pas confirmer les détails exacts des parcours ni les conditions d'accès sans vérifier avec nos responsables académiques. Souhaitez-vous que je vous aide à construire un profil plus complet pour mieux cibler vos options ?""
+}",,55.38,147,4.58,orientation,,4,1,0,"Prudent, renvoie aux responsables",Français,True,"Pour le marketing digital, une licence de gestion à l'ISB est un bon point de départ pour comprendre les bases du marché. Vous pourriez ensuite envisager des spécialisations ou des mastères en ligne si vous avez la possibilité. Cependant, je ne peux pas confirmer les détails exacts des parcours ni les conditions d'accès sans vérifier avec nos responsables académiques. Souhaitez-vous que je vous aide à construire un profil plus complet pour mieux cibler vos options ?",False,ORIENTATION,fr,1,1,True,True,True
+qwen3.5:4b,FR-20,fr,,texte,ORIENTATION,"{'interets': ['physique', 'robotique']}","Je suis bon en physique et j'aime la robotique, quelle formation de l'IIT me correspond ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""interets"": [
+      ""physique"",
+      ""robotique""
+    ]
+  },
+  ""reponse"": ""Avec un bon niveau en physique et un intérêt pour la robotique, l'Ingénierie de l'IIT (option Génie Électrique ou Automatique) semble très adaptée à vos projets. Vous pourriez aussi envisager la Prépa Sciences Physiques si vous souhaitez approfondir les bases théoriques avant d'étudier. Voulez-vous que je détaille le programme de l'une de ces filières ?""
+}",,63.45,158,3.99,orientation,,2,1,1,"Invente des filières (automatique, prépa physique)",Français,True,"Avec un bon niveau en physique et un intérêt pour la robotique, l'Ingénierie de l'IIT (option Génie Électrique ou Automatique) semble très adaptée à vos projets. Vous pourriez aussi envisager la Prépa Sciences Physiques si vous souhaitez approfondir les bases théoriques avant d'étudier. Voulez-vous que je détaille le programme de l'une de ces filières ?",False,ORIENTATION,fr,2,2,True,True,True
+qwen3.5:4b,FR-21,fr,G02_comparaison,texte,COMPARAISON,{},C'est quoi la différence entre la prépa intégrée et une licence appliquée à l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""prépa intégrée vs licence appliquée""
+  },
+  ""reponse"": ""La prépa intégrée combine un cycle de classes préparatoires (2 ans) suivi d'une licence, tandis qu'une licence appliquée est une formation directe de 3 ans sans année préparatoire. La première vise les grandes écoles et exige des notes très élevées, la seconde ouvre plus directement vers l'emploi ou la suite d'études. Je peux vous aider à choisir selon vos notes et objectifs si vous me donnez plus de détails sur votre profil.""
+}",,56.0,151,4.6,reformulation,FR-03,2,1,1,Faux : prépa 2 ans puis licence,Français,True,"La prépa intégrée combine un cycle de classes préparatoires (2 ans) suivi d'une licence, tandis qu'une licence appliquée est une formation directe de 3 ans sans année préparatoire. La première vise les grandes écoles et exige des notes très élevées, la seconde ouvre plus directement vers l'emploi ou la suite d'études. Je peux vous aider à choisir selon vos notes et objectifs si vous me donnez plus de détails sur votre profil.",False,COMPARAISON,fr,0,0,True,True,True
+qwen3.5:4b,FR-22,fr,G02_comparaison,texte,COMPARAISON,{},Prépa de l'IIT ou licence : quel chemin pour devenir ingénieur en informatique ?,"{
+  ""langue"": ""mixte"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""informatique""
+  },
+  ""reponse"": ""Pour l'ingénierie en informatique, la Prépa de l'IIT est souvent le meilleur choix car elle forme des ingénieurs complets avec une solide base scientifique. La Licence peut aussi mener à l'ingénierie via des passerelles, mais c'est plus long et demande plus d'études. Je te conseille de préciser ton niveau actuel et tes notes pour que je puisse affiner mon conseil. Dis-moi si tu as déjà fait le Baccalauréat ou si tu es en terminale.""
+}",,59.33,161,4.45,reformulation,FR-03,4,1,0,Conseil cohérent + question,Français,True,"Pour l'ingénierie en informatique, la Prépa de l'IIT est souvent le meilleur choix car elle forme des ingénieurs complets avec une solide base scientifique. La Licence peut aussi mener à l'ingénierie via des passerelles, mais c'est plus long et demande plus d'études. Je te conseille de préciser ton niveau actuel et tes notes pour que je puisse affiner mon conseil. Dis-moi si tu as déjà fait le Baccalauréat ou si tu es en terminale.",False,COMPARAISON,mixte,0,0,True,True,False
+qwen3.5:4b,FR-23,fr,G05_preinscription,texte,PREINSCRIPTION,{},Comment s'inscrire en licence de développement des systèmes TIC ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {
+    ""interets"": ""développement des systèmes TIC""
+  },
+  ""reponse"": ""Pour vous inscrire, il faut d'abord passer le QCM d'orientation sur notre plateforme. Ensuite, si votre profil correspond, un responsable académique vous contactera pour organiser un entretien de préadmission. Je peux vous aider à préparer ce QCM ou à définir vos critères de sélection.""
+}",,47.28,113,4.7,reformulation,FR-06,4,1,0,Décrit le processus QCM / entretien,Français,True,"Pour vous inscrire, il faut d'abord passer le QCM d'orientation sur notre plateforme. Ensuite, si votre profil correspond, un responsable académique vous contactera pour organiser un entretien de préadmission. Je peux vous aider à préparer ce QCM ou à définir vos critères de sélection.",False,PREINSCRIPTION,fr,0,0,True,True,True
+qwen3.5:4b,FR-24,fr,G07_passerelle,texte,INFO_FORMATION,{},Une licence de l'IIT permet-elle ensuite de rejoindre le cycle ingénieur ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Oui, la Licence de l'IIT est une passerelle directe vers le cycle Ingénierie. Vous pouvez y accéder via un concours interne ou par admission au mérite selon vos résultats.""
+}",,39.4,75,4.63,reformulation,FR-07,2,1,1,Affirme une passerelle directe par concours interne,Français,True,"Oui, la Licence de l'IIT est une passerelle directe vers le cycle Ingénierie. Vous pouvez y accéder via un concours interne ou par admission au mérite selon vos résultats.",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-25,fr,G03_orientation_profil,texte,ORIENTATION,"{'section_bac': 'mathématiques', 'moyenne': 14, 'interets': ['programmation']}","Bac maths, 14 de moyenne, passionné de programmation : quelle formation à l'IIT ?","{
+  ""langue"": ""mixte"",
+  ""intention"": ""ORIENTATION"",
+  ""profil"": {
+    ""niveau"": ""Bac"",
+    ""section_bac"": ""Maths"",
+    ""moyenne"": 14,
+    ""interets"": ""programmation""
+  },
+  ""reponse"": ""Avec un Bac Maths et une moyenne de 14, tu as accès à l'Ingénierie Informatique (IIT) et à la Prépa Sciences Économiques et Commerciales (PSEC) si tu veux faire des maths appliquées. L'Ingénierie est plus directe pour la programmation, mais la Prépa te donne une base solide en mathématiques pures. Tu peux aussi envisager la Licence Informatique directement après ton Bac si tu préfères commencer tout de suite sans passer par la prépa.""
+}",,65.21,193,4.58,reformulation,FR-04,2,1,1,Invente une prépa PSEC,Français,True,"Avec un Bac Maths et une moyenne de 14, tu as accès à l'Ingénierie Informatique (IIT) et à la Prépa Sciences Économiques et Commerciales (PSEC) si tu veux faire des maths appliquées. L'Ingénierie est plus directe pour la programmation, mais la Prépa te donne une base solide en mathématiques pures. Tu peux aussi envisager la Licence Informatique directement après ton Bac si tu préfères commencer tout de suite sans passer par la prépa.",False,ORIENTATION,mixte,3,3,True,True,False
+qwen3.5:4b,FR-26,fr,G08_debouches,texte,INFO_FORMATION,{},Quels métiers après un diplôme d'ingénieur en génie informatique de l'IIT ?,"{
+  ""langue"": ""fr"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {
+    ""niveau"": ""Licence"",
+    ""section_bac"": null,
+    ""moyenne"": null,
+    ""interets"": ""Informatique"",
+    ""preferences"": ""Ingénierie"",
+    ""points_faibles"": null,
+    ""contraintes"": null,
+    ""ville"": null,
+    ""demande_contact"": false
+  },
+  ""reponse"": ""Après un diplôme d'ingénieur en génie informatique de l'IIT, vous pouvez travailler comme développeur logiciel, architecte système ou responsable technique. Vous pourriez aussi évoluer vers la gestion de projet ou le conseil en informatique. Ces débouchés dépendent de votre spécialisation et de vos compétences acquises durant les études. Je peux vous aider à préparer votre dossier si vous souhaitez postuler.""
+}",,67.36,204,4.61,reformulation,FR-05,4,1,0,Débouchés pertinents,Français,True,"Après un diplôme d'ingénieur en génie informatique de l'IIT, vous pouvez travailler comme développeur logiciel, architecte système ou responsable technique. Vous pourriez aussi évoluer vers la gestion de projet ou le conseil en informatique. Ces débouchés dépendent de votre spécialisation et de vos compétences acquises durant les études. Je peux vous aider à préparer votre dossier si vous souhaitez postuler.",False,INFO_FORMATION,fr,0,0,True,True,True
+qwen3.5:4b,FR-27,fr,,texte,INFO_FORMATION,{},C'est combien ?,"{
+  ""langue"": ""arabizi"",
+  ""intention"": ""INFO_FORMATION"",
+  ""profil"": {},
+  ""reponse"": ""Wach, chom d'la formation ? M'koun pas sûr de la réponse exacte sans plus de détails.\nN'as pas dit koun parcours (Licence, Prépa ou Ingénierie) ni koun domaine d'étude.\nM'vous demande d'ma dire koun formation t'intéresse pour que je vérifie les frais avec les responsables.\nOn va voir ensemble koun option qui correspond à ton profil.""
+}",,52.29,136,4.64,cas_ambigu,,3,0,0,"Cas ambigu : demande une précision, mais texte incohérent",Français,True,"Wach, chom d'la formation ? M'koun pas sûr de la réponse exacte sans plus de détails.
+N'as pas dit koun parcours (Licence, Prépa ou Ingénierie) ni koun domaine d'étude.
+M'vous demande d'ma dire koun formation t'intéresse pour que je vérifie les frais avec les responsables.
+On va voir ensemble koun option qui correspond à ton profil.",False,INFO_FORMATION,arabizi,0,0,True,True,False
+qwen3.5:4b,FR-28,fr,,texte,INFO_FORMATION,{},"Et pour l'ISB, c'est pareil ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {
+    ""interets"": ""formation ISB""
+  },
+  ""reponse"": ""Oui, l'ISB propose des formations en ingénierie et prépa comme l'IIT. Les conditions d'accès dépendent de votre niveau scolaire et de vos notes. Je peux vous donner plus de détails sur les débouchés ou la durée si vous me dites quel parcours vous intéresse.""
+}",,51.76,114,4.05,cas_ambigu,,1,1,1,Cas ambigu : affirme que l'ISB propose de l'ingénierie,Français,True,"Oui, l'ISB propose des formations en ingénierie et prépa comme l'IIT. Les conditions d'accès dépendent de votre niveau scolaire et de vos notes. Je peux vous donner plus de détails sur les débouchés ou la durée si vous me dites quel parcours vous intéresse.",False,COMPARAISON,fr,0,0,True,False,True
+qwen3.5:4b,FR-29,fr,,texte,PREINSCRIPTION,{},Je veux m'inscrire.,"{
+  ""langue"": ""fr"",
+  ""intention"": ""PREINSCRIPTION"",
+  ""profil"": {},
+  ""reponse"": ""Bonjour ! Pour vous aider à vous inscrire, pourriez-vous me préciser si vous visez la Licence, la Prépa ou l'Ingénierie ?\nJe peux aussi vous dire que les inscriptions se font généralement en ligne sur le site de l'IIT et de l'ISB.\nN'hésitez pas à me donner vos notes ou vos centres d'intérêt pour mieux orienter votre dossier.\nJe reste à votre disposition pour tout renseignement officiel.""
+}",,55.89,136,4.19,cas_ambigu,,5,1,0,Cas ambigu : demande la formation visée,Français,True,"Bonjour ! Pour vous aider à vous inscrire, pourriez-vous me préciser si vous visez la Licence, la Prépa ou l'Ingénierie ?
+Je peux aussi vous dire que les inscriptions se font généralement en ligne sur le site de l'IIT et de l'ISB.
+N'hésitez pas à me donner vos notes ou vos centres d'intérêt pour mieux orienter votre dossier.
+Je reste à votre disposition pour tout renseignement officiel.",False,PREINSCRIPTION,fr,0,0,True,True,True
+qwen3.5:4b,FR-30,fr,,texte,COMPARAISON,{},"Le génie, c'est mieux ?","{
+  ""langue"": ""fr"",
+  ""intention"": ""COMPARAISON"",
+  ""profil"": {},
+  ""reponse"": ""Bonjour ! Pour comparer le Génie Civil avec d'autres filières comme l'Informatique ou les Sciences de l'Ingénieur, il faut connaître vos notes et vos centres d'intérêt. Souhaitez-vous que je vous pose quelques questions pour mieux vous conseiller ?""
+}",,46.44,95,4.13,cas_ambigu,,3,1,0,"Cas ambigu : suppose le génie civil, puis questionne",Français,True,"Bonjour ! Pour comparer le Génie Civil avec d'autres filières comme l'Informatique ou les Sciences de l'Ingénieur, il faut connaître vos notes et vos centres d'intérêt. Souhaitez-vous que je vous pose quelques questions pour mieux vous conseiller ?",False,COMPARAISON,fr,0,0,True,True,True

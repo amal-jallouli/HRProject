@@ -20,12 +20,12 @@ dependencies = [
     "redis>=5.2,<6.0",
     "python-multipart>=0.0.17,<1.0",
     "bcrypt>=4.2,<6.0",
+    "httpx>=0.28,<1.0",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=8.3,<9.0",
-    "httpx>=0.28,<1.0",
     "ruff>=0.8,<1.0",
 ]
 
